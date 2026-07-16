@@ -58,8 +58,8 @@ public partial class VRAverageCalculator : Node
         }
     }
 
-    private string leftBounds = $"{61 * currentImageWidthRatio}:{900 * currentImageHeightRatio}:{448 * currentImageWidthRatio}:{100 * currentImageHeightRatio}";
-    private string rightBounds = $"{61 * currentImageWidthRatio}:{900 * currentImageHeightRatio}:{951 * currentImageWidthRatio}:{100 * currentImageHeightRatio}";
+    private string leftBounds = $"{61}:{900}:{448}:{100}";
+    private string rightBounds = $"{61}:{900}:{951}:{100}";
     private int prevAverageVR = -1;
     async public void ProcessVR()
     {
@@ -71,7 +71,7 @@ public partial class VRAverageCalculator : Node
         {
             for (int y = 0; y < 12; y++)
             {
-                string thisBounds = $"{85 * currentImageWidthRatio}:{25 * currentImageHeightRatio}:{(x == 0 ? 440 : 940) * currentImageWidthRatio}:{(110 + (y * 76)) * currentImageHeightRatio}";
+                string thisBounds = $"{85}:{25}:{(x == 0 ? 440 : 940)}:{(110 + (y * 76))}";
                 await ProcessImageAsync(thisBounds, $"OcrImages/{x},{y}.tiff", 90, "BaseImages/ligmaballs.tiff");
             }
         }
@@ -79,7 +79,7 @@ public partial class VRAverageCalculator : Node
         {
             for (int y = 0; y < 12; y++)
             {
-                string thisBounds = $"{85 * currentImageWidthRatio}:{25 * currentImageHeightRatio}:{(x == 0 ? 440 : 940) * currentImageWidthRatio}:{(110 + (y * 76)) * currentImageHeightRatio}";
+                string thisBounds = $"{85}:{25}:{(x == 0 ? 440 : 940)}:{(110 + (y * 76))}";
                 await ProcessImageAsync(thisBounds, $"OcrImages/myScore_{x},{y}.tiff", 200, "BaseImages/ligmaballs.tiff");
             }
         }
@@ -175,7 +175,6 @@ public partial class VRAverageCalculator : Node
         }
         prevAverageVR = totalVR / allScores.Count;
     }
-    public static float currentImageWidthRatio, currentImageHeightRatio;
     public async Task GetSourceImage(string filename)
     {
         using var capture = new VideoCapture(CameraSetup.currentCamera);
@@ -188,9 +187,6 @@ public partial class VRAverageCalculator : Node
             using var newFrame = new Mat();
             Cv2.Resize(frame, newFrame, new Size(1920, 1080));
             Cv2.ImWrite(filename,newFrame);
-            var info = new MagickImageInfo(filename);
-            currentImageHeightRatio = (int)info.Height / 1080f;
-            currentImageWidthRatio = (int)info.Width / 1920f;
         }
     }
     public async Task ProcessImageAsync(string cropCoords, string filename, int threshold, string sourceFile)
