@@ -66,13 +66,13 @@ public partial class VRAverageCalculator : Node
         averageVR.Text = $"Average VR: checking...";
         myVR.Text = $"My VR: checking...";
         racerCount.Text = $"Real Player Count: checking...";
-        await GetSourceImage("ligmaballs.tiff");
+        await GetSourceImage("BaseImages/ligmaballs.tiff");
         for (int x = 0; x < 2; x++)
         {
             for (int y = 0; y < 12; y++)
             {
                 string thisBounds = $"{85 * currentImageWidthRatio}:{25 * currentImageHeightRatio}:{(x == 0 ? 440 : 940) * currentImageWidthRatio}:{(110 + (y * 76)) * currentImageHeightRatio}";
-                await ProcessImageAsync(thisBounds, $"OcrImages/{x},{y}.tiff", 90, "ligmaballs.tiff");
+                await ProcessImageAsync(thisBounds, $"OcrImages/{x},{y}.tiff", 90, "BaseImages/ligmaballs.tiff");
             }
         }
         for (int x = 0; x < 2; x++)
@@ -80,7 +80,7 @@ public partial class VRAverageCalculator : Node
             for (int y = 0; y < 12; y++)
             {
                 string thisBounds = $"{85 * currentImageWidthRatio}:{25 * currentImageHeightRatio}:{(x == 0 ? 440 : 940) * currentImageWidthRatio}:{(110 + (y * 76)) * currentImageHeightRatio}";
-                await ProcessImageAsync(thisBounds, $"OcrImages/myScore_{x},{y}.tiff", 200, "ligmaballs.tiff");
+                await ProcessImageAsync(thisBounds, $"OcrImages/myScore_{x},{y}.tiff", 200, "BaseImages/ligmaballs.tiff");
             }
         }
 
@@ -227,10 +227,10 @@ public partial class VRAverageCalculator : Node
     {
         return await Task.Run(() =>
         {
-
+            string tessDataPath = ProjectSettings.GlobalizePath("res://tessdata/");
             var tesseractInfo = new ProcessStartInfo {
                 FileName = "tesseract",
-                Arguments = $"{filename} stdout --psm 11 -c tessedit_char_whitelist=0123456789 --tessdata-dir /home/nunchuk/counter-tool/tessdata/ -l eng2",
+                Arguments = $"{filename} stdout --psm 11 -c tessedit_char_whitelist=0123456789 --tessdata-dir {tessDataPath} -l eng2",
                 RedirectStandardOutput = true,
                 UseShellExecute = false, CreateNoWindow = true
             };

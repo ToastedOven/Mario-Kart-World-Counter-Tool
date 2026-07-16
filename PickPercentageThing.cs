@@ -12,14 +12,14 @@ public partial class PickPercentageThing : Node
     static Godot.Collections.Dictionary<string, int> currentTrackCounts = new();
     public static async Task CountTracks()
     {
-        await VRAverageCalculator.instance.GetSourceImage("votes.tiff");
+        await VRAverageCalculator.instance.GetSourceImage("BaseImages/votes.tiff");
         List<Task> tasks = new();
         for (int x = 0; x < 8; x++)
         {
             for (int y = 0; y < 2; y++)
             {
                 string thisBounds = $"{200 * VRAverageCalculator.currentImageWidthRatio}:{150 * VRAverageCalculator.currentImageHeightRatio}:{(28 + x * 237) * VRAverageCalculator.currentImageWidthRatio}:{(y == 0 ? 25 : 905) * VRAverageCalculator.currentImageHeightRatio}";
-                tasks.Add(VRAverageCalculator.instance.ProcessImageAsync(thisBounds, $"Votes/pick_{1 + x + (y*12)}.tiff", 0, "votes.tiff"));
+                tasks.Add(VRAverageCalculator.instance.ProcessImageAsync(thisBounds, $"Votes/pick_{1 + x + (y*12)}.tiff", 0, "BaseImages/votes.tiff"));
             }
         }
         for (int x = 0; x < 2; x++)
@@ -27,7 +27,7 @@ public partial class PickPercentageThing : Node
             for (int y = 0; y < 4; y++)
             {
                 string thisBounds = $"{200 * VRAverageCalculator.currentImageWidthRatio}:{150 * VRAverageCalculator.currentImageHeightRatio}:{35 + (x * 1659) * VRAverageCalculator.currentImageWidthRatio}:{(26 + 176 + (y * 176)) * VRAverageCalculator.currentImageHeightRatio}";
-                tasks.Add(VRAverageCalculator.instance.ProcessImageAsync(thisBounds, $"Votes/pick_{9 + y + (x*12)}.tiff", 0, "votes.tiff"));
+                tasks.Add(VRAverageCalculator.instance.ProcessImageAsync(thisBounds, $"Votes/pick_{9 + y + (x*12)}.tiff", 0, "BaseImages/votes.tiff"));
             }
         }
         await Task.WhenAll(tasks.ToArray());
