@@ -1,0 +1,14 @@
+<Project Sdk="Godot.NET.Sdk/4.7.0">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Magick.NET-Q16-x64" Version="14.15.0" />
+        <PackageReference Include="Magick.NET.Core" Version="14.15.0" />
+        <PackageReference Include="OpenCvSharp5" Version="5.0.0.20260713" />
+        <PackageReference Include="OpenCvSharp5.official.runtime.linux-x64" Version="5.0.0.20260713" />
+        <PackageReference Include="Tesseract" Version="5.2.0" />
+    </ItemGroup>
+</Project>

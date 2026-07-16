@@ -1,0 +1,1705 @@
+[gd_scene format=3 uid="uid://daodsqor2qa2x"]
+
+[ext_resource type="PackedScene" uid="uid://bjvuck12jslhc" path="res://tracks.tscn" id="1_r0f7s"]
+[ext_resource type="PackedScene" uid="uid://divka4dg8ndna" path="res://BarScene.tscn" id="3_4a80b"]
+[ext_resource type="Script" uid="uid://cpgxkjynckw4q" path="res://RecentTrackTracker.cs" id="4_15wuk"]
+[ext_resource type="PackedScene" uid="uid://ydkut4ci8ie1" path="res://RecentTrack.tscn" id="5_gnnrh"]
+[ext_resource type="Texture2D" uid="uid://uachs8dsw63a" path="res://Tracks/1.png" id="6_5qhct"]
+[ext_resource type="Script" uid="uid://bvhkpte6uynjv" path="res://PageSwitcher.cs" id="6_a3t8j"]
+[ext_resource type="Texture2D" uid="uid://b55g3fxs2lys" path="res://Combo Icons/Drivers/baby-daisy.png" id="6_naci0"]
+[ext_resource type="Script" uid="uid://bvq81pfbysvfr" path="res://SwitchGraphButton.cs" id="7_8kiex"]
+[ext_resource type="Script" uid="uid://cimcrqlrnj8mq" path="res://HistoryHandler.cs" id="9_cjo4t"]
+[ext_resource type="PackedScene" uid="uid://dyjeidw26vaxd" path="res://previous_thing.tscn" id="10_3jyaf"]
+[ext_resource type="PackedScene" uid="uid://8u1bnjmtjohn" path="res://ComboButton.tscn" id="11_fk353"]
+[ext_resource type="Script" uid="uid://dppd3iq613c7g" path="res://Export.cs" id="12_g800d"]
+[ext_resource type="Texture2D" uid="uid://cvk1ryang16hu" path="res://Combo Icons/Drivers/swoop.png" id="12_naci0"]
+[ext_resource type="Texture2D" uid="uid://c8tg75xbdryqp" path="res://Combo Icons/Drivers/para-biddybud.png" id="13_dkek6"]
+[ext_resource type="Texture2D" uid="uid://cfkqh3e1asntm" path="res://Combo Icons/Drivers/baby-peach.png" id="14_264gc"]
+[ext_resource type="Texture2D" uid="uid://ckkhjj5vnb20k" path="res://Combo Icons/Drivers/spike.png" id="15_aps32"]
+[ext_resource type="Texture2D" uid="uid://et5yctpgtaat" path="res://Combo Icons/Drivers/goomba.png" id="16_ubwwo"]
+[ext_resource type="Texture2D" uid="uid://bbvt10nqabk8b" path="res://Combo Icons/Drivers/baby-mario.png" id="17_ts0tj"]
+[ext_resource type="Texture2D" uid="uid://bx56bo4n3xl7e" path="res://Combo Icons/Drivers/peepa.png" id="18_jvqqu"]
+[ext_resource type="Texture2D" uid="uid://cjyjacccpy3bg" path="res://Combo Icons/Drivers/dry-bones.png" id="19_sfodw"]
+[ext_resource type="Texture2D" uid="uid://d14fygnksvajf" path="res://Combo Icons/Drivers/baby-luigi.png" id="20_q5ivn"]
+[ext_resource type="Texture2D" uid="uid://bidx3kyal6tdc" path="res://Combo Icons/Drivers/sidestepper.png" id="21_don3c"]
+[ext_resource type="Texture2D" uid="uid://2exn8dxijpoe" path="res://Combo Icons/Drivers/fish-bone.png" id="22_3od16"]
+[ext_resource type="Texture2D" uid="uid://bntijmpo1c3yb" path="res://Combo Icons/Drivers/baby-rosalina.png" id="23_20k8e"]
+[ext_resource type="Texture2D" uid="uid://bfxg7dv20e1j1" path="res://Combo Icons/Drivers/nabbit.png" id="24_ffp8t"]
+[ext_resource type="Texture2D" uid="uid://dblafkp7r78yf" path="res://Combo Icons/Drivers/toadette.png" id="25_e665u"]
+[ext_resource type="Texture2D" uid="uid://bk2iwmylcuvog" path="res://Combo Icons/Drivers/toad.png" id="26_4tnf3"]
+[ext_resource type="Texture2D" uid="uid://cnedkjc6r8tm4" path="res://Combo Icons/Drivers/shy-guy.png" id="27_lrtjb"]
+[ext_resource type="Texture2D" uid="uid://gd2a0kh2weov" path="res://Combo Icons/Drivers/stingby.png" id="28_6t7uf"]
+[ext_resource type="Texture2D" uid="uid://c6s2v6lwm86rr" path="res://Combo Icons/Drivers/koopa-troopa.png" id="29_e6o8v"]
+[ext_resource type="Texture2D" uid="uid://dvvmthjrqogy0" path="res://Combo Icons/Drivers/lakitu.png" id="30_u8swy"]
+[ext_resource type="Script" uid="uid://beagxvovaukhs" path="res://SearchBar.cs" id="31_f8oyr"]
+[ext_resource type="Texture2D" uid="uid://bewjlygs8tf4a" path="res://Combo Icons/Drivers/cheep-cheep.png" id="31_omhqs"]
+[ext_resource type="Texture2D" uid="uid://bpa85icgu2pxp" path="res://Combo Icons/Drivers/peach.png" id="32_rs8hp"]
+[ext_resource type="Texture2D" uid="uid://4bm8p8xlvrht" path="res://Combo Icons/Drivers/daisy.png" id="33_ydmq4"]
+[ext_resource type="Texture2D" uid="uid://neouxn6v8teo" path="res://Combo Icons/Drivers/coin-coffer.png" id="34_a7w86"]
+[ext_resource type="Texture2D" uid="uid://cseifpwemuvjr" path="res://Combo Icons/Drivers/yoshi.png" id="35_toi2r"]
+[ext_resource type="Texture2D" uid="uid://c7ltlbi3gkr6j" path="res://Combo Icons/Drivers/monty-mole.png" id="36_mxfhk"]
+[ext_resource type="Texture2D" uid="uid://s8ohpg6i8p1x" path="res://Combo Icons/Drivers/dolphin.png" id="37_jbb51"]
+[ext_resource type="Texture2D" uid="uid://bcl2bs0e4dxko" path="res://Combo Icons/Drivers/bowser-jr.png" id="38_dmqu7"]
+[ext_resource type="Texture2D" uid="uid://dp22fjtow66q7" path="res://Combo Icons/Drivers/mario.png" id="39_ptr36"]
+[ext_resource type="Texture2D" uid="uid://md4o3w0iuc4i" path="res://Combo Icons/Drivers/rocky-wrench.png" id="40_7hhm6"]
+[ext_resource type="Texture2D" uid="uid://jit75hfep1us" path="res://Combo Icons/Drivers/luigi.png" id="41_l5glf"]
+[ext_resource type="Texture2D" uid="uid://clruca7f0opuq" path="res://Combo Icons/Drivers/pokey.png" id="42_ecun1"]
+[ext_resource type="Texture2D" uid="uid://dh7hj5b53iacx" path="res://Combo Icons/Drivers/hammer-bro.png" id="43_by1f8"]
+[ext_resource type="Texture2D" uid="uid://xk48b87bbyiv" path="res://Combo Icons/Drivers/penguin.png" id="44_f726w"]
+[ext_resource type="Texture2D" uid="uid://ctih4tot3pdbc" path="res://Combo Icons/Drivers/birdo.png" id="45_g800d"]
+[ext_resource type="Texture2D" uid="uid://bvpdr7cxemn46" path="res://Combo Icons/Drivers/snowman.png" id="46_28v50"]
+[ext_resource type="Texture2D" uid="uid://cyhmxm2x63v2j" path="res://Combo Icons/Drivers/piranha-plant.png" id="47_0jdtu"]
+[ext_resource type="Texture2D" uid="uid://c1lhkg5iskwe" path="res://Combo Icons/Drivers/pauline.png" id="48_tlb2k"]
+[ext_resource type="Texture2D" uid="uid://bskri4qco71go" path="res://Combo Icons/Drivers/king-boo.png" id="49_pohys"]
+[ext_resource type="Texture2D" uid="uid://dwwfy2q3cejsq" path="res://Combo Icons/Drivers/conkdor.png" id="50_t6aed"]
+[ext_resource type="Texture2D" uid="uid://010y3cem8bqf" path="res://Combo Icons/Drivers/rosalina.png" id="51_fu3vv"]
+[ext_resource type="Texture2D" uid="uid://ckj0f81l5wtlq" path="res://Combo Icons/Drivers/cataquack.png" id="52_wdd6a"]
+[ext_resource type="Texture2D" uid="uid://dgecnihp0qufw" path="res://Combo Icons/Drivers/wiggler.png" id="53_dbi50"]
+[ext_resource type="Texture2D" uid="uid://ddso8lk2nsns4" path="res://Combo Icons/Drivers/wario.png" id="54_54jrt"]
+[ext_resource type="Texture2D" uid="uid://ck665jbkcruvh" path="res://Combo Icons/Drivers/donkey-kong.png" id="55_vsi4f"]
+[ext_resource type="Texture2D" uid="uid://dc4tffdpkn6yr" path="res://Combo Icons/Drivers/cow.png" id="56_pkh6g"]
+[ext_resource type="Texture2D" uid="uid://b6h6kuhea3n46" path="res://Combo Icons/Drivers/chargin-chuck.png" id="57_1xuf2"]
+[ext_resource type="Texture2D" uid="uid://bmagwixp0xj4b" path="res://Combo Icons/Drivers/waluigi.png" id="58_mhywo"]
+[ext_resource type="Texture2D" uid="uid://dvv3jas2hlffn" path="res://Combo Icons/Drivers/pianta.png" id="59_oy7pa"]
+[ext_resource type="Texture2D" uid="uid://duymaptnycgy8" path="res://Combo Icons/Drivers/bowser.png" id="60_dasom"]
+[ext_resource type="Texture2D" uid="uid://bob745u0olld7" path="res://Combo Icons/Karts/rob-hog.png" id="61_8kx8s"]
+[ext_resource type="Texture2D" uid="uid://bnjy0qkfyd8jp" path="res://Combo Icons/Karts/mach-rocket.png" id="62_v45as"]
+[ext_resource type="Texture2D" uid="uid://du20akcmyo20x" path="res://Combo Icons/Karts/rally-bike.png" id="63_3hvom"]
+[ext_resource type="Texture2D" uid="uid://b8krisigrxl6x" path="res://Combo Icons/Karts/hyper-pipe.png" id="64_4dpps"]
+[ext_resource type="Texture2D" uid="uid://beqh2jll1c31x" path="res://Combo Icons/Karts/fin-twin.png" id="65_1laf8"]
+[ext_resource type="Texture2D" uid="uid://bord5v1ln3j76" path="res://Combo Icons/Karts/dolphin-dasher.png" id="66_ecdyt"]
+[ext_resource type="Texture2D" uid="uid://cps6swouijtl2" path="res://Combo Icons/Karts/tune-thumper.png" id="67_0wpcm"]
+[ext_resource type="Texture2D" uid="uid://dkveoqlfgt7q8" path="res://Combo Icons/Karts/standard-bike.png" id="68_qerqb"]
+[ext_resource type="Texture2D" uid="uid://nwmyks7bi2kb" path="res://Combo Icons/Karts/cute-scoot.png" id="69_07h1c"]
+[ext_resource type="Texture2D" uid="uid://da5llwa24hpva" path="res://Combo Icons/Karts/baby-blooper.png" id="70_epqqj"]
+[ext_resource type="Texture2D" uid="uid://cuatl8ysq2m8n" path="res://Combo Icons/Karts/biddybuggy.png" id="71_uc3v2"]
+[ext_resource type="Texture2D" uid="uid://bdbu0ft3ak6lr" path="res://Combo Icons/Karts/pipe-frame.png" id="72_ujj08"]
+[ext_resource type="Texture2D" uid="uid://etqtucsodqls" path="res://Combo Icons/Karts/loco-moto.png" id="73_wowsd"]
+[ext_resource type="Texture2D" uid="uid://b5x3xnak7acxe" path="res://Combo Icons/Karts/standard-kart.png" id="74_gi0ux"]
+[ext_resource type="Texture2D" uid="uid://ccy2dych8i4qt" path="res://Combo Icons/Karts/plushbuggy.png" id="75_qgtl3"]
+[ext_resource type="Texture2D" uid="uid://c241exua48sed" path="res://Combo Icons/Karts/w-twin-chopper.png" id="76_dmhhr"]
+[ext_resource type="Texture2D" uid="uid://blcgt7iiu5goy" path="res://Combo Icons/Karts/roadster-royale.png" id="77_fk0vt"]
+[ext_resource type="Texture2D" uid="uid://u7f511ma2pxj" path="res://Combo Icons/Karts/hot-rod.png" id="78_2yavy"]
+[ext_resource type="Texture2D" uid="uid://c6tl84hxsu1oo" path="res://Combo Icons/Karts/bumble-v.png" id="79_r1sk8"]
+[ext_resource type="Texture2D" uid="uid://b3ttlm2fn5cd5" path="res://Combo Icons/Karts/b-dasher.png" id="80_b7tow"]
+[ext_resource type="Texture2D" uid="uid://bgrpl7rxyk4cu" path="res://Combo Icons/Karts/zoom-stompy.png" id="81_lt1o6"]
+[ext_resource type="Texture2D" uid="uid://b5u8wgsmxgkqc" path="res://Combo Icons/Karts/rally-kart.png" id="82_ajrej"]
+[ext_resource type="Texture2D" uid="uid://ocptm18s5sju" path="res://Combo Icons/Karts/dread-tank.png" id="83_tcgq5"]
+[ext_resource type="Texture2D" uid="uid://gfq83i3yyuk0" path="res://Combo Icons/Karts/ribbit-revster.png" id="84_fmpyo"]
+[ext_resource type="Texture2D" uid="uid://dyx0dq6o2ubf3" path="res://Combo Icons/Karts/cloud-9.png" id="85_i4k74"]
+[ext_resource type="Texture2D" uid="uid://bh1gwo50wh5tu" path="res://Combo Icons/Karts/carpet-flyer.png" id="86_j0jie"]
+[ext_resource type="Texture2D" uid="uid://cin1do57twi1u" path="res://Combo Icons/Karts/blastronaut-iii.png" id="87_pk537"]
+[ext_resource type="Texture2D" uid="uid://bjg8lchtsg3b1" path="res://Combo Icons/Karts/reel-racer.png" id="88_to8xo"]
+[ext_resource type="Texture2D" uid="uid://dk00pj2xw36ho" path="res://Combo Icons/Karts/funky-dorrie.png" id="89_clfq1"]
+[ext_resource type="Texture2D" uid="uid://dal2wjucbo6eo" path="res://Combo Icons/Karts/junkyard-hog.png" id="90_6of06"]
+[ext_resource type="Texture2D" uid="uid://ctwxi00aorar" path="res://Combo Icons/Karts/bulldozer.png" id="91_dsn11"]
+[ext_resource type="Texture2D" uid="uid://bf3msr42qk4ic" path="res://Combo Icons/Karts/big-horn.png" id="92_xgy2b"]
+[ext_resource type="Texture2D" uid="uid://dwl13v1tt5q68" path="res://Combo Icons/Karts/tiny-titan.png" id="93_iyq2m"]
+[ext_resource type="Texture2D" uid="uid://cg1kn8n67xpbj" path="res://Combo Icons/Karts/li-dumpy.png" id="94_5kkp1"]
+[ext_resource type="Texture2D" uid="uid://dxmls0vq6ym6h" path="res://Combo Icons/Karts/chargin-truck.png" id="95_lbocp"]
+[ext_resource type="Texture2D" uid="uid://cdk1u61pv2qpd" path="res://Combo Icons/Karts/bowser-bruiser.png" id="96_kqff4"]
+[ext_resource type="Texture2D" uid="uid://cpxsms331es80" path="res://Combo Icons/Karts/mecha-tike.png" id="97_135xr"]
+[ext_resource type="Texture2D" uid="uid://qhwnrcb4go3p" path="res://Combo Icons/Karts/stellar-sled.png" id="98_4j04y"]
+[ext_resource type="Texture2D" uid="uid://4kc5mep7dal5" path="res://Combo Icons/Karts/rallygator.png" id="99_iqcio"]
+[ext_resource type="Texture2D" uid="uid://d7f4ebf2i36t" path="res://Combo Icons/Karts/lobster-roller.png" id="100_npp68"]
+[ext_resource type="Script" uid="uid://cg40ke28754cy" path="res://ApiKeyEntry.cs" id="102_by1f8"]
+[ext_resource type="PackedScene" uid="uid://d25h6yo0atq3h" path="res://PositionButton.tscn" id="102_dkek6"]
+[ext_resource type="Script" uid="uid://cfa5gaasjj6ij" path="res://PostMatchPage.cs" id="102_dmqu7"]
+[ext_resource type="Texture2D" uid="uid://bu3e43p2024d3" path="res://Positions/2nd.png" id="103_mxfhk"]
+[ext_resource type="Texture2D" uid="uid://mv7vm777jv4m" path="res://Positions/3rd.png" id="104_jbb51"]
+[ext_resource type="Texture2D" uid="uid://d2g0yq6ti4qh6" path="res://Positions/4th.png" id="105_dmqu7"]
+[ext_resource type="Texture2D" uid="uid://6sibuwjx50tm" path="res://Positions/5th.png" id="106_ptr36"]
+[ext_resource type="Texture2D" uid="uid://c25u8v88cxrjd" path="res://Positions/6th.png" id="107_7hhm6"]
+[ext_resource type="Texture2D" uid="uid://brcudom0vbf8p" path="res://Positions/7th.png" id="108_l5glf"]
+[ext_resource type="Texture2D" uid="uid://ct5plbrynotnp" path="res://Positions/8th.png" id="109_ecun1"]
+[ext_resource type="Texture2D" uid="uid://wcoacx0hb74" path="res://Positions/9th.png" id="110_by1f8"]
+[ext_resource type="Texture2D" uid="uid://05byt35gaq2t" path="res://Positions/10th.png" id="111_f726w"]
+[ext_resource type="Texture2D" uid="uid://yj6vfgqwb00s" path="res://Positions/11th.png" id="112_g800d"]
+[ext_resource type="Texture2D" uid="uid://co6nq2mjbpkn" path="res://Positions/12th.png" id="113_28v50"]
+[ext_resource type="Texture2D" uid="uid://cfw43h6qi5gk7" path="res://Positions/13th.png" id="114_0jdtu"]
+[ext_resource type="Texture2D" uid="uid://d2nrcchh1nki0" path="res://Positions/14th.png" id="115_tlb2k"]
+[ext_resource type="Texture2D" uid="uid://dhngpd2bv5b6n" path="res://Positions/15th.png" id="116_pohys"]
+[ext_resource type="Texture2D" uid="uid://kwjyci4lky0a" path="res://Positions/16th.png" id="117_t6aed"]
+[ext_resource type="Texture2D" uid="uid://52xeb2kma7n" path="res://Positions/17th.png" id="118_fu3vv"]
+[ext_resource type="Texture2D" uid="uid://y1rocbotaqrf" path="res://Positions/18th.png" id="119_wdd6a"]
+[ext_resource type="Texture2D" uid="uid://d3iau61doa860" path="res://Positions/19th.png" id="120_dbi50"]
+[ext_resource type="Texture2D" uid="uid://c8t2xxyong0lx" path="res://Positions/20th.png" id="121_54jrt"]
+[ext_resource type="Texture2D" uid="uid://c4jycbvv75nl4" path="res://Positions/21st.png" id="122_vsi4f"]
+[ext_resource type="Texture2D" uid="uid://bss2q3ef0xndk" path="res://Positions/22nd.png" id="123_pkh6g"]
+[ext_resource type="Texture2D" uid="uid://rtbvmn03omns" path="res://Positions/23rd.png" id="124_1xuf2"]
+[ext_resource type="Texture2D" uid="uid://c0aspqq0ar1vi" path="res://Positions/24th.png" id="125_mhywo"]
+[ext_resource type="Texture2D" uid="uid://cf25f5ya6k8ee" path="res://Tracks/2.png" id="126_jbb51"]
+[ext_resource type="Script" uid="uid://dapvx0wfhapvb" path="res://VRAverageCalculator.cs" id="128_ptr36"]
+[ext_resource type="Script" uid="uid://cii56btkmgqei" path="res://CameraSetup.cs" id="129_7hhm6"]
+[ext_resource type="Texture2D" uid="uid://bplxw04jcx1uv" path="res://NoVideo.png" id="130_l5glf"]
+[ext_resource type="Script" uid="uid://5h4wd572nuu2" path="res://PickPercentageThing.cs" id="131_ecun1"]
+[ext_resource type="Script" uid="uid://d3hxlnhakccat" path="res://ControlManager.cs" id="134_28v50"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cjo4t"]
+
+[node name="Control" type="Control" unique_id=1425128816]
+layout_mode = 3
+anchor_right = 1.667
+anchor_bottom = 1.667
+offset_right = -853.76
+offset_bottom = -480.24
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "autoUpload", "historyButton", "cameraSetup", "enterApiKey")]
+script = ExtResource("134_28v50")
+pickerPage = NodePath("../PickerPage")
+historyPage = NodePath("../HistoryPage")
+comboPage = NodePath("../Combo Select")
+postMatchPage = NodePath("../Post Match")
+cameraPage = NodePath("../CameraPreview")
+apiPage = NodePath("../API Key Entry")
+autoUpload = NodePath("../HistoryPage/HBoxContainer/AutoUpload")
+historyButton = NodePath("../HBoxContainer/ShowHistory")
+cameraSetup = NodePath("../HBoxContainer/Camera Setup")
+enterApiKey = NodePath("../HBoxContainer/API Key")
+metadata/_custom_type_script = "uid://d3hxlnhakccat"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1730624110]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="PickerPage" type="Control" parent="." unique_id=604863824]
+layout_mode = 1
+anchors_preset = 0
+offset_left = -111.0
+offset_right = -71.0
+offset_bottom = 40.0
+
+[node name="3Laps" type="Control" parent="PickerPage" unique_id=1583117693]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 620.0
+offset_right = 620.0
+grow_horizontal = 2
+scale = Vector2(0.85, 0.85)
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="PickerPage/3Laps" unique_id=1416350284]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -616.1109
+offset_top = 35.294117
+offset_right = 614.1176
+offset_bottom = 389.0
+grow_horizontal = 2
+color = Color(0.30323282, 0.30323282, 0.30323282, 1)
+
+[node name="tracks" parent="PickerPage/3Laps" unique_id=1713621522 instance=ExtResource("1_r0f7s")]
+layout_mode = 1
+grow_horizontal = 1
+
+[node name="ThreeLapsTotal" type="Label" parent="PickerPage/3Laps" unique_id=921512176]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -617.64703
+offset_top = -3.5294113
+offset_right = 614.57513
+offset_bottom = 36.47059
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 29
+text = "3Laps Offered"
+
+[node name="Intermissions" type="Control" parent="PickerPage" unique_id=1356805048]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 620.0
+offset_top = 337.99997
+offset_right = 620.0
+offset_bottom = 337.99997
+grow_horizontal = 2
+scale = Vector2(0.85, 0.85)
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="PickerPage/Intermissions" unique_id=1113231652]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -616.1109
+offset_top = 35.29416
+offset_right = 614.1176
+offset_bottom = 389.0
+grow_horizontal = 2
+color = Color(0.30323282, 0.30323282, 0.30323282, 1)
+
+[node name="tracks" parent="PickerPage/Intermissions" unique_id=2047806525 instance=ExtResource("1_r0f7s")]
+layout_mode = 1
+grow_horizontal = 1
+
+[node name="intermissionsTotal" type="Label" parent="PickerPage/Intermissions" unique_id=196186877]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -618.82355
+offset_top = -3.529374
+offset_right = 605.62103
+offset_bottom = 36.470627
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 29
+text = "Intermissions Offered"
+
+[node name="RecentPicks" type="Control" parent="PickerPage" unique_id=1132807329]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1311.0
+offset_right = 1351.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="CheckBox" type="CheckBox" parent="PickerPage/RecentPicks" unique_id=1990705439]
+layout_mode = 0
+offset_left = -175.0
+offset_top = 638.0
+offset_right = -10.0
+offset_bottom = 669.0
+scale = Vector2(1.2, 1.2)
+theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
+text = "Pick Was Random"
+
+[node name="NewSession" type="CheckBox" parent="PickerPage/RecentPicks" unique_id=184722809]
+layout_mode = 0
+offset_left = -152.0
+offset_top = 30.000002
+offset_right = 13.0
+offset_bottom = 61.0
+scale = Vector2(1.2, 1.2)
+theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
+button_pressed = true
+text = "New Session"
+
+[node name="DrivingFrom" type="Control" parent="PickerPage/RecentPicks" unique_id=1821734169]
+anchors_preset = 0
+offset_left = -150.0
+offset_top = 96.0
+offset_right = -110.0
+offset_bottom = 136.0
+
+[node name="Label3" type="Label" parent="PickerPage/RecentPicks/DrivingFrom" unique_id=294421464]
+layout_mode = 0
+offset_left = -36.0
+offset_top = -23.0
+offset_right = 188.0
+text = "Driving From"
+horizontal_alignment = 1
+
+[node name="TextureRect" parent="PickerPage/RecentPicks/DrivingFrom" unique_id=1039280338 instance=ExtResource("5_gnnrh")]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 85.0
+
+[node name="Label" parent="PickerPage/RecentPicks/DrivingFrom/TextureRect" index="0" unique_id=461915242]
+visible = false
+
+[node name="Button" type="Button" parent="PickerPage/RecentPicks/DrivingFrom/TextureRect" unique_id=874101789]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cjo4t")
+
+[node name="Selected" type="Control" parent="PickerPage/RecentPicks" unique_id=1999345092]
+anchors_preset = 0
+offset_left = -150.0
+offset_top = 538.0
+offset_right = -110.0
+offset_bottom = 578.0
+
+[node name="Label3" type="Label" parent="PickerPage/RecentPicks/Selected" unique_id=64547688]
+layout_mode = 0
+offset_left = -36.0
+offset_top = -23.0
+offset_right = 188.0
+text = "Selected
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" parent="PickerPage/RecentPicks/Selected" unique_id=126486445 instance=ExtResource("5_gnnrh")]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 85.0
+
+[node name="Options" type="Control" parent="PickerPage/RecentPicks" unique_id=786950898]
+anchors_preset = 0
+offset_top = 17.0
+offset_right = 40.0
+offset_bottom = 57.0
+
+[node name="Label2" type="Label" parent="PickerPage/RecentPicks/Options" unique_id=249956113]
+layout_mode = 0
+offset_left = -187.0
+offset_top = 173.0
+offset_right = 37.0
+offset_bottom = 196.0
+text = "Need three tracks to confirm"
+horizontal_alignment = 1
+
+[node name="OptionsLabel" type="Label" parent="PickerPage/RecentPicks/Options" unique_id=1500936906]
+layout_mode = 0
+offset_left = -187.0
+offset_top = 200.0
+offset_right = 37.0
+offset_bottom = 223.0
+text = "Options"
+horizontal_alignment = 1
+
+[node name="Options" type="VBoxContainer" parent="PickerPage/RecentPicks/Options" unique_id=1669458245 node_paths=PackedStringArray("timerLabel", "randomCheckbox", "comingFrom", "comingFromButton", "selected", "newSessionCheckbox")]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 223.0
+offset_bottom = 743.0
+script = ExtResource("4_15wuk")
+recentTrackScene = ExtResource("5_gnnrh")
+timerLabel = NodePath("../Label2")
+randomCheckbox = NodePath("../../CheckBox")
+comingFrom = NodePath("../../DrivingFrom/TextureRect")
+comingFromButton = NodePath("../../DrivingFrom/TextureRect/Button")
+selected = NodePath("../../Selected")
+newSessionCheckbox = NodePath("../../NewSession")
+
+[node name="TextureRect" parent="PickerPage/RecentPicks/Options/Options" unique_id=1517882623 instance=ExtResource("5_gnnrh")]
+layout_mode = 2
+
+[node name="TextureRect2" parent="PickerPage/RecentPicks/Options/Options" unique_id=360772641 instance=ExtResource("5_gnnrh")]
+layout_mode = 2
+
+[node name="TextureRect3" parent="PickerPage/RecentPicks/Options/Options" unique_id=709662070 instance=ExtResource("5_gnnrh")]
+layout_mode = 2
+
+[node name="Scan For VR" type="Button" parent="PickerPage" unique_id=969859385]
+layout_mode = 0
+offset_left = 1189.0
+offset_top = 678.0
+offset_right = 1366.0
+offset_bottom = 709.0
+text = "Manually Scan for VR"
+
+[node name="CurrentKart" type="TextureRect" parent="PickerPage" unique_id=2041005012]
+layout_mode = 0
+offset_left = 1079.0
+offset_top = 670.0
+offset_right = 1143.0
+offset_bottom = 717.0
+texture = ExtResource("80_b7tow")
+
+[node name="CurrentDriver" type="TextureRect" parent="PickerPage" unique_id=267777109]
+layout_mode = 0
+offset_left = 1037.0
+offset_top = 670.0
+offset_right = 1101.0
+offset_bottom = 756.0
+scale = Vector2(0.545, 0.545)
+texture = ExtResource("6_naci0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PickerPage" unique_id=96196027]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 674.0
+offset_right = 1081.0
+offset_bottom = 714.0
+
+[node name="LineEdit" type="LineEdit" parent="PickerPage/HBoxContainer" unique_id=1895571587 node_paths=PackedStringArray("threeLapsTotalLabel", "intermissionsTotalLabel", "comboChanger", "pickerPage", "comboPage", "currentKart", "currentCharacter", "karts", "characters", "positions")]
+custom_minimum_size = Vector2(180, 0)
+custom_maximum_size = Vector2(235, -1)
+layout_mode = 2
+placeholder_text = "Search..."
+script = ExtResource("31_f8oyr")
+threeLapsTotalLabel = NodePath("../../3Laps/ThreeLapsTotal")
+intermissionsTotalLabel = NodePath("../../Intermissions/intermissionsTotal")
+comboChanger = NodePath("../Change Kart")
+pickerPage = NodePath("../..")
+comboPage = NodePath("../../../Combo Select")
+currentKart = NodePath("../../CurrentKart")
+currentCharacter = NodePath("../../CurrentDriver")
+karts = NodePath("../../../Combo Select/Karts")
+characters = NodePath("../../../Combo Select/Characters")
+positions = NodePath("../../../Post Match/Positions")
+
+[node name="Hide Timestamp" type="CheckBox" parent="PickerPage/HBoxContainer" unique_id=1523058075]
+layout_mode = 2
+theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
+text = "Timestamp Hidden"
+
+[node name="Change Kart" type="Button" parent="PickerPage/HBoxContainer" unique_id=715856758]
+layout_mode = 2
+text = "Change Combo"
+
+[node name="GraphPage" type="Control" parent="." unique_id=456606689]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GraphPage" unique_id=861639909]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -583.0
+offset_top = -310.0
+offset_right = 583.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="ColorRect" parent="GraphPage/HBoxContainer" unique_id=206227120 instance=ExtResource("3_4a80b")]
+custom_minimum_size = Vector2(35, 620)
+layout_mode = 2
+
+[node name="ColorRect2" parent="GraphPage/HBoxContainer" unique_id=514418349 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect3" parent="GraphPage/HBoxContainer" unique_id=1220538013 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect4" parent="GraphPage/HBoxContainer" unique_id=316826365 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect5" parent="GraphPage/HBoxContainer" unique_id=384729796 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect6" parent="GraphPage/HBoxContainer" unique_id=1945113085 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect7" parent="GraphPage/HBoxContainer" unique_id=240764229 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect8" parent="GraphPage/HBoxContainer" unique_id=1103988421 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect9" parent="GraphPage/HBoxContainer" unique_id=1568268488 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect10" parent="GraphPage/HBoxContainer" unique_id=1962122995 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect11" parent="GraphPage/HBoxContainer" unique_id=1636802505 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect12" parent="GraphPage/HBoxContainer" unique_id=982434826 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect13" parent="GraphPage/HBoxContainer" unique_id=537349174 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect14" parent="GraphPage/HBoxContainer" unique_id=2031932526 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect15" parent="GraphPage/HBoxContainer" unique_id=1442618301 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect16" parent="GraphPage/HBoxContainer" unique_id=1110247403 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect17" parent="GraphPage/HBoxContainer" unique_id=1261771939 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect18" parent="GraphPage/HBoxContainer" unique_id=351885426 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect19" parent="GraphPage/HBoxContainer" unique_id=684263481 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect20" parent="GraphPage/HBoxContainer" unique_id=1450264099 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect21" parent="GraphPage/HBoxContainer" unique_id=1707052328 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect22" parent="GraphPage/HBoxContainer" unique_id=1074611640 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect23" parent="GraphPage/HBoxContainer" unique_id=1398463772 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect24" parent="GraphPage/HBoxContainer" unique_id=1082242984 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect25" parent="GraphPage/HBoxContainer" unique_id=1035339280 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect26" parent="GraphPage/HBoxContainer" unique_id=805241485 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect27" parent="GraphPage/HBoxContainer" unique_id=1829475441 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect28" parent="GraphPage/HBoxContainer" unique_id=746409371 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect29" parent="GraphPage/HBoxContainer" unique_id=1818462369 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="ColorRect30" parent="GraphPage/HBoxContainer" unique_id=453967257 instance=ExtResource("3_4a80b")]
+layout_mode = 2
+
+[node name="TotalTracks" type="Label" parent="GraphPage" unique_id=589654560]
+layout_mode = 0
+offset_left = -115.0
+offset_top = -354.0
+offset_right = 120.0
+offset_bottom = -331.0
+text = "Combined Option Comparison"
+horizontal_alignment = 1
+
+[node name="CurrentTrackInfo" type="Label" parent="GraphPage" unique_id=1492580051]
+layout_mode = 0
+offset_left = -115.0
+offset_top = -330.0
+offset_right = 120.0
+offset_bottom = -307.0
+text = "Combined Option Comparison"
+horizontal_alignment = 1
+
+[node name="CurrentTrackTexture" type="TextureRect" parent="GraphPage" unique_id=1133812089]
+custom_minimum_size = Vector2(150, 85)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.0
+offset_top = -301.0
+offset_right = 75.0
+offset_bottom = -216.0
+grow_horizontal = 2
+texture = ExtResource("6_5qhct")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="GraphPage" unique_id=1335710024]
+layout_mode = 0
+offset_left = -51.0
+offset_top = 318.0
+offset_right = 60.0
+offset_bottom = 349.0
+text = "Switch Graph"
+script = ExtResource("7_8kiex")
+
+[node name="HistoryPage" type="Control" parent="." unique_id=680005035]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HistoryPage" unique_id=1900747193]
+custom_minimum_size = Vector2(1280, 620)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -640.0
+offset_right = 640.0
+offset_bottom = 672.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HistoryPage/ScrollContainer" unique_id=1510702796]
+layout_mode = 2
+theme_override_constants/separation = 170
+alignment = 1
+script = ExtResource("9_cjo4t")
+cardScene = ExtResource("10_3jyaf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HistoryPage" unique_id=1395892448]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 674.0
+offset_right = 367.0
+offset_bottom = 714.0
+
+[node name="ShowHistory" type="Button" parent="HistoryPage/HBoxContainer" unique_id=292249025]
+layout_mode = 2
+text = "Upload Local History"
+script = ExtResource("12_g800d")
+
+[node name="AutoUpload" type="CheckBox" parent="HistoryPage/HBoxContainer" unique_id=546252603]
+layout_mode = 2
+button_pressed = true
+text = "Auto Upload"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1054667138]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 674.0
+offset_right = 367.0
+offset_bottom = 714.0
+
+[node name="ShowHistory" type="Button" parent="HBoxContainer" unique_id=1591529810]
+layout_mode = 2
+text = "Local History"
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=1209290168 node_paths=PackedStringArray("totalTracksOffered", "currentHoveredTrackInfo", "currentHoveredTrackTexture")]
+layout_mode = 2
+text = "Picker"
+script = ExtResource("6_a3t8j")
+totalTracksOffered = NodePath("../../GraphPage/TotalTracks")
+currentHoveredTrackInfo = NodePath("../../GraphPage/CurrentTrackInfo")
+currentHoveredTrackTexture = NodePath("../../GraphPage/CurrentTrackTexture")
+
+[node name="Camera Setup" type="Button" parent="HBoxContainer" unique_id=856028504]
+layout_mode = 2
+text = "Camera Setup"
+
+[node name="API Key" type="Button" parent="HBoxContainer" unique_id=1886765564]
+layout_mode = 2
+text = "Enter API Key"
+
+[node name="Combo Select" type="Control" parent="." unique_id=442089142]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Combo Select" unique_id=2027339712]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Characters" type="GridContainer" parent="Combo Select" unique_id=924558154]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -339.0
+offset_top = -222.0
+offset_right = 339.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 10
+
+[node name="ComboButton2" parent="Combo Select/Characters" unique_id=25862536 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("12_naci0")
+
+[node name="ComboButton4" parent="Combo Select/Characters" unique_id=1813244651 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("13_dkek6")
+
+[node name="ComboButton3" parent="Combo Select/Characters" unique_id=893058172 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("14_264gc")
+
+[node name="ComboButton" parent="Combo Select/Characters" unique_id=836367361 instance=ExtResource("11_fk353")]
+layout_mode = 2
+
+[node name="ComboButton5" parent="Combo Select/Characters" unique_id=1383270298 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("15_aps32")
+
+[node name="ComboButton6" parent="Combo Select/Characters" unique_id=198094238 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("16_ubwwo")
+
+[node name="ComboButton7" parent="Combo Select/Characters" unique_id=1579048914 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("17_ts0tj")
+
+[node name="ComboButton8" parent="Combo Select/Characters" unique_id=636258797 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("18_jvqqu")
+
+[node name="ComboButton9" parent="Combo Select/Characters" unique_id=2007120304 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("19_sfodw")
+
+[node name="ComboButton10" parent="Combo Select/Characters" unique_id=1418950598 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("20_q5ivn")
+
+[node name="ComboButton11" parent="Combo Select/Characters" unique_id=1198667844 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("21_don3c")
+
+[node name="ComboButton12" parent="Combo Select/Characters" unique_id=1034037506 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("22_3od16")
+
+[node name="ComboButton13" parent="Combo Select/Characters" unique_id=1383067818 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("23_20k8e")
+
+[node name="ComboButton14" parent="Combo Select/Characters" unique_id=820270806 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("24_ffp8t")
+
+[node name="ComboButton15" parent="Combo Select/Characters" unique_id=1147496906 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("25_e665u")
+
+[node name="ComboButton16" parent="Combo Select/Characters" unique_id=187380259 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("26_4tnf3")
+
+[node name="ComboButton17" parent="Combo Select/Characters" unique_id=1471337 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("27_lrtjb")
+
+[node name="ComboButton18" parent="Combo Select/Characters" unique_id=1557166282 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("28_6t7uf")
+
+[node name="ComboButton19" parent="Combo Select/Characters" unique_id=999683872 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("29_e6o8v")
+
+[node name="ComboButton20" parent="Combo Select/Characters" unique_id=1404409804 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("30_u8swy")
+
+[node name="ComboButton21" parent="Combo Select/Characters" unique_id=1109258966 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("31_omhqs")
+
+[node name="ComboButton22" parent="Combo Select/Characters" unique_id=142238271 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("32_rs8hp")
+
+[node name="ComboButton23" parent="Combo Select/Characters" unique_id=2047606433 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("33_ydmq4")
+
+[node name="ComboButton24" parent="Combo Select/Characters" unique_id=749335401 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("34_a7w86")
+
+[node name="ComboButton25" parent="Combo Select/Characters" unique_id=791615996 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("35_toi2r")
+
+[node name="ComboButton26" parent="Combo Select/Characters" unique_id=53582394 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("36_mxfhk")
+
+[node name="ComboButton27" parent="Combo Select/Characters" unique_id=190749251 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("37_jbb51")
+
+[node name="ComboButton28" parent="Combo Select/Characters" unique_id=768429240 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("38_dmqu7")
+
+[node name="ComboButton29" parent="Combo Select/Characters" unique_id=687659553 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("39_ptr36")
+
+[node name="ComboButton30" parent="Combo Select/Characters" unique_id=1385413226 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("40_7hhm6")
+
+[node name="ComboButton31" parent="Combo Select/Characters" unique_id=1928015344 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("41_l5glf")
+
+[node name="ComboButton32" parent="Combo Select/Characters" unique_id=923584138 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("42_ecun1")
+
+[node name="ComboButton33" parent="Combo Select/Characters" unique_id=1673540638 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("43_by1f8")
+
+[node name="ComboButton34" parent="Combo Select/Characters" unique_id=276174950 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("44_f726w")
+
+[node name="ComboButton35" parent="Combo Select/Characters" unique_id=298111779 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("45_g800d")
+
+[node name="ComboButton36" parent="Combo Select/Characters" unique_id=2133563049 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("46_28v50")
+
+[node name="ComboButton37" parent="Combo Select/Characters" unique_id=576693308 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("47_0jdtu")
+
+[node name="ComboButton38" parent="Combo Select/Characters" unique_id=213123811 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("48_tlb2k")
+
+[node name="ComboButton39" parent="Combo Select/Characters" unique_id=1115679727 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("49_pohys")
+
+[node name="ComboButton40" parent="Combo Select/Characters" unique_id=925149175 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("50_t6aed")
+
+[node name="ComboButton41" parent="Combo Select/Characters" unique_id=1940009297 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("51_fu3vv")
+
+[node name="ComboButton42" parent="Combo Select/Characters" unique_id=1659325933 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("52_wdd6a")
+
+[node name="ComboButton43" parent="Combo Select/Characters" unique_id=817476405 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("53_dbi50")
+
+[node name="ComboButton44" parent="Combo Select/Characters" unique_id=291586911 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("54_54jrt")
+
+[node name="ComboButton45" parent="Combo Select/Characters" unique_id=1869744034 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("55_vsi4f")
+
+[node name="ComboButton46" parent="Combo Select/Characters" unique_id=906578256 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("56_pkh6g")
+
+[node name="ComboButton47" parent="Combo Select/Characters" unique_id=263727202 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("57_1xuf2")
+
+[node name="ComboButton48" parent="Combo Select/Characters" unique_id=1721990051 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("58_mhywo")
+
+[node name="ComboButton49" parent="Combo Select/Characters" unique_id=58843148 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("59_oy7pa")
+
+[node name="ComboButton50" parent="Combo Select/Characters" unique_id=1031515709 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("60_dasom")
+
+[node name="Karts" type="GridContainer" parent="Combo Select" unique_id=1343212284]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -535.0
+offset_top = -252.0
+offset_right = 5.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+columns = 8
+
+[node name="ComboButton2" parent="Combo Select/Karts" unique_id=1192991201 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("61_8kx8s")
+kartButton = true
+
+[node name="ComboButton3" parent="Combo Select/Karts" unique_id=1329252665 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("62_v45as")
+kartButton = true
+
+[node name="ComboButton4" parent="Combo Select/Karts" unique_id=159198651 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("63_3hvom")
+kartButton = true
+
+[node name="ComboButton5" parent="Combo Select/Karts" unique_id=714715871 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("64_4dpps")
+kartButton = true
+
+[node name="ComboButton6" parent="Combo Select/Karts" unique_id=668866050 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("65_1laf8")
+kartButton = true
+
+[node name="ComboButton7" parent="Combo Select/Karts" unique_id=241520840 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("66_ecdyt")
+kartButton = true
+
+[node name="ComboButton8" parent="Combo Select/Karts" unique_id=158851031 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("67_0wpcm")
+kartButton = true
+
+[node name="ComboButton9" parent="Combo Select/Karts" unique_id=1944152847 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("68_qerqb")
+kartButton = true
+
+[node name="ComboButton10" parent="Combo Select/Karts" unique_id=1834983464 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("69_07h1c")
+kartButton = true
+
+[node name="ComboButton11" parent="Combo Select/Karts" unique_id=958894399 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("70_epqqj")
+kartButton = true
+
+[node name="ComboButton12" parent="Combo Select/Karts" unique_id=1649281463 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("71_uc3v2")
+kartButton = true
+
+[node name="ComboButton13" parent="Combo Select/Karts" unique_id=1464681086 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("72_ujj08")
+kartButton = true
+
+[node name="ComboButton14" parent="Combo Select/Karts" unique_id=1186533653 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("73_wowsd")
+kartButton = true
+
+[node name="ComboButton15" parent="Combo Select/Karts" unique_id=2070255519 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("74_gi0ux")
+kartButton = true
+
+[node name="ComboButton16" parent="Combo Select/Karts" unique_id=810274956 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("75_qgtl3")
+kartButton = true
+
+[node name="ComboButton17" parent="Combo Select/Karts" unique_id=13915571 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("76_dmhhr")
+kartButton = true
+
+[node name="ComboButton18" parent="Combo Select/Karts" unique_id=988539559 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("77_fk0vt")
+kartButton = true
+
+[node name="ComboButton19" parent="Combo Select/Karts" unique_id=1155632258 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("78_2yavy")
+kartButton = true
+
+[node name="ComboButton20" parent="Combo Select/Karts" unique_id=614087238 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("79_r1sk8")
+kartButton = true
+
+[node name="ComboButton21" parent="Combo Select/Karts" unique_id=1526310931 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("80_b7tow")
+kartButton = true
+
+[node name="ComboButton22" parent="Combo Select/Karts" unique_id=1859811217 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("81_lt1o6")
+kartButton = true
+
+[node name="ComboButton23" parent="Combo Select/Karts" unique_id=521008483 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("82_ajrej")
+kartButton = true
+
+[node name="ComboButton24" parent="Combo Select/Karts" unique_id=707610472 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("83_tcgq5")
+kartButton = true
+
+[node name="ComboButton25" parent="Combo Select/Karts" unique_id=60715479 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("84_fmpyo")
+kartButton = true
+
+[node name="ComboButton26" parent="Combo Select/Karts" unique_id=554697009 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("85_i4k74")
+kartButton = true
+
+[node name="ComboButton27" parent="Combo Select/Karts" unique_id=2083882288 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("86_j0jie")
+kartButton = true
+
+[node name="ComboButton28" parent="Combo Select/Karts" unique_id=700908433 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("87_pk537")
+kartButton = true
+
+[node name="ComboButton29" parent="Combo Select/Karts" unique_id=483926201 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("88_to8xo")
+kartButton = true
+
+[node name="ComboButton30" parent="Combo Select/Karts" unique_id=91275915 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("89_clfq1")
+kartButton = true
+
+[node name="ComboButton31" parent="Combo Select/Karts" unique_id=1828777983 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("90_6of06")
+kartButton = true
+
+[node name="ComboButton32" parent="Combo Select/Karts" unique_id=221986957 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("91_dsn11")
+kartButton = true
+
+[node name="ComboButton33" parent="Combo Select/Karts" unique_id=1867686659 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("92_xgy2b")
+kartButton = true
+
+[node name="ComboButton34" parent="Combo Select/Karts" unique_id=512711732 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("93_iyq2m")
+kartButton = true
+
+[node name="ComboButton35" parent="Combo Select/Karts" unique_id=1221318588 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("94_5kkp1")
+kartButton = true
+
+[node name="ComboButton36" parent="Combo Select/Karts" unique_id=531981698 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("95_lbocp")
+kartButton = true
+
+[node name="ComboButton37" parent="Combo Select/Karts" unique_id=1468851195 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("96_kqff4")
+kartButton = true
+
+[node name="ComboButton38" parent="Combo Select/Karts" unique_id=1872895066 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("97_135xr")
+kartButton = true
+
+[node name="ComboButton39" parent="Combo Select/Karts" unique_id=1632070810 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("98_4j04y")
+kartButton = true
+
+[node name="ComboButton40" parent="Combo Select/Karts" unique_id=1200736589 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("99_iqcio")
+kartButton = true
+
+[node name="ComboButton41" parent="Combo Select/Karts" unique_id=2137478016 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("100_npp68")
+kartButton = true
+
+[node name="API Key Entry" type="Control" parent="." unique_id=378805325 node_paths=PackedStringArray("submit", "close", "textEntry", "responseLabel", "dateLabel")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("102_by1f8")
+submit = NodePath("Submit")
+close = NodePath("CloseMenu")
+textEntry = NodePath("LineEdit")
+responseLabel = NodePath("Label")
+dateLabel = NodePath("DateSet")
+
+[node name="ColorRect" type="ColorRect" parent="API Key Entry" unique_id=1904971527]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LineEdit" type="LineEdit" parent="API Key Entry" unique_id=1865846593]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -15.5
+offset_right = 250.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Enter API Token Here..."
+alignment = 1
+
+[node name="Submit" type="Button" parent="API Key Entry" unique_id=342181119]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = 19.0
+offset_right = 32.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Submit"
+
+[node name="CloseMenu" type="Button" parent="API Key Entry" unique_id=15481997]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = 302.0
+offset_right = 25.0
+offset_bottom = 342.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+text = "Close"
+
+[node name="Label" type="Label" parent="API Key Entry" unique_id=1248198708]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -44.0
+offset_top = 315.0
+offset_right = 44.0
+offset_bottom = 338.0
+grow_horizontal = 2
+text = "Sample Text"
+horizontal_alignment = 1
+
+[node name="DateSet" type="Label" parent="API Key Entry" unique_id=97990284]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -67.0
+offset_top = 218.0
+offset_right = 68.0
+offset_bottom = 241.0
+grow_horizontal = 2
+text = "Not Currently Set"
+horizontal_alignment = 1
+
+[node name="Post Match" type="Control" parent="." unique_id=677464539 node_paths=PackedStringArray("track", "driver", "kart")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("102_dmqu7")
+track = NodePath("MatchCourse")
+driver = NodePath("MatchDriver")
+kart = NodePath("MatchKart")
+
+[node name="ColorRect2" type="ColorRect" parent="Post Match" unique_id=1813977334]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Post Match" unique_id=1163594601]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = -75.0
+offset_right = 244.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.48570347, 0.48570353, 0.48570347, 1)
+
+[node name="Positions" type="GridContainer" parent="Post Match" unique_id=1206842762]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.0
+offset_top = -72.0
+offset_right = 241.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 6
+
+[node name="PositionButton" parent="Post Match/Positions" unique_id=809021595 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton2" parent="Post Match/Positions" unique_id=1630104743 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("103_mxfhk")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton3" parent="Post Match/Positions" unique_id=19948370 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("104_jbb51")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton4" parent="Post Match/Positions" unique_id=1113024785 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("105_dmqu7")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton5" parent="Post Match/Positions" unique_id=1590731850 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("106_ptr36")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton6" parent="Post Match/Positions" unique_id=1374336191 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("107_7hhm6")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton7" parent="Post Match/Positions" unique_id=1500652536 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("108_l5glf")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton8" parent="Post Match/Positions" unique_id=704090919 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("109_ecun1")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton9" parent="Post Match/Positions" unique_id=1602303930 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("110_by1f8")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton10" parent="Post Match/Positions" unique_id=704002193 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("111_f726w")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton11" parent="Post Match/Positions" unique_id=1019535012 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("112_g800d")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton12" parent="Post Match/Positions" unique_id=219969606 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("113_28v50")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton13" parent="Post Match/Positions" unique_id=2130966283 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("114_0jdtu")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton14" parent="Post Match/Positions" unique_id=366871509 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("115_tlb2k")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton15" parent="Post Match/Positions" unique_id=2059899479 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("116_pohys")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton16" parent="Post Match/Positions" unique_id=1358430128 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("117_t6aed")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton17" parent="Post Match/Positions" unique_id=290484865 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("118_fu3vv")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton18" parent="Post Match/Positions" unique_id=1981391460 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("119_wdd6a")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton19" parent="Post Match/Positions" unique_id=968466929 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("120_dbi50")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton20" parent="Post Match/Positions" unique_id=143041207 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("121_54jrt")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton21" parent="Post Match/Positions" unique_id=1454662535 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("122_vsi4f")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton22" parent="Post Match/Positions" unique_id=1306582082 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("123_pkh6g")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton23" parent="Post Match/Positions" unique_id=1146111494 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("124_1xuf2")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="PositionButton24" parent="Post Match/Positions" unique_id=210458279 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("125_mhywo")
+hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
+instructions = NodePath("../../Instructions")
+
+[node name="MatchCourse" type="TextureRect" parent="Post Match" unique_id=716482643]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 170.0
+grow_horizontal = 2
+texture = ExtResource("126_jbb51")
+
+[node name="MatchKart" type="TextureRect" parent="Post Match" unique_id=152135761]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 6.1035156e-05
+offset_top = 181.0
+offset_right = 64.00006
+offset_bottom = 226.0
+grow_horizontal = 2
+scale = Vector2(1.645, 1.645)
+texture = ExtResource("94_5kkp1")
+
+[node name="MatchDriver" type="TextureRect" parent="Post Match" unique_id=1157413757]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.0
+offset_top = 177.0
+offset_right = -24.0
+offset_bottom = 259.0
+grow_horizontal = 2
+texture = ExtResource("26_4tnf3")
+
+[node name="Instructions" type="Label" parent="Post Match" unique_id=637811120]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -181.0
+offset_top = -279.0
+offset_right = 182.0
+offset_bottom = -228.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 37
+text = "Pick your placement"
+
+[node name="My VR" type="Label" parent="Post Match" unique_id=770817060]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 260.0
+offset_top = -341.0
+offset_right = 623.0
+offset_bottom = -290.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 34
+text = "My VR: "
+
+[node name="Average VR" type="Label" parent="Post Match" unique_id=223609329]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 260.0
+offset_top = -387.0
+offset_right = 623.0
+offset_bottom = -336.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 34
+text = "Average VR: "
+
+[node name="Player Count" type="Label" parent="Post Match" unique_id=1607665813]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 260.0
+offset_top = -428.0
+offset_right = 623.0
+offset_bottom = -377.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 34
+text = "Player Count: Null"
+
+[node name="Scan For VR" type="Button" parent="Post Match" unique_id=28982027]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -526.0
+offset_top = -220.0
+offset_right = 528.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 103
+text = "Manually Scan for VR"
+
+[node name="Reset VR Scan" type="Button" parent="Post Match" unique_id=151577696]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -59.0
+offset_right = 126.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "Reset VR Scan"
+
+[node name="Node" type="Node" parent="." unique_id=2119304821 node_paths=PackedStringArray("vrButtons", "resetButton", "averageVR", "myVR", "racerCount")]
+script = ExtResource("128_ptr36")
+vrButtons = [NodePath("../PickerPage/Scan For VR"), NodePath("../Post Match/Scan For VR")]
+resetButton = NodePath("../Post Match/Reset VR Scan")
+averageVR = NodePath("../Post Match/Average VR")
+myVR = NodePath("../Post Match/My VR")
+racerCount = NodePath("../Post Match/Player Count")
+
+[node name="CameraPreview" type="Control" parent="." unique_id=875432935]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CameraPreview" unique_id=215542014]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CloseMenu" type="Button" parent="CameraPreview/ColorRect" unique_id=2002573273]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = 302.0
+offset_right = 25.0
+offset_bottom = 342.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+text = "Close"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CameraPreview/ColorRect" unique_id=1666886285]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.5
+offset_top = 247.5
+offset_right = 141.5
+offset_bottom = 278.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Prev Index" type="Button" parent="CameraPreview/ColorRect/HBoxContainer" unique_id=324031735]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "Previous Index"
+
+[node name="Next Index" type="Button" parent="CameraPreview/ColorRect/HBoxContainer" unique_id=2097406464]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "Next Index"
+
+[node name="Rotate" type="Button" parent="CameraPreview/ColorRect/HBoxContainer" unique_id=2060199306]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "Rotate"
+
+[node name="Flip" type="Button" parent="CameraPreview/ColorRect/HBoxContainer" unique_id=174288318]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "Flip"
+
+[node name="Label" type="Label" parent="CameraPreview/ColorRect" unique_id=1831797697]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = 200.0
+offset_right = 149.0
+offset_bottom = 249.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Stream ID: afuihnjaaaaaaaaaaaaaaaaa
+(Copied to clipboard)"
+horizontal_alignment = 1
+
+[node name="CameraSetup" type="Node" parent="CameraPreview/ColorRect" unique_id=903640186 node_paths=PackedStringArray("closeButton", "prevIndex", "nextIndex", "rotate", "flip", "parentControl", "previewImage", "currentCameraLabel")]
+script = ExtResource("129_7hhm6")
+closeButton = NodePath("../CloseMenu")
+prevIndex = NodePath("../HBoxContainer/Prev Index")
+nextIndex = NodePath("../HBoxContainer/Next Index")
+rotate = NodePath("../HBoxContainer/Rotate")
+flip = NodePath("../HBoxContainer/Flip")
+parentControl = NodePath("../..")
+previewImage = NodePath("../TextureRect")
+currentCameraLabel = NodePath("../Label")
+fallBackTexture = ExtResource("130_l5glf")
+metadata/_custom_type_script = "uid://cii56btkmgqei"
+
+[node name="TextureRect" type="TextureRect" parent="CameraPreview/ColorRect" unique_id=1670871290]
+custom_minimum_size = Vector2(854, 480)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="PickPercentageThing" type="Node" parent="." unique_id=362714986]
+script = ExtResource("131_ecun1")
+metadata/_custom_type_script = "uid://5h4wd572nuu2"
+
+[editable path="PickerPage/RecentPicks/DrivingFrom/TextureRect"]

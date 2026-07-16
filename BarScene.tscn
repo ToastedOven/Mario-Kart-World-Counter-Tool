@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://divka4dg8ndna"]
+
+[ext_resource type="Script" uid="uid://dx7mqjr5yg2ld" path="res://Bar.cs" id="1_28kvp"]
+[ext_resource type="Texture2D" uid="uid://uachs8dsw63a" path="res://Tracks/1.png" id="2_k8k7q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28kvp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8k7q"]
+bg_color = Color(1, 1, 1, 0.36078432)
+
+[node name="ColorRect" type="ColorRect" unique_id=206227120 node_paths=PackedStringArray("texture", "button", "countLabel")]
+custom_minimum_size = Vector2(35, 112.07)
+size_flags_vertical = 8
+color = Color(0.41598046, 0.41598043, 0.4159804, 1)
+script = ExtResource("1_28kvp")
+texture = NodePath("TextureRect")
+button = NodePath("Button")
+countLabel = NodePath("Label")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=479464723]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -17.5
+offset_right = 17.5
+offset_bottom = 35.0
+grow_horizontal = 2
+texture = ExtResource("2_k8k7q")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=623255029]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_28kvp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k8k7q")
+button_mask = 0
+
+[node name="Label" type="Label" parent="." unique_id=1714187984]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -19.5
+offset_top = 33.0
+offset_right = 20.5
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 9
+text = "999999"
+horizontal_alignment = 1

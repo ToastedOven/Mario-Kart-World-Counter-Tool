@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://mcn2ak2axasa"]
+
+[ext_resource type="Texture2D" uid="uid://uachs8dsw63a" path="res://Tracks/1.png" id="1_r04n3"]
+[ext_resource type="Script" uid="uid://d3ehic18tqh8y" path="res://ButtonThing.cs" id="2_n4tde"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n4tde"]
+
+[node name="TextureRect" type="TextureRect" unique_id=1409574972 node_paths=PackedStringArray("addButton", "text", "allPercentage", "categoryPercentage", "overlay")]
+custom_minimum_size = Vector2(150, 85)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_r04n3")
+expand_mode = 1
+script = ExtResource("2_n4tde")
+addButton = NodePath("Button2")
+text = NodePath("Label")
+allPercentage = NodePath("Label2")
+categoryPercentage = NodePath("Label3")
+overlay = NodePath("ColorRect")
+
+[node name="Button2" type="Button" parent="." unique_id=1910439038]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 85.0
+theme_override_constants/outline_size = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4tde")
+button_mask = 3
+
+[node name="Label" type="Label" parent="." unique_id=1086996095]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 147.0
+offset_bottom = 33.0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 23
+text = "Count: 6969"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1374185910]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 54.0
+offset_right = 131.0
+offset_bottom = 89.0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 25
+text = "All: 100%"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=1255461460]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 29.0
+offset_right = 149.0
+offset_bottom = 64.0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 17
+text = "Category: 100%"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1825752826]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)

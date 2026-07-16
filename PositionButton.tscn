@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d25h6yo0atq3h"]
+
+[ext_resource type="Texture2D" uid="uid://bam0t5gfkw2er" path="res://Positions/1st.png" id="1_lf2l5"]
+[ext_resource type="Script" uid="uid://d2m4t3kk8j0t5" path="res://PositionButton.cs" id="2_fepwp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jht0p"]
+
+[node name="PositionButton" type="TextureRect" unique_id=809021595 node_paths=PackedStringArray("button")]
+texture = ExtResource("1_lf2l5")
+script = ExtResource("2_fepwp")
+button = NodePath("Button")
+
+[node name="Button" type="Button" parent="." unique_id=554554559]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jht0p")

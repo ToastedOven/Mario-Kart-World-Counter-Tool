@@ -1,0 +1,7 @@
+{
+  "runtimeOptions": {
+    "nativeDllSearchDirectories": [
+      "/usr/lib64"
+    ]
+  }
+}

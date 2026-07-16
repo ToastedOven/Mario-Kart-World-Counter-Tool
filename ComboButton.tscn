@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://8u1bnjmtjohn"]
+
+[ext_resource type="Texture2D" uid="uid://b55g3fxs2lys" path="res://Combo Icons/Drivers/baby-daisy.png" id="1_o5krm"]
+[ext_resource type="Script" uid="uid://bfwiu7q4fhjd8" path="res://ComboButton.cs" id="2_kxr04"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jht0p"]
+
+[node name="ComboButton" type="TextureRect" unique_id=25862536 node_paths=PackedStringArray("button")]
+texture = ExtResource("1_o5krm")
+script = ExtResource("2_kxr04")
+button = NodePath("Button")
+
+[node name="Button" type="Button" parent="." unique_id=442503864]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jht0p")

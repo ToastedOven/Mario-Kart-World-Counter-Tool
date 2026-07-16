@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ydkut4ci8ie1"]
+
+[ext_resource type="Texture2D" uid="uid://uachs8dsw63a" path="res://Tracks/1.png" id="1_jkp08"]
+
+[node name="TextureRect" type="TextureRect" unique_id=1039280338]
+custom_minimum_size = Vector2(150, 85)
+texture = ExtResource("1_jkp08")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=461915242]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 26.0
+offset_right = 147.0
+offset_bottom = 61.0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 23
+text = "Intermission"
+horizontal_alignment = 1
