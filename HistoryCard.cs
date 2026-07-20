@@ -10,39 +10,39 @@ public partial class HistoryCard : Control
     [Export] private Label label1, label2, label3, label4, randomLabel, raceDate, myVR, averageVR;
     public Dictionary<string, string> info = new();
     private List<string> neededKeys = new() { "Option1", "Option2", "Option3", "Picked", "Random", "ComingFrom", "NewSession", "Position", "PlayerCount", "Date", "DriverIndex", "KartIndex", "MatchVRs", "MyVR" };
-    public static Dictionary<int, string> trackNumbersToNames = new()
-    {
-        { 0, "Mario Bros Circuit" },
-        { 1, "Crown City" },
-        { 2, "Whistlestop Summit" },
-        { 3, "DK Spaceport" },
-        { 4, "Desert Hills" },
-        { 5, "Shy Guy Bazaar" },
-        { 6, "Wario Stadium" },
-        { 7, "Airship Fortress" },
-        { 8, "DK Pass" },
-        { 9, "Starview Peak" },
-        { 10, "Sky High Sundae" },
-        { 11, "Wario Shipyard" },
-        { 12, "Koopa Troopa Beach" },
-        { 13, "Faraway Oasis" },
-        { 14, "Peach Beach" },
-        { 15, "Salty Salty Speedway" },
-        { 16, "Dino Dino Jungle" },
-        { 17, "Great ? Block Ruins" },
-        { 18, "Cheep Cheep Falls" },
-        { 19, "Dandelion Depths" },
-        { 20, "Boo Cinema" },
-        { 21, "Dry Bones Burnout" },
-        { 22, "Moo Moo Meadows" },
-        { 23, "Choco Mountain" },
-        { 24, "Toads Factory" },
-        { 25, "Bowsers Castle" },
-        { 26, "Acorn Heights" },
-        { 27, "Mario Circuit" },
-        { 28, "Peach Stadium" },
-        { 29, "Rainbow Road" }
-    };
+    public static List<string> trackNames =
+    [
+        "Mario Bros Circuit",
+        "Crown City",
+        "Whistlestop Summit",
+        "DK Spaceport",
+        "Desert Hills",
+        "Shy Guy Bazaar",
+        "Wario Stadium",
+        "Airship Fortress",
+        "DK Pass",
+        "Starview Peak",
+        "Sky High Sundae",
+        "Wario Shipyard",
+        "Koopa Troopa Beach",
+        "Faraway Oasis",
+        "Peach Beach",
+        "Salty Salty Speedway",
+        "Dino Dino Jungle",
+        "Great ? Block Ruins",
+        "Cheep Cheep Falls",
+        "Dandelion Depths",
+        "Boo Cinema",
+        "Dry Bones Burnout",
+        "Moo Moo Meadows",
+        "Choco Mountain",
+        "Toads Factory",
+        "Bowsers Castle",
+        "Acorn Heights",
+        "Mario Circuit",
+        "Peach Stadium",
+        "Rainbow Road"
+    ];
 
     private static Dictionary<int, string> racerNumbersToNames = new()
     {
@@ -256,7 +256,7 @@ public partial class HistoryCard : Control
             vrs.Add(-1);
         }
         //option 123 and picked are "comingfrom to thing" if intermission, otherwise, just "thing"
-        string comingFrom = trackNumbersToNames[info["ComingFrom"].ToInt()];
+        string comingFrom = trackNames[info["ComingFrom"].ToInt()];
         var newMatch = new HistoryEntry
         {
             Option1 = Thingy(comingFrom, "Option1"),
@@ -288,11 +288,11 @@ public partial class HistoryCard : Control
         string option1;
         if (info[option].ToInt() < 30)
         {
-            option1 = trackNumbersToNames[info[option].ToInt()];
+            option1 = trackNames[info[option].ToInt()];
         }
         else
         {
-            option1 = $"{comingFrom} >>> {trackNumbersToNames[info[option].ToInt() % 30]}";
+            option1 = $"{comingFrom} >>> {trackNames[info[option].ToInt() % 30]}";
         }
 
         return option1;

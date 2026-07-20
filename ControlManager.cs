@@ -12,5 +12,15 @@ public partial class ControlManager : Node
     public override void _Ready()
     {
         instance = this;
+        comboPage.Visible = true;
+        historyButton.Pressed += () => { historyPage.Visible = true; };
+        cameraSetup.Pressed += CameraSetupOnPressed;
+        enterApiKey.Pressed += () => { apiPage.Visible = true; };
+    }
+
+    private void CameraSetupOnPressed()
+    {
+        cameraPage.Visible = true;
+        CameraSetup.instance.Preview();
     }
 }

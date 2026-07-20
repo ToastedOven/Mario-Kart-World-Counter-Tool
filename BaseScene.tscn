@@ -1,13 +1,9 @@
 [gd_scene format=3 uid="uid://daodsqor2qa2x"]
 
 [ext_resource type="PackedScene" uid="uid://bjvuck12jslhc" path="res://tracks.tscn" id="1_r0f7s"]
-[ext_resource type="PackedScene" uid="uid://divka4dg8ndna" path="res://BarScene.tscn" id="3_4a80b"]
 [ext_resource type="Script" uid="uid://cpgxkjynckw4q" path="res://RecentTrackTracker.cs" id="4_15wuk"]
 [ext_resource type="PackedScene" uid="uid://ydkut4ci8ie1" path="res://RecentTrack.tscn" id="5_gnnrh"]
-[ext_resource type="Texture2D" uid="uid://uachs8dsw63a" path="res://Tracks/1.png" id="6_5qhct"]
-[ext_resource type="Script" uid="uid://bvhkpte6uynjv" path="res://PageSwitcher.cs" id="6_a3t8j"]
 [ext_resource type="Texture2D" uid="uid://b55g3fxs2lys" path="res://Combo Icons/Drivers/baby-daisy.png" id="6_naci0"]
-[ext_resource type="Script" uid="uid://bvq81pfbysvfr" path="res://SwitchGraphButton.cs" id="7_8kiex"]
 [ext_resource type="Script" uid="uid://cimcrqlrnj8mq" path="res://HistoryHandler.cs" id="9_cjo4t"]
 [ext_resource type="PackedScene" uid="uid://dyjeidw26vaxd" path="res://previous_thing.tscn" id="10_3jyaf"]
 [ext_resource type="PackedScene" uid="uid://8u1bnjmtjohn" path="res://ComboButton.tscn" id="11_fk353"]
@@ -170,6 +166,25 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1054667138]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 674.0
+offset_right = 367.0
+offset_bottom = 714.0
+
+[node name="ShowHistory" type="Button" parent="HBoxContainer" unique_id=1591529810]
+layout_mode = 2
+text = "Local History"
+
+[node name="Camera Setup" type="Button" parent="HBoxContainer" unique_id=856028504]
+layout_mode = 2
+text = "Camera Setup"
+
+[node name="API Key" type="Button" parent="HBoxContainer" unique_id=1886765564]
+layout_mode = 2
+text = "Enter API Key"
+
 [node name="PickerPage" type="Control" parent="." unique_id=604863824]
 layout_mode = 1
 anchors_preset = 0
@@ -215,7 +230,7 @@ offset_right = 614.57513
 offset_bottom = 36.47059
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 29
-text = "3Laps Offered"
+text = "3Laps"
 
 [node name="Intermissions" type="Control" parent="PickerPage" unique_id=1356805048]
 layout_mode = 1
@@ -257,7 +272,7 @@ offset_right = 605.62103
 offset_bottom = 36.470627
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 29
-text = "Intermissions Offered"
+text = "Intermissions"
 
 [node name="RecentPicks" type="Control" parent="PickerPage" unique_id=1132807329]
 layout_mode = 1
@@ -448,176 +463,24 @@ text = "Timestamp Hidden"
 layout_mode = 2
 text = "Change Combo"
 
-[node name="GraphPage" type="Control" parent="." unique_id=456606689]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="GraphPage" unique_id=861639909]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -583.0
-offset_top = -310.0
-offset_right = 583.0
-offset_bottom = 310.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 1
-alignment = 1
-
-[node name="ColorRect" parent="GraphPage/HBoxContainer" unique_id=206227120 instance=ExtResource("3_4a80b")]
-custom_minimum_size = Vector2(35, 620)
-layout_mode = 2
-
-[node name="ColorRect2" parent="GraphPage/HBoxContainer" unique_id=514418349 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect3" parent="GraphPage/HBoxContainer" unique_id=1220538013 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect4" parent="GraphPage/HBoxContainer" unique_id=316826365 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect5" parent="GraphPage/HBoxContainer" unique_id=384729796 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect6" parent="GraphPage/HBoxContainer" unique_id=1945113085 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect7" parent="GraphPage/HBoxContainer" unique_id=240764229 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect8" parent="GraphPage/HBoxContainer" unique_id=1103988421 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect9" parent="GraphPage/HBoxContainer" unique_id=1568268488 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect10" parent="GraphPage/HBoxContainer" unique_id=1962122995 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect11" parent="GraphPage/HBoxContainer" unique_id=1636802505 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect12" parent="GraphPage/HBoxContainer" unique_id=982434826 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect13" parent="GraphPage/HBoxContainer" unique_id=537349174 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect14" parent="GraphPage/HBoxContainer" unique_id=2031932526 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect15" parent="GraphPage/HBoxContainer" unique_id=1442618301 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect16" parent="GraphPage/HBoxContainer" unique_id=1110247403 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect17" parent="GraphPage/HBoxContainer" unique_id=1261771939 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect18" parent="GraphPage/HBoxContainer" unique_id=351885426 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect19" parent="GraphPage/HBoxContainer" unique_id=684263481 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect20" parent="GraphPage/HBoxContainer" unique_id=1450264099 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect21" parent="GraphPage/HBoxContainer" unique_id=1707052328 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect22" parent="GraphPage/HBoxContainer" unique_id=1074611640 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect23" parent="GraphPage/HBoxContainer" unique_id=1398463772 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect24" parent="GraphPage/HBoxContainer" unique_id=1082242984 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect25" parent="GraphPage/HBoxContainer" unique_id=1035339280 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect26" parent="GraphPage/HBoxContainer" unique_id=805241485 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect27" parent="GraphPage/HBoxContainer" unique_id=1829475441 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect28" parent="GraphPage/HBoxContainer" unique_id=746409371 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect29" parent="GraphPage/HBoxContainer" unique_id=1818462369 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="ColorRect30" parent="GraphPage/HBoxContainer" unique_id=453967257 instance=ExtResource("3_4a80b")]
-layout_mode = 2
-
-[node name="TotalTracks" type="Label" parent="GraphPage" unique_id=589654560]
-layout_mode = 0
-offset_left = -115.0
-offset_top = -354.0
-offset_right = 120.0
-offset_bottom = -331.0
-text = "Combined Option Comparison"
-horizontal_alignment = 1
-
-[node name="CurrentTrackInfo" type="Label" parent="GraphPage" unique_id=1492580051]
-layout_mode = 0
-offset_left = -115.0
-offset_top = -330.0
-offset_right = 120.0
-offset_bottom = -307.0
-text = "Combined Option Comparison"
-horizontal_alignment = 1
-
-[node name="CurrentTrackTexture" type="TextureRect" parent="GraphPage" unique_id=1133812089]
-custom_minimum_size = Vector2(150, 85)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -75.0
-offset_top = -301.0
-offset_right = 75.0
-offset_bottom = -216.0
-grow_horizontal = 2
-texture = ExtResource("6_5qhct")
-expand_mode = 1
-
-[node name="Button" type="Button" parent="GraphPage" unique_id=1335710024]
-layout_mode = 0
-offset_left = -51.0
-offset_top = 318.0
-offset_right = 60.0
-offset_bottom = 349.0
-text = "Switch Graph"
-script = ExtResource("7_8kiex")
-
 [node name="HistoryPage" type="Control" parent="." unique_id=680005035]
 visible = false
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="HistoryPage" unique_id=1658515940]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HistoryPage" unique_id=1900747193]
 custom_minimum_size = Vector2(1280, 620)
@@ -653,33 +516,6 @@ script = ExtResource("12_g800d")
 layout_mode = 2
 button_pressed = true
 text = "Auto Upload"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1054667138]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 674.0
-offset_right = 367.0
-offset_bottom = 714.0
-
-[node name="ShowHistory" type="Button" parent="HBoxContainer" unique_id=1591529810]
-layout_mode = 2
-text = "Local History"
-
-[node name="Button" type="Button" parent="HBoxContainer" unique_id=1209290168 node_paths=PackedStringArray("totalTracksOffered", "currentHoveredTrackInfo", "currentHoveredTrackTexture")]
-layout_mode = 2
-text = "Picker"
-script = ExtResource("6_a3t8j")
-totalTracksOffered = NodePath("../../GraphPage/TotalTracks")
-currentHoveredTrackInfo = NodePath("../../GraphPage/CurrentTrackInfo")
-currentHoveredTrackTexture = NodePath("../../GraphPage/CurrentTrackTexture")
-
-[node name="Camera Setup" type="Button" parent="HBoxContainer" unique_id=856028504]
-layout_mode = 2
-text = "Camera Setup"
-
-[node name="API Key" type="Button" parent="HBoxContainer" unique_id=1886765564]
-layout_mode = 2
-text = "Enter API Key"
 
 [node name="Combo Select" type="Control" parent="." unique_id=442089142]
 visible = false
