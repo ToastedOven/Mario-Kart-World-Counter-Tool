@@ -18,28 +18,28 @@ public partial class Bar : ColorRect
         texture.Texture = ButtonThing.buttons[spot].Texture;
         bars.Add(this);
         ButtonThing.buttonForEvents.RecalculateNeeded += RecalculateSizes;
-        button.MouseEntered += ButtonOnMouseEntered;
-        button.MouseExited += ButtonOnMouseExited;
+        // button.MouseEntered += ButtonOnMouseEntered;
+        // button.MouseExited += ButtonOnMouseExited;
     }
 
-    private void ButtonOnMouseExited()
-    {
-        PageSwitcher.instance.currentHoveredTrackInfo.Text = $"";
-        PageSwitcher.instance.currentHoveredTrackTexture.Texture = null;
-    }
-
-    private void ButtonOnMouseEntered()
-    {
-        if (checkOffered)
-        {
-            PageSwitcher.instance.currentHoveredTrackInfo.Text = $"Total Offerings: {ButtonThing.buttons[spot].offeredValue + ButtonThing.buttons[spot + 30].offeredValue}";
-        }
-        else
-        {
-            PageSwitcher.instance.currentHoveredTrackInfo.Text = $"Total Picked: {ButtonThing.buttons[spot].pickedValue + ButtonThing.buttons[spot + 30].pickedValue}";
-        }
-        PageSwitcher.instance.currentHoveredTrackTexture.Texture = ButtonThing.buttons[spot].Texture;
-    }
+    // private void ButtonOnMouseExited()
+    // {
+    //     PageSwitcher.instance.currentHoveredTrackInfo.Text = $"";
+    //     PageSwitcher.instance.currentHoveredTrackTexture.Texture = null;
+    // }
+    //
+    // private void ButtonOnMouseEntered()
+    // {
+    //     if (checkOffered)
+    //     {
+    //         PageSwitcher.instance.currentHoveredTrackInfo.Text = $"Total Offerings: {ButtonThing.buttons[spot].offeredValue + ButtonThing.buttons[spot + 30].offeredValue}";
+    //     }
+    //     else
+    //     {
+    //         PageSwitcher.instance.currentHoveredTrackInfo.Text = $"Total Picked: {ButtonThing.buttons[spot].pickedValue + ButtonThing.buttons[spot + 30].pickedValue}";
+    //     }
+    //     PageSwitcher.instance.currentHoveredTrackTexture.Texture = ButtonThing.buttons[spot].Texture;
+    // }
 
     private void RecalculateSizes()
     {

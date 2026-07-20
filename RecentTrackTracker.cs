@@ -8,12 +8,13 @@ public partial class RecentTrackTracker : VBoxContainer
 {
     [Export] private PackedScene recentTrackScene;
 
-    private Array<ButtonThing> recentTracks = new();
+    public Array<ButtonThing> recentTracks = new();
     private Array<TextureRect> recentTrackIcons = new();
     public static RecentTrackTracker instance;
     public double timer = 0;
+    public const double recentTrackTimeToAutoVrScan = 7.5;
     [Export] private Label timerLabel;
-    [Export] private CheckBox randomCheckbox;
+    [Export] public CheckBox randomCheckbox;
     [Export] private TextureRect comingFrom;
     [Export] private Button comingFromButton;
     [Export] private Control selected;
@@ -38,6 +39,10 @@ public partial class RecentTrackTracker : VBoxContainer
         comingFromId = -1;
     }
 
+    public void AddTrack(int trackId)
+    {
+        AddTrack(ButtonThing.buttons[trackId]);
+    }
     public void AddTrack(ButtonThing trackButton)
     {
         if (comingFromId == -1)
@@ -65,11 +70,11 @@ public partial class RecentTrackTracker : VBoxContainer
         recentTracks.Add(trackButton);
         if (recentTracks.Count == 4)
         {
-            timer = 15f;
+            timer = recentTrackTimeToAutoVrScan;
         }
         else if (recentTracks.Count == 3)
         {
-            PickPercentageThing.startScanning = true;
+            PickPercentageThing.scanningForVotes = true;
         }
     }
 
