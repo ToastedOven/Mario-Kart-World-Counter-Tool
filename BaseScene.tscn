@@ -4,9 +4,11 @@
 [ext_resource type="Script" uid="uid://cpgxkjynckw4q" path="res://RecentTrackTracker.cs" id="4_15wuk"]
 [ext_resource type="PackedScene" uid="uid://ydkut4ci8ie1" path="res://RecentTrack.tscn" id="5_gnnrh"]
 [ext_resource type="Texture2D" uid="uid://b55g3fxs2lys" path="res://Combo Icons/Drivers/baby-daisy.png" id="6_naci0"]
+[ext_resource type="Script" uid="uid://djkpt1c4yri6x" path="res://GenericPage.cs" id="8_ecun1"]
 [ext_resource type="Script" uid="uid://cimcrqlrnj8mq" path="res://HistoryHandler.cs" id="9_cjo4t"]
 [ext_resource type="PackedScene" uid="uid://dyjeidw26vaxd" path="res://previous_thing.tscn" id="10_3jyaf"]
 [ext_resource type="PackedScene" uid="uid://8u1bnjmtjohn" path="res://ComboButton.tscn" id="11_fk353"]
+[ext_resource type="Script" uid="uid://bpxde5fulopbg" path="res://SettingsPage.cs" id="12_by1f8"]
 [ext_resource type="Script" uid="uid://dppd3iq613c7g" path="res://Export.cs" id="12_g800d"]
 [ext_resource type="Texture2D" uid="uid://cvk1ryang16hu" path="res://Combo Icons/Drivers/swoop.png" id="12_naci0"]
 [ext_resource type="Texture2D" uid="uid://c8tg75xbdryqp" path="res://Combo Icons/Drivers/para-biddybud.png" id="13_dkek6"]
@@ -463,7 +465,7 @@ text = "Timestamp Hidden"
 layout_mode = 2
 text = "Change Combo"
 
-[node name="HistoryPage" type="Control" parent="." unique_id=680005035]
+[node name="HistoryPage" type="Control" parent="." unique_id=680005035 node_paths=PackedStringArray("close")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -471,6 +473,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("8_ecun1")
+close = NodePath("CloseMenu")
 
 [node name="ColorRect" type="ColorRect" parent="HistoryPage" unique_id=1658515940]
 layout_mode = 1
@@ -516,6 +520,59 @@ script = ExtResource("12_g800d")
 layout_mode = 2
 button_pressed = true
 text = "Auto Upload"
+
+[node name="CloseMenu" type="Button" parent="HistoryPage" unique_id=1384588562]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = 302.0
+offset_right = 25.0
+offset_bottom = 342.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+text = "Close"
+
+[node name="SettingsPage" type="Control" parent="." unique_id=654584262 node_paths=PackedStringArray("close")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_by1f8")
+close = NodePath("CloseMenu")
+
+[node name="ColorRect" type="ColorRect" parent="SettingsPage" unique_id=1945797825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CloseMenu" type="Button" parent="SettingsPage" unique_id=641828989]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = 302.0
+offset_right = 25.0
+offset_bottom = 342.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+text = "Close"
 
 [node name="Combo Select" type="Control" parent="." unique_id=442089142]
 visible = false
@@ -967,7 +1024,7 @@ layout_mode = 2
 texture = ExtResource("100_npp68")
 kartButton = true
 
-[node name="API Key Entry" type="Control" parent="." unique_id=378805325 node_paths=PackedStringArray("submit", "close", "textEntry", "responseLabel", "dateLabel")]
+[node name="API Key Entry" type="Control" parent="." unique_id=378805325 node_paths=PackedStringArray("submit", "textEntry", "responseLabel", "dateLabel", "close")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -977,10 +1034,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("102_by1f8")
 submit = NodePath("Submit")
-close = NodePath("CloseMenu")
 textEntry = NodePath("LineEdit")
 responseLabel = NodePath("Label")
 dateLabel = NodePath("DateSet")
+close = NodePath("CloseMenu")
 
 [node name="ColorRect" type="ColorRect" parent="API Key Entry" unique_id=1904971527]
 layout_mode = 1
@@ -1424,7 +1481,7 @@ averageVR = NodePath("../Post Match/Average VR")
 myVR = NodePath("../Post Match/My VR")
 racerCount = NodePath("../Post Match/Player Count")
 
-[node name="CameraPreview" type="Control" parent="." unique_id=875432935]
+[node name="CameraPreview" type="Control" parent="." unique_id=875432935 node_paths=PackedStringArray("close")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -1432,6 +1489,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("8_ecun1")
+close = NodePath("ColorRect/CloseMenu")
 
 [node name="ColorRect" type="ColorRect" parent="CameraPreview" unique_id=215542014]
 layout_mode = 1
@@ -1509,9 +1568,8 @@ text = "Stream ID: afuihnjaaaaaaaaaaaaaaaaa
 (Copied to clipboard)"
 horizontal_alignment = 1
 
-[node name="CameraSetup" type="Node" parent="CameraPreview/ColorRect" unique_id=903640186 node_paths=PackedStringArray("closeButton", "prevIndex", "nextIndex", "rotate", "flip", "parentControl", "previewImage", "currentCameraLabel")]
+[node name="CameraSetup" type="Node" parent="CameraPreview/ColorRect" unique_id=903640186 node_paths=PackedStringArray("prevIndex", "nextIndex", "rotate", "flip", "parentControl", "previewImage", "currentCameraLabel")]
 script = ExtResource("129_7hhm6")
-closeButton = NodePath("../CloseMenu")
 prevIndex = NodePath("../HBoxContainer/Prev Index")
 nextIndex = NodePath("../HBoxContainer/Next Index")
 rotate = NodePath("../HBoxContainer/Rotate")

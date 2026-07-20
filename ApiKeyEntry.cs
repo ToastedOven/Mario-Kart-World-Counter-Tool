@@ -2,9 +2,9 @@ using Godot;
 using System;
 using System.Text;
 
-public partial class ApiKeyEntry : Control
+public partial class ApiKeyEntry : GenericPage
 {
-    [Export] private Button submit, close;
+    [Export] private Button submit;
     [Export] private LineEdit textEntry;
     [Export] private Label responseLabel, dateLabel;
     public static string apiKey;
@@ -12,9 +12,9 @@ public partial class ApiKeyEntry : Control
 
     public override void _Ready()
     {
+        base._Ready();
         submit.Pressed += () => { SubmitKey(textEntry.Text); };
         textEntry.TextSubmitted += SubmitKey;
-        close.Pressed += () => { Visible = false; };
         Load();
     }
 

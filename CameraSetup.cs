@@ -10,7 +10,7 @@ namespace CounterTool;
 [GlobalClass]
 public partial class CameraSetup : Node
 {
-    [Export] Button closeButton, prevIndex, nextIndex, rotate, flip;
+    [Export] Button prevIndex, nextIndex, rotate, flip;
     [Export] private Control parentControl;
     [Export] private TextureRect previewImage;
     [Export] private Label currentCameraLabel;
@@ -23,7 +23,6 @@ public partial class CameraSetup : Node
     public override void _Ready()
     {
         instance = this;
-        closeButton.Pressed += CloseButtonOnPressed;
         prevIndex.Pressed += () => { currentCamera--; Preview(); };
         nextIndex.Pressed += () => { currentCamera++; Preview(); };
         
@@ -169,10 +168,6 @@ public partial class CameraSetup : Node
         {
             Cv2.Flip(frame, frame, FlipMode.XY); // Both
         }
-    }
-    private void CloseButtonOnPressed()
-    {
-        parentControl.Visible = false;
     }
 
     private void Save()
