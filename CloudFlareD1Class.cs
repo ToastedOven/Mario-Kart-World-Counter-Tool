@@ -2,120 +2,58 @@ using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using System.Text.Json;
 using System.Threading.Tasks;
 
-public class CloudflareClient
+namespace CounterTool;
+
+public class CloudflareClient(string workerUrl, string apiKey)
 {
     private static readonly HttpClient _httpClient = new HttpClient();
-    private readonly string _workerUrl;
-    private readonly string _apiKey;
+    private readonly string _workerUrl = workerUrl.TrimEnd('/');
 
-    public CloudflareClient(string workerUrl, string apiKey)
+    private HttpRequestMessage CreateRequest(HttpMethod method, string endpoint = "")
     {
-        _workerUrl = workerUrl;
-        _apiKey = apiKey;
-    }
+        string fullUrl = string.IsNullOrEmpty(endpoint) 
+            ? _workerUrl 
+            : $"{_workerUrl}/{endpoint.TrimStart('/')}";
 
-    private HttpRequestMessage CreateRequest(HttpMethod method, string endpoint)
-    {
-        var request = new HttpRequestMessage(method, _workerUrl + endpoint);
-        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+        var request = new HttpRequestMessage(method, fullUrl);
+        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
         return request;
     }
-    
-    public async Task<(bool success, string streamId, string pushUrl)> GenerateStreamAsync()
-    {
-        try
-        {
-            var response = await _httpClient.SendAsync(CreateRequest(HttpMethod.Post, "stream/generate"));
-            using var doc = JsonDocument.Parse(await response.Content.ReadAsStringAsync());
-            var root = doc.RootElement;
 
-            return (
-                root.GetProperty("success").GetBoolean(),
-                root.GetProperty("streamId").GetString(),
-                root.GetProperty("pushUrl").GetString()
-            );
-        }
-        catch { return (false, null, null); }
-    }
-    public async Task<bool> ActivateStreamAsync(string streamId)
-    {
-        try
-        {
-            var request = CreateRequest(HttpMethod.Post, "stream/activate");
-            request.Content = JsonContent.Create(new { streamId });
-            
-            var response = await _httpClient.SendAsync(request);
-            using var doc = JsonDocument.Parse(await response.Content.ReadAsStringAsync());
-            return doc.RootElement.GetProperty("success").GetBoolean();
-        }
-        catch { return false; }
-    }
-
-    public async Task<bool> StopStreamAsync()
-    {
-        try
-        {
-            var response = await _httpClient.SendAsync(CreateRequest(HttpMethod.Post, "stream/stop"));
-            using var doc = JsonDocument.Parse(await response.Content.ReadAsStringAsync());
-            return doc.RootElement.GetProperty("success").GetBoolean();
-        }
-        catch { return false; }
-    }
     public async Task<bool> InsertHistoryEntryAsync(HistoryEntry entry)
     {
-        // 1. Define standard parameterized query using '?' placeholders
-        string sqlQuery = @"
-            INSERT INTO history (
-                option1, option2, option3, picked, is_random, coming_from, 
-                new_session, placement, player_count, friendly_date, 
-                racer, kart, my_vr, match_vrs, average_vr, option1_votes, option2_votes, option3_votes, random_votes, timestamp
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-
-        // 2. Format the list of integers into a clean JSON string array format for the database
-        string matchVrsJson = JsonSerializer.Serialize(entry.MatchVrs);
-
-        // 3. Assemble parameters in the precise chronological order of the placeholders
-        object[] queryParams = new object[]
-        {
-            entry.Option1,
-            entry.Option2,
-            entry.Option3,
-            entry.Picked,
-            entry.Random ? 1 : 0, // SQLite treats booleans as 1 (true) or 0 (false)
-            entry.ComingFrom,
-            entry.NewSession ? 1 : 0,
-            entry.Placement,
-            entry.PlayerCount,
-            entry.Date,
-            entry.Racer,
-            entry.Kart,
-            entry.MyVr,
-            matchVrsJson,
-            entry.AverageVr,
-            entry.Option1Votes,
-            entry.Option2Votes,
-            entry.Option3Votes,
-            entry.RandomVotes,
-            entry.Timestamp,
-        };
-
-        // 4. Construct the standard payload required by your proxy worker
         var payload = new
         {
-            query = sqlQuery,
-            @params = queryParams
+            option1 = entry.Option1,
+            option2 = entry.Option2,
+            option3 = entry.Option3,
+            picked = entry.Picked,
+            is_random = entry.Random ? 1 : 0,
+            coming_from = entry.ComingFrom,
+            new_session = entry.NewSession ? 1 : 0,
+            placement = entry.Placement,
+            player_count = entry.PlayerCount,
+            friendly_date = entry.Date,
+            racer = entry.Racer,
+            kart = entry.Kart,
+            my_vr = entry.MyVr,
+            average_vr = entry.AverageVr,
+            match_vrs = entry.MatchVrs,
+            option1_votes = entry.Option1Votes,
+            option2_votes = entry.Option2Votes,
+            option3_votes = entry.Option3Votes,
+            random_votes = entry.RandomVotes,
+            timestamp = entry.Timestamp,
+            disconnected = entry.Disconnect ? 1 : 0
         };
-
-        // 5. Send payload over HTTP POST with authorization details
-        var request = new HttpRequestMessage(HttpMethod.Post, _workerUrl);
-        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
-        request.Content = JsonContent.Create(payload);
 
         try
         {
+            var request = CreateRequest(HttpMethod.Post);
+            request.Content = JsonContent.Create(payload);
+
             var response = await _httpClient.SendAsync(request);
             if (response.IsSuccessStatusCode)
             {
@@ -133,6 +71,7 @@ public class CloudflareClient
             return false;
         }
     }
+
     public async Task<string> CheckIfKeyIsValid(string key)
     {
         try

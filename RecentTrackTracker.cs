@@ -55,7 +55,8 @@ public partial class RecentTrackTracker : VBoxContainer
         {
             return;
         }
-        var newTrack = recentTrackScene.Instantiate<TextureRect>();
+        var newTrack = recentTrackScene.Instantiate<RecentTrack>();
+        newTrack.myTrack = trackButton;
         if (recentTracks.Count < 3)
         {
             AddChild(newTrack);
@@ -77,7 +78,7 @@ public partial class RecentTrackTracker : VBoxContainer
             PickPercentageThing.scanningForVotes = true;
         }
     }
-
+    
     public void RemoveTrack(ButtonThing trackButton)
     {
         if (!recentTracks.Contains(trackButton))

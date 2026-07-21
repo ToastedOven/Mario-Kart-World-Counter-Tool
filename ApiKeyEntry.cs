@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Text;
+using CounterTool;
 
 public partial class ApiKeyEntry : GenericPage
 {

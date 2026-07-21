@@ -134,8 +134,6 @@
 [ext_resource type="Script" uid="uid://5h4wd572nuu2" path="res://PickPercentageThing.cs" id="131_ecun1"]
 [ext_resource type="Script" uid="uid://d3hxlnhakccat" path="res://ControlManager.cs" id="134_28v50"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cjo4t"]
-
 [node name="Control" type="Control" unique_id=1425128816]
 layout_mode = 3
 anchors_preset = 15
@@ -144,7 +142,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "settingsPage", "urlPage", "autoUpload1", "autoUpload2", "hideTimestamp1", "hideTimestamp2", "autoScanForTracks", "autoScanForVr", "historyButton", "cameraSetup", "enterApiKey", "settings", "enterCustomUrl")]
+[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "settingsPage", "urlPage", "autoUpload1", "autoUpload2", "hideTimestamp1", "hideTimestamp2", "autoScanForTracks", "autoScanForVr", "historyButton", "cameraSetup", "enterApiKey", "settings", "enterCustomUrl", "dcButton", "postMatchInstructions")]
 script = ExtResource("134_28v50")
 pickerPage = NodePath("../PickerPage")
 historyPage = NodePath("../HistoryPage")
@@ -165,6 +163,8 @@ cameraSetup = NodePath("../SettingsPage/VBoxContainer/Camera Setup")
 enterApiKey = NodePath("../SettingsPage/VBoxContainer/API Key")
 settings = NodePath("../HBoxContainer/Settings")
 enterCustomUrl = NodePath("../SettingsPage/VBoxContainer/DB URL")
+dcButton = NodePath("../Post Match/DC")
+postMatchInstructions = NodePath("../Post Match/Instructions")
 metadata/_custom_type_script = "uid://d3hxlnhakccat"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1730624110]
@@ -335,15 +335,6 @@ offset_bottom = 85.0
 [node name="Label" parent="PickerPage/RecentPicks/DrivingFrom/TextureRect" index="0" unique_id=461915242]
 visible = false
 
-[node name="Button" type="Button" parent="PickerPage/RecentPicks/DrivingFrom/TextureRect" unique_id=874101789]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_cjo4t")
-
 [node name="Selected" type="Control" parent="PickerPage/RecentPicks" unique_id=1999345092]
 anchors_preset = 0
 offset_left = -150.0
@@ -399,7 +390,7 @@ recentTrackScene = ExtResource("5_gnnrh")
 timerLabel = NodePath("../Label2")
 randomCheckbox = NodePath("../../CheckBox")
 comingFrom = NodePath("../../DrivingFrom/TextureRect")
-comingFromButton = NodePath("../../DrivingFrom/TextureRect/Button")
+comingFromButton = NodePath("../../DrivingFrom/TextureRect/Button2")
 selected = NodePath("../../Selected")
 newSessionCheckbox = NodePath("../../NewSession")
 
@@ -1312,172 +1303,148 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 6
 
-[node name="PositionButton" parent="Post Match/Positions" unique_id=809021595 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton" parent="Post Match/Positions" unique_id=809021595 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton2" parent="Post Match/Positions" unique_id=1630104743 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton2" parent="Post Match/Positions" unique_id=1630104743 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("103_mxfhk")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton3" parent="Post Match/Positions" unique_id=19948370 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton3" parent="Post Match/Positions" unique_id=19948370 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("104_jbb51")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton4" parent="Post Match/Positions" unique_id=1113024785 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton4" parent="Post Match/Positions" unique_id=1113024785 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("105_dmqu7")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton5" parent="Post Match/Positions" unique_id=1590731850 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton5" parent="Post Match/Positions" unique_id=1590731850 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("106_ptr36")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton6" parent="Post Match/Positions" unique_id=1374336191 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton6" parent="Post Match/Positions" unique_id=1374336191 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("107_7hhm6")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton7" parent="Post Match/Positions" unique_id=1500652536 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton7" parent="Post Match/Positions" unique_id=1500652536 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("108_l5glf")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton8" parent="Post Match/Positions" unique_id=704090919 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton8" parent="Post Match/Positions" unique_id=704090919 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("109_ecun1")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton9" parent="Post Match/Positions" unique_id=1602303930 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton9" parent="Post Match/Positions" unique_id=1602303930 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("110_by1f8")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton10" parent="Post Match/Positions" unique_id=704002193 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton10" parent="Post Match/Positions" unique_id=704002193 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("111_f726w")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton11" parent="Post Match/Positions" unique_id=1019535012 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton11" parent="Post Match/Positions" unique_id=1019535012 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("112_g800d")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton12" parent="Post Match/Positions" unique_id=219969606 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton12" parent="Post Match/Positions" unique_id=219969606 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("113_28v50")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton13" parent="Post Match/Positions" unique_id=2130966283 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton13" parent="Post Match/Positions" unique_id=2130966283 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("114_0jdtu")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton14" parent="Post Match/Positions" unique_id=366871509 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton14" parent="Post Match/Positions" unique_id=366871509 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("115_tlb2k")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton15" parent="Post Match/Positions" unique_id=2059899479 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton15" parent="Post Match/Positions" unique_id=2059899479 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("116_pohys")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton16" parent="Post Match/Positions" unique_id=1358430128 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton16" parent="Post Match/Positions" unique_id=1358430128 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("117_t6aed")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton17" parent="Post Match/Positions" unique_id=290484865 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton17" parent="Post Match/Positions" unique_id=290484865 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("118_fu3vv")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton18" parent="Post Match/Positions" unique_id=1981391460 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton18" parent="Post Match/Positions" unique_id=1981391460 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("119_wdd6a")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton19" parent="Post Match/Positions" unique_id=968466929 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton19" parent="Post Match/Positions" unique_id=968466929 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("120_dbi50")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton20" parent="Post Match/Positions" unique_id=143041207 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton20" parent="Post Match/Positions" unique_id=143041207 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("121_54jrt")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton21" parent="Post Match/Positions" unique_id=1454662535 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton21" parent="Post Match/Positions" unique_id=1454662535 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("122_vsi4f")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton22" parent="Post Match/Positions" unique_id=1306582082 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton22" parent="Post Match/Positions" unique_id=1306582082 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("123_pkh6g")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton23" parent="Post Match/Positions" unique_id=1146111494 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton23" parent="Post Match/Positions" unique_id=1146111494 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("124_1xuf2")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
-[node name="PositionButton24" parent="Post Match/Positions" unique_id=210458279 node_paths=PackedStringArray("hideTimeStamp", "instructions") instance=ExtResource("102_dkek6")]
+[node name="PositionButton24" parent="Post Match/Positions" unique_id=210458279 node_paths=PackedStringArray("hideTimeStamp") instance=ExtResource("102_dkek6")]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("125_mhywo")
 hideTimeStamp = NodePath("../../../PickerPage/HBoxContainer/Hide Timestamp")
-instructions = NodePath("../../Instructions")
 
 [node name="MatchCourse" type="TextureRect" parent="Post Match" unique_id=716482643]
 layout_mode = 1
@@ -1544,7 +1511,7 @@ offset_right = 623.0
 offset_bottom = -290.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 34
+theme_override_font_sizes/font_size = 25
 text = "My VR: "
 
 [node name="Average VR" type="Label" parent="Post Match" unique_id=223609329]
@@ -1560,7 +1527,7 @@ offset_right = 623.0
 offset_bottom = -336.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 34
+theme_override_font_sizes/font_size = 25
 text = "Average VR: "
 
 [node name="Player Count" type="Label" parent="Post Match" unique_id=1607665813]
@@ -1576,7 +1543,7 @@ offset_right = 623.0
 offset_bottom = -377.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 34
+theme_override_font_sizes/font_size = 25
 text = "Player Count: Null"
 
 [node name="Scan For VR" type="Button" parent="Post Match" unique_id=28982027]
@@ -1586,14 +1553,26 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -526.0
-offset_top = -220.0
-offset_right = 528.0
-offset_bottom = -70.0
+offset_left = -253.0
+offset_top = -159.0
+offset_right = 254.0
+offset_bottom = -83.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 103
+theme_override_font_sizes/font_size = 49
 text = "Manually Scan for VR"
+
+[node name="DC" type="Button" parent="Post Match" unique_id=2109408463]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 114.0
+offset_top = -15.0
+offset_right = 289.0
+offset_bottom = 16.0
+grow_vertical = 2
+text = "Communication Error"
 
 [node name="Reset VR Scan" type="Button" parent="Post Match" unique_id=151577696]
 layout_mode = 1
@@ -1603,9 +1582,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -124.0
-offset_top = -59.0
+offset_top = -74.0
 offset_right = 126.0
-offset_bottom = -1.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 36

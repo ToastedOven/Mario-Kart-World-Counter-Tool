@@ -54,4 +54,5 @@ public class HistoryEntry
     public int Option3Votes { get; set; }
     public int RandomVotes { get; set; }
     public long Timestamp { get; set; }
+    public bool Disconnect { get; set; }
 }
