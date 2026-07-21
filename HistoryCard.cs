@@ -277,7 +277,8 @@ public partial class HistoryCard : Control
             Option2Votes = info["Option2Votes"].ToInt(),
             Option3Votes = info["Option3Votes"].ToInt(),
             RandomVotes = info["RandomVotes"].ToInt(),
-            Timestamp = long.Parse(info["Timestamp"])
+            Timestamp = long.Parse(info["Timestamp"]),
+            Disconnect = info["Disconnected"] == "1",
             
         };
         return newMatch;

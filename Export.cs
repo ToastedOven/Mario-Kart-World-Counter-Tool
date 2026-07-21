@@ -19,7 +19,7 @@ public partial class Export : Button
 
     private async void OnPressed()
     {
-        var d1Client = new CloudflareClient("https://nunchuk-db-proxy.dwelxs2.workers.dev/", ApiKeyEntry.apiKey);
+        var d1Client = new CloudflareClient(SettingsPage.dbUrl, ApiKeyEntry.apiKey);
         
         foreach (var historyCard in HistoryHandler.cards)
         {
@@ -54,4 +54,5 @@ public class HistoryEntry
     public int Option3Votes { get; set; }
     public int RandomVotes { get; set; }
     public long Timestamp { get; set; }
+    public bool Disconnect { get; set; }
 }

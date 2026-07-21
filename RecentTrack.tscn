@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://ydkut4ci8ie1"]
 
 [ext_resource type="Texture2D" uid="uid://uachs8dsw63a" path="res://Tracks/1.png" id="1_jkp08"]
+[ext_resource type="Script" uid="uid://chmbit5dhbj5k" path="res://RecentTrack.cs" id="2_8eiap"]
 
-[node name="TextureRect" type="TextureRect" unique_id=1039280338]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkp08"]
+
+[node name="TextureRect" type="TextureRect" unique_id=1039280338 node_paths=PackedStringArray("button")]
 custom_minimum_size = Vector2(150, 85)
 texture = ExtResource("1_jkp08")
 expand_mode = 1
+script = ExtResource("2_8eiap")
+button = NodePath("Button2")
 
 [node name="Label" type="Label" parent="." unique_id=461915242]
 layout_mode = 0
@@ -17,3 +22,11 @@ theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 23
 text = "Intermission"
 horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="." unique_id=1685142562]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 85.0
+theme_override_constants/outline_size = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jkp08")
+button_mask = 3

@@ -5,10 +5,11 @@ namespace CounterTool;
 [GlobalClass]
 public partial class ControlManager : Node
 {
-    [Export] public Control pickerPage, historyPage, comboPage, postMatchPage, cameraPage, apiPage;
-    [Export] public CheckBox autoUpload;
-    [Export] public Button historyButton, cameraSetup, enterApiKey;
+    [Export] public Control pickerPage, historyPage, comboPage, postMatchPage, cameraPage, apiPage, settingsPage, urlPage;
+    [Export] public CheckBox autoUpload1, autoUpload2, hideTimestamp1, hideTimestamp2, autoScanForTracks, autoScanForVr;
+    [Export] public Button historyButton, cameraSetup, enterApiKey, settings, enterCustomUrl, dcButton;
     public static ControlManager instance;
+    [Export] public Label postMatchInstructions;
     public override void _Ready()
     {
         instance = this;
@@ -16,6 +17,8 @@ public partial class ControlManager : Node
         historyButton.Pressed += () => { historyPage.Visible = true; };
         cameraSetup.Pressed += CameraSetupOnPressed;
         enterApiKey.Pressed += () => { apiPage.Visible = true; };
+        enterCustomUrl.Pressed += () => { urlPage.Visible = true; };
+        settings.Pressed += () =>  { settingsPage.Visible = true; };
     }
 
     private void CameraSetupOnPressed()
