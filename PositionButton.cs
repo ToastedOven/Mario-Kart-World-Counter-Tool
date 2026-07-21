@@ -27,14 +27,14 @@ public partial class PositionButton : TextureRect
             instructions.Text = "Pick your placement";
             string matchTime = "Hidden";
             string timeStamp = "Hidden";
-            if (!hideTimeStamp.IsPressed())
+            if (!SettingsPage.hiddenTimestamp)
             {
                 string tzId = TimeZoneInfo.Local.Id;
                 if (!TimeZoneInfo.Local.HasIanaId && TimeZoneInfo.TryConvertWindowsIdToIanaId(tzId, out var ianaId))
                 {
                     tzId = ianaId;
                 }
-                matchTime = $"{DateTime.Now.ToString("[MM/dd/yyyy h:mmtt")} {tzId}]";
+                matchTime = $"{DateTime.Now:[MM/dd/yyyy h:mmtt} {tzId}]";
                 timeStamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString();
             }
 
@@ -54,9 +54,9 @@ public partial class PositionButton : TextureRect
             var newMatch = historyCard.GetHistoryInfoForDb();
             
             ControlManager.instance.postMatchPage.Visible = false;
-            if (ControlManager.instance.autoUpload.IsPressed())
+            if (SettingsPage.autoUpload)
             {
-                var d1Client = new CloudflareClient("https://nunchuk-db-proxy.dwelxs2.workers.dev/", ApiKeyEntry.apiKey);
+                var d1Client = new CloudflareClient(SettingsPage.dbUrl, ApiKeyEntry.apiKey);
                 await d1Client.InsertHistoryEntryAsync(newMatch);   
                 HistoryHandler.instance.RemoveLatestCard();
             }

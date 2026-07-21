@@ -14,7 +14,6 @@ public partial class PickPercentageThing : Node
     public static bool scanningForVotes, scanningForCourseSelected, scanningForPickedCourse, activelyScanning, gaveUp, pickedWasRandom;
     private static readonly HashSet<int> RandomSlotIndices = new();
 
-    private double _scanTimer = .5;
     private bool _needToGrabResult;
     private bool _courseSelected;
     private string _selectedTrackName = "Unknown";
@@ -98,7 +97,7 @@ public partial class PickPercentageThing : Node
         
         if (scanningForVotes)
         {
-            VoteScanning(delta);
+            VoteScanning();
         }
         else if (scanningForCourseSelected)
         {
@@ -106,16 +105,15 @@ public partial class PickPercentageThing : Node
         }
         else if (scanningForPickedCourse)
         {
-            PickScanning(delta);
+            PickScanning();
         }
     }
 
-    private void VoteScanning(double delta)
+    private void VoteScanning()
     {
         if (_needToGrabResult)
         {
             _needToGrabResult = false;
-            _scanTimer = .5;
             if (CurrentTrackCounts.TryGetValue("SelectionHappening", out int count) && count > 0)
             {
                 GD.Print("grabbed votes");
@@ -125,21 +123,16 @@ public partial class PickPercentageThing : Node
         }
         else
         {
-            _scanTimer -= delta;
-            if (_scanTimer <= 0)
-            {
-                activelyScanning = true;
-                CountTracksAsync();
-            }   
+            activelyScanning = true;
+            CountTracksAsync();
         }
     }
 
-    private async void PickScanning(double delta)
+    private async void PickScanning()
     {
         if (_needToGrabResult)
         {
             _needToGrabResult = false;
-            _scanTimer = .5;
 
             if (_selectedTrackName != "Unknown")
             {
@@ -154,19 +147,18 @@ public partial class PickPercentageThing : Node
                     }
                 }
                 scanningForPickedCourse = false;
-                await ToSignal(GetTree().CreateTimer(RecentTrackTracker.recentTrackTimeToAutoVrScan), SceneTreeTimer.SignalName.Timeout);
-                GD.Print("scanning for VR automatically");
-                VRAverageCalculator.instance.ProcessVR();
+                if (SettingsPage.autoScanVR)
+                {
+                    await ToSignal(GetTree().CreateTimer(RecentTrackTracker.recentTrackTimeToAutoVrScan), SceneTreeTimer.SignalName.Timeout);
+                    GD.Print("scanning for VR automatically");
+                    VRAverageCalculator.instance.ProcessVR();   
+                }
             }
         }
         else
         {
-            _scanTimer -= delta;
-            if (_scanTimer <= 0)
-            {
-                activelyScanning = true;
-                IdentifySelectedTrackAsync();
-            }   
+            activelyScanning = true;
+            IdentifySelectedTrackAsync();
         }
     }
 

@@ -103,6 +103,7 @@
 [ext_resource type="Script" uid="uid://cg40ke28754cy" path="res://ApiKeyEntry.cs" id="102_by1f8"]
 [ext_resource type="PackedScene" uid="uid://d25h6yo0atq3h" path="res://PositionButton.tscn" id="102_dkek6"]
 [ext_resource type="Script" uid="uid://cfa5gaasjj6ij" path="res://PostMatchPage.cs" id="102_dmqu7"]
+[ext_resource type="Script" uid="uid://bgld5ahnj1tx4" path="res://UrlEntry.cs" id="103_f726w"]
 [ext_resource type="Texture2D" uid="uid://bu3e43p2024d3" path="res://Positions/2nd.png" id="103_mxfhk"]
 [ext_resource type="Texture2D" uid="uid://mv7vm777jv4m" path="res://Positions/3rd.png" id="104_jbb51"]
 [ext_resource type="Texture2D" uid="uid://d2g0yq6ti4qh6" path="res://Positions/4th.png" id="105_dmqu7"]
@@ -137,14 +138,13 @@
 
 [node name="Control" type="Control" unique_id=1425128816]
 layout_mode = 3
-anchor_right = 1.667
-anchor_bottom = 1.667
-offset_right = -853.76
-offset_bottom = -480.24
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "autoUpload", "historyButton", "cameraSetup", "enterApiKey")]
+[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "settingsPage", "urlPage", "autoUpload1", "autoUpload2", "hideTimestamp1", "hideTimestamp2", "autoScanForTracks", "autoScanForVr", "historyButton", "cameraSetup", "enterApiKey", "settings", "enterCustomUrl")]
 script = ExtResource("134_28v50")
 pickerPage = NodePath("../PickerPage")
 historyPage = NodePath("../HistoryPage")
@@ -152,10 +152,19 @@ comboPage = NodePath("../Combo Select")
 postMatchPage = NodePath("../Post Match")
 cameraPage = NodePath("../CameraPreview")
 apiPage = NodePath("../API Key Entry")
-autoUpload = NodePath("../HistoryPage/HBoxContainer/AutoUpload")
+settingsPage = NodePath("../SettingsPage")
+urlPage = NodePath("../URL Entry")
+autoUpload1 = NodePath("../HistoryPage/HBoxContainer/AutoUpload")
+autoUpload2 = NodePath("../SettingsPage/VBoxContainer/Auto Upload")
+hideTimestamp1 = NodePath("../PickerPage/HBoxContainer/Hide Timestamp")
+hideTimestamp2 = NodePath("../SettingsPage/VBoxContainer/Hide Timestamp")
+autoScanForTracks = NodePath("../SettingsPage/VBoxContainer/Auto Scan Tracks")
+autoScanForVr = NodePath("../SettingsPage/VBoxContainer/Auto Scan VR")
 historyButton = NodePath("../HBoxContainer/ShowHistory")
-cameraSetup = NodePath("../HBoxContainer/Camera Setup")
-enterApiKey = NodePath("../HBoxContainer/API Key")
+cameraSetup = NodePath("../SettingsPage/VBoxContainer/Camera Setup")
+enterApiKey = NodePath("../SettingsPage/VBoxContainer/API Key")
+settings = NodePath("../HBoxContainer/Settings")
+enterCustomUrl = NodePath("../SettingsPage/VBoxContainer/DB URL")
 metadata/_custom_type_script = "uid://d3hxlnhakccat"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1730624110]
@@ -179,13 +188,9 @@ offset_bottom = 714.0
 layout_mode = 2
 text = "Local History"
 
-[node name="Camera Setup" type="Button" parent="HBoxContainer" unique_id=856028504]
+[node name="Settings" type="Button" parent="HBoxContainer" unique_id=436034519]
 layout_mode = 2
-text = "Camera Setup"
-
-[node name="API Key" type="Button" parent="HBoxContainer" unique_id=1886765564]
-layout_mode = 2
-text = "Enter API Key"
+text = "Settings"
 
 [node name="PickerPage" type="Control" parent="." unique_id=604863824]
 layout_mode = 1
@@ -537,7 +542,7 @@ grow_vertical = 2
 theme_override_constants/outline_size = 4
 text = "Close"
 
-[node name="SettingsPage" type="Control" parent="." unique_id=654584262 node_paths=PackedStringArray("close")]
+[node name="SettingsPage" type="Control" parent="." unique_id=654584262 node_paths=PackedStringArray("apiLabel", "close")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -546,6 +551,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("12_by1f8")
+apiLabel = NodePath("../API Key Entry/DateSet")
 close = NodePath("CloseMenu")
 
 [node name="ColorRect" type="ColorRect" parent="SettingsPage" unique_id=1945797825]
@@ -573,6 +579,55 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
 text = "Close"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPage" unique_id=768085319]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="API Key" type="Button" parent="SettingsPage/VBoxContainer" unique_id=1555797362]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "Enter API Key"
+
+[node name="DB URL" type="Button" parent="SettingsPage/VBoxContainer" unique_id=2049996617]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "Enter Custom DB URL"
+
+[node name="Camera Setup" type="Button" parent="SettingsPage/VBoxContainer" unique_id=103330243]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "Camera Setup"
+
+[node name="Hide Timestamp" type="CheckBox" parent="SettingsPage/VBoxContainer" unique_id=1259975610]
+layout_mode = 2
+theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
+text = "Timestamp Hidden"
+
+[node name="Auto Upload" type="CheckBox" parent="SettingsPage/VBoxContainer" unique_id=1642810085]
+layout_mode = 2
+theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
+text = "Auto Upload History"
+
+[node name="Auto Scan Tracks" type="CheckBox" parent="SettingsPage/VBoxContainer" unique_id=1428852087]
+layout_mode = 2
+theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
+text = "Auto Scan For Track Options"
+
+[node name="Auto Scan VR" type="CheckBox" parent="SettingsPage/VBoxContainer" unique_id=1030172346]
+layout_mode = 2
+theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
+text = "Auto Scan For VR (Requires Tesseract)"
 
 [node name="Combo Select" type="Control" parent="." unique_id=442089142]
 visible = false
@@ -1106,10 +1161,93 @@ offset_top = 315.0
 offset_right = 44.0
 offset_bottom = 338.0
 grow_horizontal = 2
-text = "Sample Text"
 horizontal_alignment = 1
 
 [node name="DateSet" type="Label" parent="API Key Entry" unique_id=97990284]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -67.0
+offset_top = 218.0
+offset_right = 68.0
+offset_bottom = 241.0
+grow_horizontal = 2
+text = "Not Currently Set"
+horizontal_alignment = 1
+
+[node name="URL Entry" type="Control" parent="." unique_id=496850073 node_paths=PackedStringArray("submit", "textEntry", "urlLabel", "close")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("103_f726w")
+submit = NodePath("Submit")
+textEntry = NodePath("LineEdit")
+urlLabel = NodePath("DateSet")
+close = NodePath("CloseMenu")
+
+[node name="ColorRect" type="ColorRect" parent="URL Entry" unique_id=667578068]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LineEdit" type="LineEdit" parent="URL Entry" unique_id=964309051]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -15.5
+offset_right = 250.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Enter DB URL Here..."
+alignment = 1
+
+[node name="Submit" type="Button" parent="URL Entry" unique_id=8305669]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = 19.0
+offset_right = 32.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Submit"
+
+[node name="CloseMenu" type="Button" parent="URL Entry" unique_id=773739292]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = 302.0
+offset_right = 25.0
+offset_bottom = 342.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+text = "Close"
+
+[node name="DateSet" type="Label" parent="URL Entry" unique_id=648402376]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

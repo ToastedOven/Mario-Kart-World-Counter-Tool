@@ -17,8 +17,8 @@ public partial class CameraSetup : Node
     [Export] Texture2D fallBackTexture;
     public static int currentCamera;
     public static CameraSetup instance;
-    private static int currentRotation = 0;
-    private static int currentFlip = 0;
+    public static int currentRotation = 0;
+    public static int currentFlip = 0;
 
     public override void _Ready()
     {
@@ -28,7 +28,6 @@ public partial class CameraSetup : Node
         
         rotate.Pressed += () => { currentRotation = (currentRotation + 1) % 4; Preview(); };
         flip.Pressed += () => { currentFlip = (currentFlip + 1) % 4; Preview(); };
-        Load();
     }
 
     public void Preview()
@@ -106,7 +105,7 @@ public partial class CameraSetup : Node
                 // Build the Godot Image asset and pass it onto the UI component
                 var imageTexture = Godot.Image.CreateFromData(rgbFrame.Width, rgbFrame.Height, false, Godot.Image.Format.Rgb8, rawData);
                 previewImage.Texture = ImageTexture.CreateFromImage(imageTexture);
-                Save();
+                SettingsPage.Save();
                 return;
             }
         } 
@@ -167,29 +166,6 @@ public partial class CameraSetup : Node
         else if (currentFlip == 3)
         {
             Cv2.Flip(frame, frame, FlipMode.XY); // Both
-        }
-    }
-
-    private void Save()
-    {
-        StringBuilder saveInfo = new StringBuilder();
-        var saveFile = FileAccess.Open("user://MkctCamera.settings", FileAccess.ModeFlags.Write);
-        saveInfo.Append($"{currentCamera} {currentRotation} {currentFlip}");
-        saveFile.StoreString(saveInfo.ToString());
-        saveFile.Close();
-    }
-
-    private void Load()
-    {
-        var saveFile = FileAccess.Open("user://MkctCamera.settings", FileAccess.ModeFlags.Read);
-        if (saveFile is not null)
-        {
-            var fileContents = saveFile.GetAsText();
-            var numbers = fileContents.Split(" ");
-            currentCamera = numbers[0].ToInt();
-            currentRotation = numbers[1].ToInt();
-            currentFlip = numbers[2].ToInt();
-            saveFile.Close();
         }
     }
 }
