@@ -49,6 +49,17 @@ public partial class SettingsPage : GenericPage
         }
     } = true;
 
+    public static string currentVersion
+    {
+        get;
+        set
+        {
+            field = value;
+            ControlManager.instance.versionLine.Text = field;
+            Save();
+        }
+    } = "";
+
     public static SettingsPage instance;
     public static string dbUrl = "https://mkw-db.nunchuk.xyz/";
     [Export] private Label apiLabel;
@@ -57,12 +68,33 @@ public partial class SettingsPage : GenericPage
         base._Ready();
         instance = this;
         Load();
+        if (currentVersion == "")
+        {
+            PullVersionButtonOnPressed();
+        }
         ControlManager.instance.hideTimestamp1.Pressed += TimeStampToggle;
         ControlManager.instance.hideTimestamp2.Pressed += TimeStampToggle;
         ControlManager.instance.autoUpload1.Pressed += AutoUploadToggle;
         ControlManager.instance.autoUpload2.Pressed += AutoUploadToggle;
         ControlManager.instance.autoScanForTracks.Pressed += () => { autoScanOptions = ControlManager.instance.autoScanForTracks.IsPressed(); };
         ControlManager.instance.autoScanForVr.Pressed += () => { autoScanOptions = ControlManager.instance.autoScanForVr.IsPressed(); };
+        ControlManager.instance.pullVersionButton.Pressed += PullVersionButtonOnPressed;
+    }
+
+    public override void CloseOnPressed()
+    {
+        base.CloseOnPressed();
+        currentVersion = ControlManager.instance.versionLine.Text;
+    }
+
+    private async void PullVersionButtonOnPressed()
+    {
+        CloudflareClient client = new CloudflareClient(dbUrl, "");
+        string response = await client.GetGameVersionFromDb();
+        if (response.Contains("\"version\""))
+        {
+            currentVersion = response.Split("\"")[3];
+        }
     }
 
     private void AutoUploadToggle()
@@ -86,6 +118,7 @@ public partial class SettingsPage : GenericPage
         saveInfo.Append($"SCANOPTIONS:::{autoScanOptions}\n");
         saveInfo.Append($"SCANVR:::{autoScanVR}\n");
         saveInfo.Append($"DBURL:::{dbUrl}\n");
+        saveInfo.Append($"VERSION:::{currentVersion}\n");
         saveFile.StoreString(saveInfo.ToString());
         saveFile.Close();
     }
@@ -125,6 +158,9 @@ public partial class SettingsPage : GenericPage
                         break;
                     case "DBURL":
                         dbUrl = lineContents[1];
+                        break;
+                    case "VERSION":
+                        currentVersion = lineContents[1];
                         break;
                 }
             }

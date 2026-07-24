@@ -130,6 +130,8 @@
 [ext_resource type="Texture2D" uid="uid://cf25f5ya6k8ee" path="res://Tracks/2.png" id="126_jbb51"]
 [ext_resource type="Script" uid="uid://dapvx0wfhapvb" path="res://VRAverageCalculator.cs" id="128_ptr36"]
 [ext_resource type="Script" uid="uid://cii56btkmgqei" path="res://CameraSetup.cs" id="129_7hhm6"]
+[ext_resource type="Script" uid="uid://8ctn2pr64r5g" path="res://VerifyDataPage.cs" id="130_28v50"]
+[ext_resource type="PackedScene" uid="uid://da3igom1c1veh" path="res://HistoryInfo.tscn" id="130_g800d"]
 [ext_resource type="Texture2D" uid="uid://bplxw04jcx1uv" path="res://NoVideo.png" id="130_l5glf"]
 [ext_resource type="Script" uid="uid://5h4wd572nuu2" path="res://PickPercentageThing.cs" id="131_ecun1"]
 [ext_resource type="Script" uid="uid://d3hxlnhakccat" path="res://ControlManager.cs" id="134_28v50"]
@@ -142,7 +144,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "settingsPage", "urlPage", "autoUpload1", "autoUpload2", "hideTimestamp1", "hideTimestamp2", "autoScanForTracks", "autoScanForVr", "historyButton", "cameraSetup", "enterApiKey", "settings", "enterCustomUrl", "dcButton", "postMatchInstructions")]
+[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "settingsPage", "urlPage", "autoUpload1", "autoUpload2", "hideTimestamp1", "hideTimestamp2", "autoScanForTracks", "autoScanForVr", "mirrorMode", "historyButton", "cameraSetup", "enterApiKey", "settings", "enterCustomUrl", "dcButton", "pullVersionButton", "versionLine", "postMatchInstructions")]
 script = ExtResource("134_28v50")
 pickerPage = NodePath("../PickerPage")
 historyPage = NodePath("../HistoryPage")
@@ -158,12 +160,15 @@ hideTimestamp1 = NodePath("../PickerPage/HBoxContainer/Hide Timestamp")
 hideTimestamp2 = NodePath("../SettingsPage/VBoxContainer/Hide Timestamp")
 autoScanForTracks = NodePath("../SettingsPage/VBoxContainer/Auto Scan Tracks")
 autoScanForVr = NodePath("../SettingsPage/VBoxContainer/Auto Scan VR")
+mirrorMode = NodePath("../Post Match/PostMatchOptions/Mirror")
 historyButton = NodePath("../HBoxContainer/ShowHistory")
 cameraSetup = NodePath("../SettingsPage/VBoxContainer/Camera Setup")
 enterApiKey = NodePath("../SettingsPage/VBoxContainer/API Key")
 settings = NodePath("../HBoxContainer/Settings")
 enterCustomUrl = NodePath("../SettingsPage/VBoxContainer/DB URL")
-dcButton = NodePath("../Post Match/DC")
+dcButton = NodePath("../Post Match/PostMatchOptions/DC")
+pullVersionButton = NodePath("../SettingsPage/VBoxContainer/HBoxContainer/GrabVersion")
+versionLine = NodePath("../SettingsPage/VBoxContainer/HBoxContainer/VersionLineEdit")
 postMatchInstructions = NodePath("../Post Match/Instructions")
 metadata/_custom_type_script = "uid://d3hxlnhakccat"
 
@@ -619,6 +624,22 @@ text = "Auto Scan For Track Options"
 layout_mode = 2
 theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
 text = "Auto Scan For VR (Requires Tesseract)"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsPage/VBoxContainer" unique_id=2864270]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsPage/VBoxContainer/HBoxContainer" unique_id=1424047774]
+layout_mode = 2
+text = "Version:"
+
+[node name="VersionLineEdit" type="LineEdit" parent="SettingsPage/VBoxContainer/HBoxContainer" unique_id=1318008039]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+placeholder_text = "ex: 1.7.0"
+
+[node name="GrabVersion" type="Button" parent="SettingsPage/VBoxContainer/HBoxContainer" unique_id=618411556]
+layout_mode = 2
+text = "Grab From DB"
 
 [node name="Combo Select" type="Control" parent="." unique_id=442089142]
 visible = false
@@ -1562,18 +1583,6 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 49
 text = "Manually Scan for VR"
 
-[node name="DC" type="Button" parent="Post Match" unique_id=2109408463]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 114.0
-offset_top = -15.0
-offset_right = 289.0
-offset_bottom = 16.0
-grow_vertical = 2
-text = "Communication Error"
-
 [node name="Reset VR Scan" type="Button" parent="Post Match" unique_id=151577696]
 layout_mode = 1
 anchors_preset = 7
@@ -1589,6 +1598,80 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 36
 text = "Reset VR Scan"
+
+[node name="PostMatchOptions" type="VBoxContainer" parent="Post Match" unique_id=49951998]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 98.0
+offset_top = -33.0
+offset_right = 273.0
+offset_bottom = 33.0
+grow_vertical = 2
+
+[node name="DC" type="Button" parent="Post Match/PostMatchOptions" unique_id=2109408463]
+layout_mode = 2
+text = "Communication Error"
+
+[node name="Mirror" type="CheckBox" parent="Post Match/PostMatchOptions" unique_id=1408474610]
+layout_mode = 2
+theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
+text = "Mirror Mode"
+
+[node name="Verify Data" type="Control" parent="." unique_id=446593222 node_paths=PackedStringArray("historyDataContainer", "confirmButton")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("130_28v50")
+historyDataContainer = NodePath("VerifyGrid")
+confirmButton = NodePath("Confirm")
+historyDataScene = ExtResource("130_g800d")
+
+[node name="ColorRect2" type="ColorRect" parent="Verify Data" unique_id=787113425]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Confirm" type="Button" parent="Verify Data" unique_id=418763334]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -74.0
+offset_right = 126.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "Confirm"
+
+[node name="VerifyGrid" type="GridContainer" parent="Verify Data" unique_id=31830587]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.0
+offset_top = -138.0
+offset_right = 353.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
 
 [node name="Node" type="Node" parent="." unique_id=2119304821 node_paths=PackedStringArray("vrButtons", "resetButton", "averageVR", "myVR", "racerCount")]
 script = ExtResource("128_ptr36")

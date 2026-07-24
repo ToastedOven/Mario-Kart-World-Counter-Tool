@@ -7,6 +7,11 @@ public partial class GenericPage : Control
 
     public override void _Ready()
     {
-        close.Pressed += () => { this.Visible = false; };
+        close.Pressed += CloseOnPressed;
+    }
+
+    public virtual void CloseOnPressed()
+    {
+        Visible = false;
     }
 }

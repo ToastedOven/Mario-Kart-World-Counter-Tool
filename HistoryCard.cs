@@ -144,6 +144,7 @@ public partial class HistoryCard : Control
     public void Setup(string cardData)
     {
         var rawInfo = cardData.Split(",");
+        info = new();
         foreach (var infoItem in rawInfo)
         {
             info.Add(infoItem.Split(">>")[0], infoItem.Split(">>")[1]);
@@ -279,6 +280,8 @@ public partial class HistoryCard : Control
             RandomVotes = info["RandomVotes"].ToInt(),
             Timestamp = long.Parse(info["Timestamp"]),
             Disconnect = info["Disconnected"] == "1",
+            Version = info["Version"],
+            Mirror = info["Mirror"] == "1",
             
         };
         return newMatch;

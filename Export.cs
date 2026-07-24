@@ -55,4 +55,6 @@ public class HistoryEntry
     public int RandomVotes { get; set; }
     public long Timestamp { get; set; }
     public bool Disconnect { get; set; }
+    public string Version { get; set; }
+    public bool Mirror { get; set; }
 }

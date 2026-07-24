@@ -6,8 +6,9 @@ namespace CounterTool;
 public partial class ControlManager : Node
 {
     [Export] public Control pickerPage, historyPage, comboPage, postMatchPage, cameraPage, apiPage, settingsPage, urlPage;
-    [Export] public CheckBox autoUpload1, autoUpload2, hideTimestamp1, hideTimestamp2, autoScanForTracks, autoScanForVr;
-    [Export] public Button historyButton, cameraSetup, enterApiKey, settings, enterCustomUrl, dcButton;
+    [Export] public CheckBox autoUpload1, autoUpload2, hideTimestamp1, hideTimestamp2, autoScanForTracks, autoScanForVr, mirrorMode;
+    [Export] public Button historyButton, cameraSetup, enterApiKey, settings, enterCustomUrl, dcButton, pullVersionButton;
+    [Export] public LineEdit versionLine;
     public static ControlManager instance;
     [Export] public Label postMatchInstructions;
     public override void _Ready()
