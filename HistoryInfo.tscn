@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://da3igom1c1veh"]
+
+[ext_resource type="Script" uid="uid://dq72pi1chhfx6" path="res://HistoryInfo.cs" id="1_taj4d"]
+
+[node name="HBoxContainer" type="HBoxContainer" unique_id=971377584 node_paths=PackedStringArray("name", "data")]
+script = ExtResource("1_taj4d")
+name = NodePath("Label")
+data = NodePath("LineEdit")
+
+[node name="Label" type="Label" parent="." unique_id=276381955]
+layout_mode = 2
+text = "Ligma"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1734013331]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "aaaaaaaaaaaa"

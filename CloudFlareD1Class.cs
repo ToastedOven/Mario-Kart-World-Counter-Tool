@@ -46,7 +46,9 @@ public class CloudflareClient(string workerUrl, string apiKey)
             option3_votes = entry.Option3Votes,
             random_votes = entry.RandomVotes,
             timestamp = entry.Timestamp,
-            disconnected = entry.Disconnect ? 1 : 0
+            disconnected = entry.Disconnect ? 1 : 0,
+            version = entry.Version,
+            mirror = entry.Mirror ? 1 : 0
         };
 
         try
@@ -78,6 +80,18 @@ public class CloudflareClient(string workerUrl, string apiKey)
         {
             var request = CreateRequest(HttpMethod.Get, "verify");
             request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", key);
+            
+            var response = await _httpClient.SendAsync(request);
+            return await response.Content.ReadAsStringAsync();
+        }
+        catch { return "failed to send request"; }
+    }
+    
+    public async Task<string> GetGameVersionFromDb()
+    {
+        try
+        {
+            var request = CreateRequest(HttpMethod.Get, "getversion");
             
             var response = await _httpClient.SendAsync(request);
             return await response.Content.ReadAsStringAsync();

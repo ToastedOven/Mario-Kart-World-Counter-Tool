@@ -22,7 +22,7 @@ public partial class PositionButton : TextureRect
             ControlManager.instance.postMatchInstructions.Text = "Pick player count";
             if (VRAverageCalculator.currentMatchVRs.Count > 0)
             {
-                currentRacePlayerCount = VRAverageCalculator.currentMatchVRs.Count;
+                currentRacePlayerCount = VRAverageCalculator.currentMatchVRs.Count - 1;
                 await FinalizeRace();
             }
         }
@@ -50,7 +50,7 @@ public partial class PositionButton : TextureRect
         }
 
             
-        string matchInfo = $"{RecentTrackTracker.instance.currentMatchInfo},Position>>{currentRacePosition},PlayerCount>>{currentRacePlayerCount},Date>>{matchTime},Timestamp>>{timeStamp},DriverIndex>>{ComboButton.currentDriver},KartIndex>>{ComboButton.currentKart},Disconnected>>{(PostMatchPage.instance.disconnected ? 1 : 0)}";
+        string matchInfo = $"{RecentTrackTracker.instance.currentMatchInfo},Position>>{currentRacePosition},PlayerCount>>{currentRacePlayerCount},Date>>{matchTime},Timestamp>>{timeStamp},DriverIndex>>{ComboButton.currentDriver},KartIndex>>{ComboButton.currentKart},Disconnected>>{(PostMatchPage.instance.disconnected ? 1 : 0)},Version>>{SettingsPage.currentVersion},Mirror>>{(ControlManager.instance.mirrorMode.IsPressed() ? 1 : 0)}";
         if (VRAverageCalculator.currentMatchVRs.Count != 0)
         {
             matchInfo += $",MyVR>>{VRAverageCalculator.myCurrentVR},MatchVRs>>";
@@ -61,17 +61,7 @@ public partial class PositionButton : TextureRect
             matchInfo = matchInfo.TrimEnd('?');
             VRAverageCalculator.instance.Reset();
         }
-        var historyCard = HistoryHandler.instance.CreateCard(matchInfo);
-        var newMatch = historyCard.GetHistoryInfoForDb();
-            
+        VerifyDataPage.instance.LoadHistoryInfo(matchInfo);
         ControlManager.instance.postMatchPage.Visible = false;
-        if (SettingsPage.autoUpload)
-        {
-            var d1Client = new CloudflareClient(SettingsPage.dbUrl, ApiKeyEntry.apiKey);
-            await d1Client.InsertHistoryEntryAsync(newMatch);   
-            HistoryHandler.instance.RemoveLatestCard();
-        }
-        SaveManager.Save();
-        currentRacePosition = -1;
     }
 }
