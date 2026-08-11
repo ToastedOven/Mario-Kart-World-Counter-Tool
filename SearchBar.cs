@@ -8,7 +8,7 @@ public partial class SearchBar : LineEdit
     public Label threeLapsTotalLabel, intermissionsTotalLabel;
 
     [Export] private Button comboChanger;
-    [Export] private Control pickerPage, comboPage;
+    [Export] public Control pickerPage, comboPage;
     [Export] private TextureRect currentKart, currentCharacter;
     [Export] public GridContainer karts, characters, positions;
     bool hidingStats;
@@ -30,12 +30,6 @@ public partial class SearchBar : LineEdit
     {
         await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
         hidingStats = !hidingStats;
-        foreach (var button in ButtonThing.buttons)
-        {
-            button.text.Visible = !hidingStats;
-            button.allPercentage.Visible = !hidingStats;
-            button.categoryPercentage.Visible = !hidingStats;
-        }
     }
 
     private void OnTextChanged(string newText)

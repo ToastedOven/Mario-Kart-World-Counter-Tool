@@ -22,7 +22,7 @@ public class CloudflareClient(string workerUrl, string apiKey)
         return request;
     }
 
-    public async Task<bool> InsertHistoryEntryAsync(HistoryEntry entry)
+    public async Task<(bool, string)> InsertHistoryEntryAsync(HistoryEntry entry)
     {
         var payload = new
         {
@@ -35,7 +35,6 @@ public class CloudflareClient(string workerUrl, string apiKey)
             new_session = entry.NewSession ? 1 : 0,
             placement = entry.Placement,
             player_count = entry.PlayerCount,
-            friendly_date = entry.Date,
             racer = entry.Racer,
             kart = entry.Kart,
             my_vr = entry.MyVr,
@@ -59,18 +58,15 @@ public class CloudflareClient(string workerUrl, string apiKey)
             var response = await _httpClient.SendAsync(request);
             if (response.IsSuccessStatusCode)
             {
-                Console.WriteLine("Match entry recorded successfully in Cloudflare D1!");
-                return true;
+                return (true, response.StatusCode.ToString());
             }
 
             string errorBody = await response.Content.ReadAsStringAsync();
-            Console.WriteLine($"Server returned an error: {response.StatusCode} - {errorBody}");
-            return false;
+            return (false, $"Server returned an error: {response.StatusCode} - {errorBody}");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Network exception encountered: {ex.Message}");
-            return false;
+            return (false, $"Network exception encountered: {ex.Message}");
         }
     }
 

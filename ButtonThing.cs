@@ -8,7 +8,6 @@ using Array = Godot.Collections.Array;
 public partial class ButtonThing : TextureRect
 {
     [Export] private Button addButton;
-    [Export] public Label text, allPercentage, categoryPercentage;
     private Label threeLapsTotalLabel, intermissionsTotalLabel;
     public int offeredValue{ get; private set; }
     public int pickedValue{ get; private set; }
@@ -107,7 +106,6 @@ public partial class ButtonThing : TextureRect
         {
             highestValue = Mathf.Max(offeredValue + buttons[buttons.IndexOf(this) + 30].offeredValue, highestValue);
         }
-        text.Text = $"Count: {offeredValue}";
         if (recalc)
         {
             RecalculateButtonPercentages();
@@ -144,18 +142,6 @@ public partial class ButtonThing : TextureRect
         while (!IsInstanceValid(threeLapsTotalLabel))
         {
             await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
-        }
-        int i = 0;
-        for (; i < 30; i++)
-        {
-            buttons[i].allPercentage.Text = $"All: {(buttons[i].offeredValue / (float)totalValue):P1}";
-            buttons[i].categoryPercentage.Text = $"Category: {(buttons[i].offeredValue / (float)threeLapTotal):P1}";
-        }
-
-        for (; i < 60; i++)
-        {
-            buttons[i].allPercentage.Text = $"All: {(buttons[i].offeredValue / (float)totalValue):P1}";
-            buttons[i].categoryPercentage.Text = $"Category: {(buttons[i].offeredValue / (float)intermissionTotal):P1}";
         }
         
         threeLapsTotalLabel.Text = $"3Laps Offered: {threeLapTotal} ({(threeLapTotal / (float)totalValue):P1})";

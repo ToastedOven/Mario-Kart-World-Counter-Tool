@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://daodsqor2qa2x"]
 
 [ext_resource type="PackedScene" uid="uid://bjvuck12jslhc" path="res://tracks.tscn" id="1_r0f7s"]
+[ext_resource type="PackedScene" uid="uid://c6mihqv4fqxus" path="res://popup.tscn" id="2_2yavy"]
 [ext_resource type="Script" uid="uid://cpgxkjynckw4q" path="res://RecentTrackTracker.cs" id="4_15wuk"]
 [ext_resource type="PackedScene" uid="uid://ydkut4ci8ie1" path="res://RecentTrack.tscn" id="5_gnnrh"]
 [ext_resource type="Texture2D" uid="uid://b55g3fxs2lys" path="res://Combo Icons/Drivers/baby-daisy.png" id="6_naci0"]
@@ -134,7 +135,38 @@
 [ext_resource type="PackedScene" uid="uid://da3igom1c1veh" path="res://HistoryInfo.tscn" id="130_g800d"]
 [ext_resource type="Texture2D" uid="uid://bplxw04jcx1uv" path="res://NoVideo.png" id="130_l5glf"]
 [ext_resource type="Script" uid="uid://5h4wd572nuu2" path="res://PickPercentageThing.cs" id="131_ecun1"]
+[ext_resource type="PackedScene" uid="uid://cyjeh54rlltff" path="res://HistoryCardEditor.tscn" id="132_0jdtu"]
+[ext_resource type="Script" uid="uid://cd6je5apmabea" path="res://TrackSelect.cs" id="133_fk0vt"]
+[ext_resource type="PackedScene" uid="uid://csjxbq2gqp257" path="res://HistoryCardTrackPicker.tscn" id="133_tlb2k"]
 [ext_resource type="Script" uid="uid://d3hxlnhakccat" path="res://ControlManager.cs" id="134_28v50"]
+[ext_resource type="Texture2D" uid="uid://dhr1s066nncof" path="res://Tracks/3.png" id="135_2yavy"]
+[ext_resource type="Texture2D" uid="uid://dga5eixhv5xqy" path="res://Tracks/4.png" id="136_r1sk8"]
+[ext_resource type="Texture2D" uid="uid://cic78y2rr8qs2" path="res://Tracks/5.png" id="137_b7tow"]
+[ext_resource type="Texture2D" uid="uid://cgkgffldhnorn" path="res://Tracks/6.png" id="138_lt1o6"]
+[ext_resource type="Texture2D" uid="uid://evxj28eh1o0k" path="res://Tracks/7.png" id="139_ajrej"]
+[ext_resource type="Texture2D" uid="uid://bhipor1dl620b" path="res://Tracks/8.png" id="140_tcgq5"]
+[ext_resource type="Texture2D" uid="uid://bggqvtsldcljn" path="res://Tracks/9.png" id="141_fmpyo"]
+[ext_resource type="Texture2D" uid="uid://cdposcuahycl" path="res://Tracks/10.png" id="142_i4k74"]
+[ext_resource type="Texture2D" uid="uid://ky2ebkss3jko" path="res://Tracks/11.png" id="143_j0jie"]
+[ext_resource type="Texture2D" uid="uid://dgdqb88p8t17g" path="res://Tracks/12.png" id="144_pk537"]
+[ext_resource type="Texture2D" uid="uid://dx4eu8n7qq2av" path="res://Tracks/13.png" id="145_to8xo"]
+[ext_resource type="Texture2D" uid="uid://cgd2xq6lf5bql" path="res://Tracks/14.png" id="146_clfq1"]
+[ext_resource type="Texture2D" uid="uid://sp2d28eolnjm" path="res://Tracks/15.png" id="147_6of06"]
+[ext_resource type="Texture2D" uid="uid://qmom6nktltmi" path="res://Tracks/16.png" id="148_dsn11"]
+[ext_resource type="Texture2D" uid="uid://kf0j8cboflqo" path="res://Tracks/17.png" id="149_xgy2b"]
+[ext_resource type="Texture2D" uid="uid://c85eegax30phj" path="res://Tracks/18.png" id="150_iyq2m"]
+[ext_resource type="Texture2D" uid="uid://cdqmpygru6ny7" path="res://Tracks/19.png" id="151_5kkp1"]
+[ext_resource type="Texture2D" uid="uid://do8owmo8re4ta" path="res://Tracks/20.png" id="152_lbocp"]
+[ext_resource type="Texture2D" uid="uid://bpumsxj5vaqkv" path="res://Tracks/21.png" id="153_kqff4"]
+[ext_resource type="Texture2D" uid="uid://ofjkmg6v8bqa" path="res://Tracks/22.png" id="154_135xr"]
+[ext_resource type="Texture2D" uid="uid://dsdel2efvhpy8" path="res://Tracks/23.png" id="155_4j04y"]
+[ext_resource type="Texture2D" uid="uid://c8ycg5h1wlteq" path="res://Tracks/24.png" id="156_iqcio"]
+[ext_resource type="Texture2D" uid="uid://byqp6skf6x4l2" path="res://Tracks/25.png" id="157_npp68"]
+[ext_resource type="Texture2D" uid="uid://d2o0xlyijpbaf" path="res://Tracks/26.png" id="158_j4x78"]
+[ext_resource type="Texture2D" uid="uid://cwmy1ww3j8dgj" path="res://Tracks/27.png" id="159_dhfdj"]
+[ext_resource type="Texture2D" uid="uid://h4o6bwrjtq43" path="res://Tracks/28.png" id="160_oe45t"]
+[ext_resource type="Texture2D" uid="uid://f63xm516opee" path="res://Tracks/29.png" id="161_gdycy"]
+[ext_resource type="Texture2D" uid="uid://buy3kls7kxmpg" path="res://Tracks/30.png" id="162_yh4el"]
 
 [node name="Control" type="Control" unique_id=1425128816]
 layout_mode = 3
@@ -144,7 +176,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "settingsPage", "urlPage", "autoUpload1", "autoUpload2", "hideTimestamp1", "hideTimestamp2", "autoScanForTracks", "autoScanForVr", "mirrorMode", "historyButton", "cameraSetup", "enterApiKey", "settings", "enterCustomUrl", "dcButton", "pullVersionButton", "versionLine", "postMatchInstructions")]
+[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "settingsPage", "urlPage", "trackSelectionPage", "autoUpload1", "autoUpload2", "hideTimestamp1", "hideTimestamp2", "autoScanForTracks", "autoScanForVr", "mirrorMode", "historyButton", "cameraSetup", "enterApiKey", "settings", "enterCustomUrl", "dcButton", "pullVersionButton", "versionLine", "postMatchInstructions")]
 script = ExtResource("134_28v50")
 pickerPage = NodePath("../PickerPage")
 historyPage = NodePath("../HistoryPage")
@@ -154,6 +186,7 @@ cameraPage = NodePath("../CameraPreview")
 apiPage = NodePath("../API Key Entry")
 settingsPage = NodePath("../SettingsPage")
 urlPage = NodePath("../URL Entry")
+trackSelectionPage = NodePath("../Track Select")
 autoUpload1 = NodePath("../HistoryPage/HBoxContainer/AutoUpload")
 autoUpload2 = NodePath("../SettingsPage/VBoxContainer/Auto Upload")
 hideTimestamp1 = NodePath("../PickerPage/HBoxContainer/Hide Timestamp")
@@ -169,6 +202,7 @@ enterCustomUrl = NodePath("../SettingsPage/VBoxContainer/DB URL")
 dcButton = NodePath("../Post Match/PostMatchOptions/DC")
 pullVersionButton = NodePath("../SettingsPage/VBoxContainer/HBoxContainer/GrabVersion")
 versionLine = NodePath("../SettingsPage/VBoxContainer/HBoxContainer/VersionLineEdit")
+popupScene = ExtResource("2_2yavy")
 postMatchInstructions = NodePath("../Post Match/Instructions")
 metadata/_custom_type_script = "uid://d3hxlnhakccat"
 
@@ -389,7 +423,7 @@ horizontal_alignment = 1
 layout_mode = 0
 offset_left = -150.0
 offset_top = 223.0
-offset_bottom = 743.0
+offset_bottom = 486.0
 script = ExtResource("4_15wuk")
 recentTrackScene = ExtResource("5_gnnrh")
 timerLabel = NodePath("../Label2")
@@ -500,7 +534,7 @@ grow_horizontal = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HistoryPage/ScrollContainer" unique_id=1510702796]
 layout_mode = 2
-theme_override_constants/separation = 170
+theme_override_constants/separation = 50
 alignment = 1
 script = ExtResource("9_cjo4t")
 cardScene = ExtResource("10_3jyaf")
@@ -530,9 +564,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -25.0
-offset_top = 302.0
+offset_top = 319.0
 offset_right = 25.0
-offset_bottom = 342.0
+offset_bottom = 359.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
@@ -640,456 +674,6 @@ placeholder_text = "ex: 1.7.0"
 [node name="GrabVersion" type="Button" parent="SettingsPage/VBoxContainer/HBoxContainer" unique_id=618411556]
 layout_mode = 2
 text = "Grab From DB"
-
-[node name="Combo Select" type="Control" parent="." unique_id=442089142]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="Combo Select" unique_id=2027339712]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Characters" type="GridContainer" parent="Combo Select" unique_id=924558154]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -339.0
-offset_top = -222.0
-offset_right = 339.0
-offset_bottom = 222.0
-grow_horizontal = 2
-grow_vertical = 2
-columns = 10
-
-[node name="ComboButton2" parent="Combo Select/Characters" unique_id=25862536 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("12_naci0")
-
-[node name="ComboButton4" parent="Combo Select/Characters" unique_id=1813244651 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("13_dkek6")
-
-[node name="ComboButton3" parent="Combo Select/Characters" unique_id=893058172 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("14_264gc")
-
-[node name="ComboButton" parent="Combo Select/Characters" unique_id=836367361 instance=ExtResource("11_fk353")]
-layout_mode = 2
-
-[node name="ComboButton5" parent="Combo Select/Characters" unique_id=1383270298 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("15_aps32")
-
-[node name="ComboButton6" parent="Combo Select/Characters" unique_id=198094238 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("16_ubwwo")
-
-[node name="ComboButton7" parent="Combo Select/Characters" unique_id=1579048914 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("17_ts0tj")
-
-[node name="ComboButton8" parent="Combo Select/Characters" unique_id=636258797 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("18_jvqqu")
-
-[node name="ComboButton9" parent="Combo Select/Characters" unique_id=2007120304 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("19_sfodw")
-
-[node name="ComboButton10" parent="Combo Select/Characters" unique_id=1418950598 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("20_q5ivn")
-
-[node name="ComboButton11" parent="Combo Select/Characters" unique_id=1198667844 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("21_don3c")
-
-[node name="ComboButton12" parent="Combo Select/Characters" unique_id=1034037506 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("22_3od16")
-
-[node name="ComboButton13" parent="Combo Select/Characters" unique_id=1383067818 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("23_20k8e")
-
-[node name="ComboButton14" parent="Combo Select/Characters" unique_id=820270806 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("24_ffp8t")
-
-[node name="ComboButton15" parent="Combo Select/Characters" unique_id=1147496906 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("25_e665u")
-
-[node name="ComboButton16" parent="Combo Select/Characters" unique_id=187380259 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("26_4tnf3")
-
-[node name="ComboButton17" parent="Combo Select/Characters" unique_id=1471337 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("27_lrtjb")
-
-[node name="ComboButton18" parent="Combo Select/Characters" unique_id=1557166282 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("28_6t7uf")
-
-[node name="ComboButton19" parent="Combo Select/Characters" unique_id=999683872 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("29_e6o8v")
-
-[node name="ComboButton20" parent="Combo Select/Characters" unique_id=1404409804 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("30_u8swy")
-
-[node name="ComboButton21" parent="Combo Select/Characters" unique_id=1109258966 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("31_omhqs")
-
-[node name="ComboButton22" parent="Combo Select/Characters" unique_id=142238271 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("32_rs8hp")
-
-[node name="ComboButton23" parent="Combo Select/Characters" unique_id=2047606433 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("33_ydmq4")
-
-[node name="ComboButton24" parent="Combo Select/Characters" unique_id=749335401 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("34_a7w86")
-
-[node name="ComboButton25" parent="Combo Select/Characters" unique_id=791615996 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("35_toi2r")
-
-[node name="ComboButton26" parent="Combo Select/Characters" unique_id=53582394 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("36_mxfhk")
-
-[node name="ComboButton27" parent="Combo Select/Characters" unique_id=190749251 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("37_jbb51")
-
-[node name="ComboButton28" parent="Combo Select/Characters" unique_id=768429240 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("38_dmqu7")
-
-[node name="ComboButton29" parent="Combo Select/Characters" unique_id=687659553 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("39_ptr36")
-
-[node name="ComboButton30" parent="Combo Select/Characters" unique_id=1385413226 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("40_7hhm6")
-
-[node name="ComboButton31" parent="Combo Select/Characters" unique_id=1928015344 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("41_l5glf")
-
-[node name="ComboButton32" parent="Combo Select/Characters" unique_id=923584138 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("42_ecun1")
-
-[node name="ComboButton33" parent="Combo Select/Characters" unique_id=1673540638 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("43_by1f8")
-
-[node name="ComboButton34" parent="Combo Select/Characters" unique_id=276174950 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("44_f726w")
-
-[node name="ComboButton35" parent="Combo Select/Characters" unique_id=298111779 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("45_g800d")
-
-[node name="ComboButton36" parent="Combo Select/Characters" unique_id=2133563049 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("46_28v50")
-
-[node name="ComboButton37" parent="Combo Select/Characters" unique_id=576693308 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("47_0jdtu")
-
-[node name="ComboButton38" parent="Combo Select/Characters" unique_id=213123811 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("48_tlb2k")
-
-[node name="ComboButton39" parent="Combo Select/Characters" unique_id=1115679727 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("49_pohys")
-
-[node name="ComboButton40" parent="Combo Select/Characters" unique_id=925149175 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("50_t6aed")
-
-[node name="ComboButton41" parent="Combo Select/Characters" unique_id=1940009297 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("51_fu3vv")
-
-[node name="ComboButton42" parent="Combo Select/Characters" unique_id=1659325933 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("52_wdd6a")
-
-[node name="ComboButton43" parent="Combo Select/Characters" unique_id=817476405 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("53_dbi50")
-
-[node name="ComboButton44" parent="Combo Select/Characters" unique_id=291586911 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("54_54jrt")
-
-[node name="ComboButton45" parent="Combo Select/Characters" unique_id=1869744034 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("55_vsi4f")
-
-[node name="ComboButton46" parent="Combo Select/Characters" unique_id=906578256 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("56_pkh6g")
-
-[node name="ComboButton47" parent="Combo Select/Characters" unique_id=263727202 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("57_1xuf2")
-
-[node name="ComboButton48" parent="Combo Select/Characters" unique_id=1721990051 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("58_mhywo")
-
-[node name="ComboButton49" parent="Combo Select/Characters" unique_id=58843148 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("59_oy7pa")
-
-[node name="ComboButton50" parent="Combo Select/Characters" unique_id=1031515709 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("60_dasom")
-
-[node name="Karts" type="GridContainer" parent="Combo Select" unique_id=1343212284]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -535.0
-offset_top = -252.0
-offset_right = 5.0
-offset_bottom = -1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2, 2)
-columns = 8
-
-[node name="ComboButton2" parent="Combo Select/Karts" unique_id=1192991201 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("61_8kx8s")
-kartButton = true
-
-[node name="ComboButton3" parent="Combo Select/Karts" unique_id=1329252665 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("62_v45as")
-kartButton = true
-
-[node name="ComboButton4" parent="Combo Select/Karts" unique_id=159198651 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("63_3hvom")
-kartButton = true
-
-[node name="ComboButton5" parent="Combo Select/Karts" unique_id=714715871 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("64_4dpps")
-kartButton = true
-
-[node name="ComboButton6" parent="Combo Select/Karts" unique_id=668866050 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("65_1laf8")
-kartButton = true
-
-[node name="ComboButton7" parent="Combo Select/Karts" unique_id=241520840 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("66_ecdyt")
-kartButton = true
-
-[node name="ComboButton8" parent="Combo Select/Karts" unique_id=158851031 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("67_0wpcm")
-kartButton = true
-
-[node name="ComboButton9" parent="Combo Select/Karts" unique_id=1944152847 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("68_qerqb")
-kartButton = true
-
-[node name="ComboButton10" parent="Combo Select/Karts" unique_id=1834983464 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("69_07h1c")
-kartButton = true
-
-[node name="ComboButton11" parent="Combo Select/Karts" unique_id=958894399 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("70_epqqj")
-kartButton = true
-
-[node name="ComboButton12" parent="Combo Select/Karts" unique_id=1649281463 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("71_uc3v2")
-kartButton = true
-
-[node name="ComboButton13" parent="Combo Select/Karts" unique_id=1464681086 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("72_ujj08")
-kartButton = true
-
-[node name="ComboButton14" parent="Combo Select/Karts" unique_id=1186533653 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("73_wowsd")
-kartButton = true
-
-[node name="ComboButton15" parent="Combo Select/Karts" unique_id=2070255519 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("74_gi0ux")
-kartButton = true
-
-[node name="ComboButton16" parent="Combo Select/Karts" unique_id=810274956 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("75_qgtl3")
-kartButton = true
-
-[node name="ComboButton17" parent="Combo Select/Karts" unique_id=13915571 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("76_dmhhr")
-kartButton = true
-
-[node name="ComboButton18" parent="Combo Select/Karts" unique_id=988539559 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("77_fk0vt")
-kartButton = true
-
-[node name="ComboButton19" parent="Combo Select/Karts" unique_id=1155632258 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("78_2yavy")
-kartButton = true
-
-[node name="ComboButton20" parent="Combo Select/Karts" unique_id=614087238 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("79_r1sk8")
-kartButton = true
-
-[node name="ComboButton21" parent="Combo Select/Karts" unique_id=1526310931 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("80_b7tow")
-kartButton = true
-
-[node name="ComboButton22" parent="Combo Select/Karts" unique_id=1859811217 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("81_lt1o6")
-kartButton = true
-
-[node name="ComboButton23" parent="Combo Select/Karts" unique_id=521008483 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("82_ajrej")
-kartButton = true
-
-[node name="ComboButton24" parent="Combo Select/Karts" unique_id=707610472 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("83_tcgq5")
-kartButton = true
-
-[node name="ComboButton25" parent="Combo Select/Karts" unique_id=60715479 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("84_fmpyo")
-kartButton = true
-
-[node name="ComboButton26" parent="Combo Select/Karts" unique_id=554697009 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("85_i4k74")
-kartButton = true
-
-[node name="ComboButton27" parent="Combo Select/Karts" unique_id=2083882288 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("86_j0jie")
-kartButton = true
-
-[node name="ComboButton28" parent="Combo Select/Karts" unique_id=700908433 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("87_pk537")
-kartButton = true
-
-[node name="ComboButton29" parent="Combo Select/Karts" unique_id=483926201 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("88_to8xo")
-kartButton = true
-
-[node name="ComboButton30" parent="Combo Select/Karts" unique_id=91275915 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("89_clfq1")
-kartButton = true
-
-[node name="ComboButton31" parent="Combo Select/Karts" unique_id=1828777983 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("90_6of06")
-kartButton = true
-
-[node name="ComboButton32" parent="Combo Select/Karts" unique_id=221986957 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("91_dsn11")
-kartButton = true
-
-[node name="ComboButton33" parent="Combo Select/Karts" unique_id=1867686659 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("92_xgy2b")
-kartButton = true
-
-[node name="ComboButton34" parent="Combo Select/Karts" unique_id=512711732 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("93_iyq2m")
-kartButton = true
-
-[node name="ComboButton35" parent="Combo Select/Karts" unique_id=1221318588 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("94_5kkp1")
-kartButton = true
-
-[node name="ComboButton36" parent="Combo Select/Karts" unique_id=531981698 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("95_lbocp")
-kartButton = true
-
-[node name="ComboButton37" parent="Combo Select/Karts" unique_id=1468851195 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("96_kqff4")
-kartButton = true
-
-[node name="ComboButton38" parent="Combo Select/Karts" unique_id=1872895066 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("97_135xr")
-kartButton = true
-
-[node name="ComboButton39" parent="Combo Select/Karts" unique_id=1632070810 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("98_4j04y")
-kartButton = true
-
-[node name="ComboButton40" parent="Combo Select/Karts" unique_id=1200736589 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("99_iqcio")
-kartButton = true
-
-[node name="ComboButton41" parent="Combo Select/Karts" unique_id=2137478016 instance=ExtResource("11_fk353")]
-layout_mode = 2
-texture = ExtResource("100_npp68")
-kartButton = true
 
 [node name="API Key Entry" type="Control" parent="." unique_id=378805325 node_paths=PackedStringArray("submit", "textEntry", "responseLabel", "dateLabel", "close")]
 visible = false
@@ -1619,7 +1203,7 @@ layout_mode = 2
 theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
 text = "Mirror Mode"
 
-[node name="Verify Data" type="Control" parent="." unique_id=446593222 node_paths=PackedStringArray("historyDataContainer", "confirmButton")]
+[node name="Verify Data" type="Control" parent="." unique_id=446593222 node_paths=PackedStringArray("historyDataContainer", "confirmButton", "switchViewButton", "editor")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -1629,8 +1213,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("130_28v50")
 historyDataContainer = NodePath("VerifyGrid")
-confirmButton = NodePath("Confirm")
+confirmButton = NodePath("Buttons/Confirm")
+switchViewButton = NodePath("Buttons/SwitchView")
 historyDataScene = ExtResource("130_g800d")
+editor = NodePath("HistoryEditor")
 
 [node name="ColorRect2" type="ColorRect" parent="Verify Data" unique_id=787113425]
 layout_mode = 1
@@ -1641,37 +1227,654 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Confirm" type="Button" parent="Verify Data" unique_id=418763334]
-custom_minimum_size = Vector2(400, 0)
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -124.0
-offset_top = -74.0
-offset_right = 126.0
-offset_bottom = -16.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 36
-text = "Confirm"
-
 [node name="VerifyGrid" type="GridContainer" parent="Verify Data" unique_id=31830587]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -353.0
-offset_top = -138.0
-offset_right = 353.0
-offset_bottom = 138.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 2
+columns = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Verify Data" unique_id=1685998578]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -58.0
+offset_right = 200.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Confirm" type="Button" parent="Verify Data/Buttons" unique_id=418763334]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Confirm"
+
+[node name="SwitchView" type="Button" parent="Verify Data/Buttons" unique_id=511005685]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Raw View"
+
+[node name="HistoryEditor" parent="Verify Data" unique_id=289421652 instance=ExtResource("132_0jdtu")]
+layout_mode = 1
+offset_left = -487.5
+offset_top = -275.0
+offset_right = 487.5
+offset_bottom = 145.0
+
+[node name="Combo Select" type="Control" parent="." unique_id=442089142]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Combo Select" unique_id=2027339712]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Characters" type="GridContainer" parent="Combo Select" unique_id=924558154]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -339.0
+offset_top = -222.0
+offset_right = 339.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 10
+
+[node name="ComboButton2" parent="Combo Select/Characters" unique_id=25862536 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("12_naci0")
+
+[node name="ComboButton4" parent="Combo Select/Characters" unique_id=1813244651 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("13_dkek6")
+
+[node name="ComboButton3" parent="Combo Select/Characters" unique_id=893058172 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("14_264gc")
+
+[node name="ComboButton" parent="Combo Select/Characters" unique_id=836367361 instance=ExtResource("11_fk353")]
+layout_mode = 2
+
+[node name="ComboButton5" parent="Combo Select/Characters" unique_id=1383270298 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("15_aps32")
+
+[node name="ComboButton6" parent="Combo Select/Characters" unique_id=198094238 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("16_ubwwo")
+
+[node name="ComboButton7" parent="Combo Select/Characters" unique_id=1579048914 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("17_ts0tj")
+
+[node name="ComboButton8" parent="Combo Select/Characters" unique_id=636258797 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("18_jvqqu")
+
+[node name="ComboButton9" parent="Combo Select/Characters" unique_id=2007120304 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("19_sfodw")
+
+[node name="ComboButton10" parent="Combo Select/Characters" unique_id=1418950598 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("20_q5ivn")
+
+[node name="ComboButton11" parent="Combo Select/Characters" unique_id=1198667844 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("21_don3c")
+
+[node name="ComboButton12" parent="Combo Select/Characters" unique_id=1034037506 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("22_3od16")
+
+[node name="ComboButton13" parent="Combo Select/Characters" unique_id=1383067818 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("23_20k8e")
+
+[node name="ComboButton14" parent="Combo Select/Characters" unique_id=820270806 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("24_ffp8t")
+
+[node name="ComboButton15" parent="Combo Select/Characters" unique_id=1147496906 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("25_e665u")
+
+[node name="ComboButton16" parent="Combo Select/Characters" unique_id=187380259 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("26_4tnf3")
+
+[node name="ComboButton17" parent="Combo Select/Characters" unique_id=1471337 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("27_lrtjb")
+
+[node name="ComboButton18" parent="Combo Select/Characters" unique_id=1557166282 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("28_6t7uf")
+
+[node name="ComboButton19" parent="Combo Select/Characters" unique_id=999683872 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("29_e6o8v")
+
+[node name="ComboButton20" parent="Combo Select/Characters" unique_id=1404409804 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("30_u8swy")
+
+[node name="ComboButton21" parent="Combo Select/Characters" unique_id=1109258966 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("31_omhqs")
+
+[node name="ComboButton22" parent="Combo Select/Characters" unique_id=142238271 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("32_rs8hp")
+
+[node name="ComboButton23" parent="Combo Select/Characters" unique_id=2047606433 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("33_ydmq4")
+
+[node name="ComboButton24" parent="Combo Select/Characters" unique_id=749335401 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("34_a7w86")
+
+[node name="ComboButton25" parent="Combo Select/Characters" unique_id=791615996 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("35_toi2r")
+
+[node name="ComboButton26" parent="Combo Select/Characters" unique_id=53582394 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("36_mxfhk")
+
+[node name="ComboButton27" parent="Combo Select/Characters" unique_id=190749251 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("37_jbb51")
+
+[node name="ComboButton28" parent="Combo Select/Characters" unique_id=768429240 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("38_dmqu7")
+
+[node name="ComboButton29" parent="Combo Select/Characters" unique_id=687659553 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("39_ptr36")
+
+[node name="ComboButton30" parent="Combo Select/Characters" unique_id=1385413226 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("40_7hhm6")
+
+[node name="ComboButton31" parent="Combo Select/Characters" unique_id=1928015344 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("41_l5glf")
+
+[node name="ComboButton32" parent="Combo Select/Characters" unique_id=923584138 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("42_ecun1")
+
+[node name="ComboButton33" parent="Combo Select/Characters" unique_id=1673540638 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("43_by1f8")
+
+[node name="ComboButton34" parent="Combo Select/Characters" unique_id=276174950 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("44_f726w")
+
+[node name="ComboButton35" parent="Combo Select/Characters" unique_id=298111779 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("45_g800d")
+
+[node name="ComboButton36" parent="Combo Select/Characters" unique_id=2133563049 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("46_28v50")
+
+[node name="ComboButton37" parent="Combo Select/Characters" unique_id=576693308 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("47_0jdtu")
+
+[node name="ComboButton38" parent="Combo Select/Characters" unique_id=213123811 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("48_tlb2k")
+
+[node name="ComboButton39" parent="Combo Select/Characters" unique_id=1115679727 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("49_pohys")
+
+[node name="ComboButton40" parent="Combo Select/Characters" unique_id=925149175 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("50_t6aed")
+
+[node name="ComboButton41" parent="Combo Select/Characters" unique_id=1940009297 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("51_fu3vv")
+
+[node name="ComboButton42" parent="Combo Select/Characters" unique_id=1659325933 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("52_wdd6a")
+
+[node name="ComboButton43" parent="Combo Select/Characters" unique_id=817476405 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("53_dbi50")
+
+[node name="ComboButton44" parent="Combo Select/Characters" unique_id=291586911 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("54_54jrt")
+
+[node name="ComboButton45" parent="Combo Select/Characters" unique_id=1869744034 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("55_vsi4f")
+
+[node name="ComboButton46" parent="Combo Select/Characters" unique_id=906578256 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("56_pkh6g")
+
+[node name="ComboButton47" parent="Combo Select/Characters" unique_id=263727202 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("57_1xuf2")
+
+[node name="ComboButton48" parent="Combo Select/Characters" unique_id=1721990051 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("58_mhywo")
+
+[node name="ComboButton49" parent="Combo Select/Characters" unique_id=58843148 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("59_oy7pa")
+
+[node name="ComboButton50" parent="Combo Select/Characters" unique_id=1031515709 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("60_dasom")
+
+[node name="Karts" type="GridContainer" parent="Combo Select" unique_id=1343212284]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -535.0
+offset_top = -252.0
+offset_right = 5.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+columns = 8
+
+[node name="ComboButton2" parent="Combo Select/Karts" unique_id=1192991201 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("61_8kx8s")
+kartButton = true
+
+[node name="ComboButton3" parent="Combo Select/Karts" unique_id=1329252665 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("62_v45as")
+kartButton = true
+
+[node name="ComboButton4" parent="Combo Select/Karts" unique_id=159198651 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("63_3hvom")
+kartButton = true
+
+[node name="ComboButton5" parent="Combo Select/Karts" unique_id=714715871 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("64_4dpps")
+kartButton = true
+
+[node name="ComboButton6" parent="Combo Select/Karts" unique_id=668866050 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("65_1laf8")
+kartButton = true
+
+[node name="ComboButton7" parent="Combo Select/Karts" unique_id=241520840 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("66_ecdyt")
+kartButton = true
+
+[node name="ComboButton8" parent="Combo Select/Karts" unique_id=158851031 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("67_0wpcm")
+kartButton = true
+
+[node name="ComboButton9" parent="Combo Select/Karts" unique_id=1944152847 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("68_qerqb")
+kartButton = true
+
+[node name="ComboButton10" parent="Combo Select/Karts" unique_id=1834983464 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("69_07h1c")
+kartButton = true
+
+[node name="ComboButton11" parent="Combo Select/Karts" unique_id=958894399 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("70_epqqj")
+kartButton = true
+
+[node name="ComboButton12" parent="Combo Select/Karts" unique_id=1649281463 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("71_uc3v2")
+kartButton = true
+
+[node name="ComboButton13" parent="Combo Select/Karts" unique_id=1464681086 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("72_ujj08")
+kartButton = true
+
+[node name="ComboButton14" parent="Combo Select/Karts" unique_id=1186533653 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("73_wowsd")
+kartButton = true
+
+[node name="ComboButton15" parent="Combo Select/Karts" unique_id=2070255519 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("74_gi0ux")
+kartButton = true
+
+[node name="ComboButton16" parent="Combo Select/Karts" unique_id=810274956 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("75_qgtl3")
+kartButton = true
+
+[node name="ComboButton17" parent="Combo Select/Karts" unique_id=13915571 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("76_dmhhr")
+kartButton = true
+
+[node name="ComboButton18" parent="Combo Select/Karts" unique_id=988539559 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("77_fk0vt")
+kartButton = true
+
+[node name="ComboButton19" parent="Combo Select/Karts" unique_id=1155632258 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("78_2yavy")
+kartButton = true
+
+[node name="ComboButton20" parent="Combo Select/Karts" unique_id=614087238 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("79_r1sk8")
+kartButton = true
+
+[node name="ComboButton21" parent="Combo Select/Karts" unique_id=1526310931 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("80_b7tow")
+kartButton = true
+
+[node name="ComboButton22" parent="Combo Select/Karts" unique_id=1859811217 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("81_lt1o6")
+kartButton = true
+
+[node name="ComboButton23" parent="Combo Select/Karts" unique_id=521008483 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("82_ajrej")
+kartButton = true
+
+[node name="ComboButton24" parent="Combo Select/Karts" unique_id=707610472 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("83_tcgq5")
+kartButton = true
+
+[node name="ComboButton25" parent="Combo Select/Karts" unique_id=60715479 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("84_fmpyo")
+kartButton = true
+
+[node name="ComboButton26" parent="Combo Select/Karts" unique_id=554697009 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("85_i4k74")
+kartButton = true
+
+[node name="ComboButton27" parent="Combo Select/Karts" unique_id=2083882288 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("86_j0jie")
+kartButton = true
+
+[node name="ComboButton28" parent="Combo Select/Karts" unique_id=700908433 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("87_pk537")
+kartButton = true
+
+[node name="ComboButton29" parent="Combo Select/Karts" unique_id=483926201 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("88_to8xo")
+kartButton = true
+
+[node name="ComboButton30" parent="Combo Select/Karts" unique_id=91275915 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("89_clfq1")
+kartButton = true
+
+[node name="ComboButton31" parent="Combo Select/Karts" unique_id=1828777983 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("90_6of06")
+kartButton = true
+
+[node name="ComboButton32" parent="Combo Select/Karts" unique_id=221986957 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("91_dsn11")
+kartButton = true
+
+[node name="ComboButton33" parent="Combo Select/Karts" unique_id=1867686659 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("92_xgy2b")
+kartButton = true
+
+[node name="ComboButton34" parent="Combo Select/Karts" unique_id=512711732 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("93_iyq2m")
+kartButton = true
+
+[node name="ComboButton35" parent="Combo Select/Karts" unique_id=1221318588 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("94_5kkp1")
+kartButton = true
+
+[node name="ComboButton36" parent="Combo Select/Karts" unique_id=531981698 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("95_lbocp")
+kartButton = true
+
+[node name="ComboButton37" parent="Combo Select/Karts" unique_id=1468851195 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("96_kqff4")
+kartButton = true
+
+[node name="ComboButton38" parent="Combo Select/Karts" unique_id=1872895066 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("97_135xr")
+kartButton = true
+
+[node name="ComboButton39" parent="Combo Select/Karts" unique_id=1632070810 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("98_4j04y")
+kartButton = true
+
+[node name="ComboButton40" parent="Combo Select/Karts" unique_id=1200736589 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("99_iqcio")
+kartButton = true
+
+[node name="ComboButton41" parent="Combo Select/Karts" unique_id=2137478016 instance=ExtResource("11_fk353")]
+layout_mode = 2
+texture = ExtResource("100_npp68")
+kartButton = true
+
+[node name="Track Select" type="Control" parent="." unique_id=1585094337 node_paths=PackedStringArray("cards")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("133_fk0vt")
+cards = [NodePath("tracks/TextureRect"), NodePath("tracks/TextureRect2"), NodePath("tracks/TextureRect3"), NodePath("tracks/TextureRect4"), NodePath("tracks/TextureRect5"), NodePath("tracks/TextureRect6"), NodePath("tracks/TextureRect7"), NodePath("tracks/TextureRect8"), NodePath("tracks/TextureRect9"), NodePath("tracks/TextureRect10"), NodePath("tracks/TextureRect11"), NodePath("tracks/TextureRect12"), NodePath("tracks/TextureRect13"), NodePath("tracks/TextureRect14"), NodePath("tracks/TextureRect15"), NodePath("tracks/TextureRect16"), NodePath("tracks/TextureRect17"), NodePath("tracks/TextureRect18"), NodePath("tracks/TextureRect19"), NodePath("tracks/TextureRect20"), NodePath("tracks/TextureRect21"), NodePath("tracks/TextureRect22"), NodePath("tracks/TextureRect23"), NodePath("tracks/TextureRect24"), NodePath("tracks/TextureRect25"), NodePath("tracks/TextureRect26"), NodePath("tracks/TextureRect27"), NodePath("tracks/TextureRect28"), NodePath("tracks/TextureRect29"), NodePath("tracks/TextureRect30")]
+
+[node name="ColorRect" type="ColorRect" parent="Track Select" unique_id=217117677]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.80300003)
+
+[node name="tracks" type="HFlowContainer" parent="Track Select" unique_id=1856684607]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -614.5
+offset_top = -176.0
+offset_right = 614.5
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" parent="Track Select/tracks" unique_id=1020966983 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+
+[node name="TextureRect2" parent="Track Select/tracks" unique_id=1009758574 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("126_jbb51")
+
+[node name="TextureRect3" parent="Track Select/tracks" unique_id=627803350 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("135_2yavy")
+
+[node name="TextureRect4" parent="Track Select/tracks" unique_id=1449762537 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("136_r1sk8")
+
+[node name="TextureRect5" parent="Track Select/tracks" unique_id=1571529049 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("137_b7tow")
+
+[node name="TextureRect6" parent="Track Select/tracks" unique_id=1704987091 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("138_lt1o6")
+
+[node name="TextureRect7" parent="Track Select/tracks" unique_id=902216025 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("139_ajrej")
+
+[node name="TextureRect8" parent="Track Select/tracks" unique_id=2042214043 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("140_tcgq5")
+
+[node name="TextureRect9" parent="Track Select/tracks" unique_id=1744862387 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("141_fmpyo")
+
+[node name="TextureRect10" parent="Track Select/tracks" unique_id=1210417996 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("142_i4k74")
+
+[node name="TextureRect11" parent="Track Select/tracks" unique_id=1519154011 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("143_j0jie")
+
+[node name="TextureRect12" parent="Track Select/tracks" unique_id=920872131 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("144_pk537")
+
+[node name="TextureRect13" parent="Track Select/tracks" unique_id=442905955 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("145_to8xo")
+
+[node name="TextureRect14" parent="Track Select/tracks" unique_id=659188972 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("146_clfq1")
+
+[node name="TextureRect15" parent="Track Select/tracks" unique_id=1213038408 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("147_6of06")
+
+[node name="TextureRect16" parent="Track Select/tracks" unique_id=1469292941 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("148_dsn11")
+
+[node name="TextureRect17" parent="Track Select/tracks" unique_id=960538400 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("149_xgy2b")
+
+[node name="TextureRect18" parent="Track Select/tracks" unique_id=1702445204 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("150_iyq2m")
+
+[node name="TextureRect19" parent="Track Select/tracks" unique_id=2095649161 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("151_5kkp1")
+
+[node name="TextureRect20" parent="Track Select/tracks" unique_id=399033515 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("152_lbocp")
+
+[node name="TextureRect21" parent="Track Select/tracks" unique_id=646360358 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("153_kqff4")
+
+[node name="TextureRect22" parent="Track Select/tracks" unique_id=87129765 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("154_135xr")
+
+[node name="TextureRect23" parent="Track Select/tracks" unique_id=2073999674 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("155_4j04y")
+
+[node name="TextureRect24" parent="Track Select/tracks" unique_id=1969482616 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("156_iqcio")
+
+[node name="TextureRect25" parent="Track Select/tracks" unique_id=321078764 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("157_npp68")
+
+[node name="TextureRect26" parent="Track Select/tracks" unique_id=1863418801 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("158_j4x78")
+
+[node name="TextureRect27" parent="Track Select/tracks" unique_id=1611431778 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("159_dhfdj")
+
+[node name="TextureRect28" parent="Track Select/tracks" unique_id=1342023845 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("160_oe45t")
+
+[node name="TextureRect29" parent="Track Select/tracks" unique_id=187050823 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("161_gdycy")
+
+[node name="TextureRect30" parent="Track Select/tracks" unique_id=344124482 instance=ExtResource("133_tlb2k")]
+layout_mode = 2
+texture = ExtResource("162_yh4el")
 
 [node name="Node" type="Node" parent="." unique_id=2119304821 node_paths=PackedStringArray("vrButtons", "resetButton", "averageVR", "myVR", "racerCount")]
 script = ExtResource("128_ptr36")

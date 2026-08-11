@@ -15,7 +15,12 @@ public partial class CameraSetup : Node
     [Export] private TextureRect previewImage;
     [Export] private Label currentCameraLabel;
     [Export] Texture2D fallBackTexture;
-    public static int currentCamera;
+
+    public static int currentCamera
+    {
+        get;
+        set => field = Mathf.Max(0, value);
+    }
     public static CameraSetup instance;
     public static int currentRotation = 0;
     public static int currentFlip = 0;

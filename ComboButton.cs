@@ -19,6 +19,8 @@ public partial class ComboButton : TextureRect
         if (kartButton)
         {
             currentKart = positionInList;
+            HistoryCardEditor.kartIndex = currentKart;
+            HistoryCardEditor.instance.Reload();
             SearchBar.instance.karts.Visible = false;
             SearchBar.instance.characters.Visible = true;
             SearchBar.instance.FinishComboPicking();
@@ -26,6 +28,7 @@ public partial class ComboButton : TextureRect
         else
         {
             currentDriver = positionInList;
+            HistoryCardEditor.racerIndex = currentDriver;
             SearchBar.instance.karts.Visible = true;
             SearchBar.instance.characters.Visible = false;
         }

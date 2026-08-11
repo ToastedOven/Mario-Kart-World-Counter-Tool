@@ -36,8 +36,7 @@ public partial class PositionButton : TextureRect
     public static async Task FinalizeRace()
     {
         ControlManager.instance.postMatchInstructions.Text = "Pick your placement";
-        string matchTime = "Hidden";
-        string timeStamp = "Hidden";
+        string timeStamp = "-1";
         if (!SettingsPage.hiddenTimestamp)
         {
             string tzId = TimeZoneInfo.Local.Id;
@@ -45,12 +44,12 @@ public partial class PositionButton : TextureRect
             {
                 tzId = ianaId;
             }
-            matchTime = $"{DateTime.Now:[MM/dd/yyyy h:mmtt} {tzId}]";
             timeStamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString();
         }
 
             
-        string matchInfo = $"{RecentTrackTracker.instance.currentMatchInfo},Position>>{currentRacePosition},PlayerCount>>{currentRacePlayerCount},Date>>{matchTime},Timestamp>>{timeStamp},DriverIndex>>{ComboButton.currentDriver},KartIndex>>{ComboButton.currentKart},Disconnected>>{(PostMatchPage.instance.disconnected ? 1 : 0)},Version>>{SettingsPage.currentVersion},Mirror>>{(ControlManager.instance.mirrorMode.IsPressed() ? 1 : 0)}";
+        string matchInfo = $"{RecentTrackTracker.instance.currentMatchInfo},Position>>{currentRacePosition + 1},PlayerCount>>{currentRacePlayerCount + 1},Timestamp>>{timeStamp},DriverIndex>>{ComboButton.currentDriver},KartIndex>>{ComboButton.currentKart},Disconnected>>{(PostMatchPage.instance.disconnected ? 1 : 0)},Version>>{SettingsPage.currentVersion},Mirror>>{(ControlManager.instance.mirrorMode.IsPressed() ? 1 : 0)}";
+        ControlManager.instance.mirrorMode.SetPressed(false);
         if (VRAverageCalculator.currentMatchVRs.Count != 0)
         {
             matchInfo += $",MyVR>>{VRAverageCalculator.myCurrentVR},MatchVRs>>";
@@ -61,7 +60,7 @@ public partial class PositionButton : TextureRect
             matchInfo = matchInfo.TrimEnd('?');
             VRAverageCalculator.instance.Reset();
         }
-        VerifyDataPage.instance.LoadHistoryInfo(matchInfo);
+        VerifyDataPage.instance.SetupHistoryCard(matchInfo);
         ControlManager.instance.postMatchPage.Visible = false;
     }
 }

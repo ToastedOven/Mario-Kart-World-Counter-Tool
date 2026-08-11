@@ -16,6 +16,8 @@ public partial class PostMatchPage : Control
     private async void DcButtonOnPressed()
     {
         disconnected = true;
+        PositionButton.currentRacePlayerCount = 1;
+        PositionButton.currentRacePosition = 1;
         await PositionButton.FinalizeRace();
     }
 }
