@@ -20,14 +20,28 @@ public partial class Export : Button
     private async void OnPressed()
     {
         var d1Client = new CloudflareClient(SettingsPage.dbUrl, ApiKeyEntry.apiKey);
-        
-        foreach (var historyCard in HistoryHandler.cards)
+        int failedCount = 0;
+        for (int i = 0; i < HistoryHandler.cards.Count; i++)
         {
+            var historyCard = HistoryHandler.cards[i];
             var newMatch = historyCard.GetHistoryInfoForDb();
-            await d1Client.InsertHistoryEntryAsync(newMatch);   
-            historyCard.QueueFree();
+            var (worked, output) = await d1Client.InsertHistoryEntryAsync(newMatch);
+            if (worked)
+            {
+                HistoryHandler.cards.Remove(historyCard);
+                historyCard.QueueFree();
+                i--;
+            }
+            else
+            {
+                failedCount++;
+            }
         }
-        HistoryHandler.cards.Clear();
+
+        if (failedCount > 0)
+        {
+            ControlManager.instance.CreatePopup($"{failedCount} entries failed to upload, they have been retained.");
+        }
         SaveManager.Save();
     }
 }
@@ -43,7 +57,6 @@ public class HistoryEntry
     public bool NewSession { get; set; }
     public int Placement { get; set; }
     public int PlayerCount { get; set; }
-    public string Date { get; set; }
     public string Racer { get; set; }
     public string Kart { get; set; }
     public int MyVr { get; set; }

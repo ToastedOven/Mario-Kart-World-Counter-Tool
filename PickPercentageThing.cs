@@ -49,7 +49,12 @@ public partial class PickPercentageThing : Node
             foreach (var mat in loadedLargerImages) mat?.Dispose();
             return tempCounts;
         });
-
+        if (!VRAverageCalculator.gotCapture)
+        {
+            activelyScanning = false;
+            _needToGrabResult = false;
+            return;
+        }
         foreach (var kvp in results) CurrentTrackCounts[kvp.Key] = kvp.Value;
         CompleteScan();
     }
@@ -144,7 +149,12 @@ public partial class PickPercentageThing : Node
                     if (ButtonThing.buttons.IndexOf(track) == trackNum || ButtonThing.buttons.IndexOf(track) == trackNum + 30)
                     {
                         RecentTrackTracker.instance.AddTrack(track);
+                        break;
                     }
+                }
+                if (RecentTrackTracker.instance.recentTracks.Count != 4)
+                {
+                    RecentTrackTracker.instance.AddTrack(trackNum);
                 }
                 scanningForPickedCourse = false;
                 if (SettingsPage.autoScanVR)

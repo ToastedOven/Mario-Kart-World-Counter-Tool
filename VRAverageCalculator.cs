@@ -55,7 +55,12 @@ public partial class VRAverageCalculator : Node
         racerCount.Text = "Real Player Count: checking...";
 
         await GetSourceImage("BaseImages/ligmaballs.tiff");
-
+        if (!gotCapture)
+        {
+            Reset();
+            return;
+        }
+        
         List<Task> cropTasks = new();
 
         for (int x = 0; x < 2; x++)
@@ -151,8 +156,10 @@ public partial class VRAverageCalculator : Node
         prevAverageVR = average;
     }
 
+    public static bool gotCapture;
     public async Task GetSourceImage(string filename)
     {
+        gotCapture = false;
         await Task.Run(() =>
         {
             using var capture = new VideoCapture(CameraSetup.currentCamera);
@@ -165,6 +172,7 @@ public partial class VRAverageCalculator : Node
                 using var newFrame = new Mat();
                 Cv2.Resize(frame, newFrame, new Size(1920, 1080));
                 Cv2.ImWrite(filename, newFrame);
+                gotCapture = true;
             }
         });
     }

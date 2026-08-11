@@ -9,7 +9,7 @@ public partial class RecentTrackTracker : VBoxContainer
     [Export] private PackedScene recentTrackScene;
 
     public Array<ButtonThing> recentTracks = new();
-    private Array<TextureRect> recentTrackIcons = new();
+    private Array<RecentTrack> recentTrackIcons = new();
     public static RecentTrackTracker instance;
     public double timer = 0;
     public const double recentTrackTimeToAutoVrScan = 7.5;
@@ -65,8 +65,6 @@ public partial class RecentTrackTracker : VBoxContainer
         {
             selected.AddChild(newTrack);
         }
-        newTrack.Texture = trackButton.Texture;
-        newTrack.GetNode<Label>("Label").Text = trackButton.intermissionButton ? "Intermission" : "3Lap";
         recentTrackIcons.Add(newTrack);
         recentTracks.Add(trackButton);
         if (recentTracks.Count == 4)
@@ -113,12 +111,16 @@ public partial class RecentTrackTracker : VBoxContainer
                 int wasNewSession = newSessionCheckbox.IsPressed() ? 1 : 0;
                 randomCheckbox.SetPressed(false);
                 newSessionCheckbox.SetPressed(false);
-                currentMatchInfo = $"Option1>>{ButtonThing.buttons.IndexOf(recentTracks[0])},Option2>>{ButtonThing.buttons.IndexOf(recentTracks[1])},Option3>>{ButtonThing.buttons.IndexOf(recentTracks[2])},Picked>>{ButtonThing.buttons.IndexOf(recentTracks[3])},Random>>{wasRandom},ComingFrom>>{comingFromId},NewSession>>{wasNewSession},{PickPercentageThing.GetCurrentTrackVotesForSaveData(ButtonThing.buttons.IndexOf(recentTracks[0]), ButtonThing.buttons.IndexOf(recentTracks[1]), ButtonThing.buttons.IndexOf(recentTracks[2]))}";
+                currentMatchInfo = $"Option1>>{ButtonThing.buttons.IndexOf(recentTrackIcons[0].myTrack)},Option2>>{ButtonThing.buttons.IndexOf(recentTrackIcons[1].myTrack)},Option3>>{ButtonThing.buttons.IndexOf(recentTrackIcons[2].myTrack)},Picked>>{ButtonThing.buttons.IndexOf(recentTracks[3])},Random>>{wasRandom},ComingFrom>>{comingFromId},NewSession>>{wasNewSession},{PickPercentageThing.GetCurrentTrackVotesForSaveData(ButtonThing.buttons.IndexOf(recentTracks[0]), ButtonThing.buttons.IndexOf(recentTracks[1]), ButtonThing.buttons.IndexOf(recentTracks[2]))}";
                 PostMatchPage.instance.track.Texture = recentTracks[3].Texture;
                 PostMatchPage.instance.kart.Texture = SearchBar.instance.karts.GetChild<TextureRect>(ComboButton.currentKart).Texture;
                 PostMatchPage.instance.driver.Texture = SearchBar.instance.characters.GetChild<TextureRect>(ComboButton.currentDriver).Texture;
-                comingFrom.Texture = recentTracks.Last().Texture;
                 comingFromId = ButtonThing.buttons.IndexOf(recentTracks.Last()) % 30;
+                if (comingFromId == 29)
+                {
+                    comingFromId = 28;
+                }
+                comingFrom.Texture = ButtonThing.buttons[comingFromId].Texture;
                 recentTracks.Clear();
                 foreach (var track in recentTrackIcons)
                 {

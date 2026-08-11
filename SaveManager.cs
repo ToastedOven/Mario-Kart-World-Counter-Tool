@@ -42,7 +42,6 @@ public class SaveManager
             {
                 button.SetOfferedValue(int.Parse(numbers[ButtonThing.buttons.IndexOf(button)]), false);
                 button.SetPickedValue(int.Parse(numbers[ButtonThing.buttons.IndexOf(button) + 60]), false);
-                button.text.Text = $"Count: {button.offeredValue}";
             }
 
             var historyInfo = fileContents.Split("\n")[1];

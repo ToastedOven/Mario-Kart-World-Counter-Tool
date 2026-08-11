@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://cg1kn8n67xpbj" path="res://Combo Icons/Karts/li-dumpy.png" id="4_fbnc7"]
 [ext_resource type="Texture2D" uid="uid://c0aspqq0ar1vi" path="res://Positions/24th.png" id="5_saope"]
 
-[node name="PreviousThing" type="Control" unique_id=1925188196 node_paths=PackedStringArray("card1", "card2", "card3", "card4", "comingFromCard", "driver", "kart", "position", "playerCount", "label1", "label2", "label3", "label4", "randomLabel", "raceDate", "myVR", "averageVR")]
+[node name="PreviousThing" type="Control" unique_id=1925188196 node_paths=PackedStringArray("card1", "card2", "card3", "card4", "comingFromCard", "driver", "kart", "position", "playerCount", "label1", "label2", "label3", "label4", "deleteButton", "reworkButton")]
+custom_minimum_size = Vector2(157.26, 0)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 157.26001
 script = ExtResource("1_47qo1")
 card1 = NodePath("VBoxContainer/CurrentTrackTexture")
 card2 = NodePath("VBoxContainer/CurrentTrackTexture2")
@@ -23,17 +25,15 @@ label1 = NodePath("VBoxContainer/CurrentTrackTexture/Label2")
 label2 = NodePath("VBoxContainer/CurrentTrackTexture2/Label2")
 label3 = NodePath("VBoxContainer/CurrentTrackTexture3/Label2")
 label4 = NodePath("CurrentTrackTexture/Label2")
-randomLabel = NodePath("Label3")
-raceDate = NodePath("Date")
-myVR = NodePath("MyVR")
-averageVR = NodePath("AverageVR")
+deleteButton = NodePath("Trash")
+reworkButton = NodePath("Rework")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1333462326]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 137.0
+offset_top = 157.0
 offset_right = 154.0
-offset_bottom = 400.0
+offset_bottom = 420.0
 
 [node name="CurrentTrackTexture" type="TextureRect" parent="VBoxContainer" unique_id=788499284]
 custom_minimum_size = Vector2(150, 85)
@@ -92,10 +92,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 4.0
-offset_top = 423.0
-offset_right = 154.0
-offset_bottom = 508.0
+offset_left = -74.630005
+offset_top = 450.0
+offset_right = 75.369995
+offset_bottom = 535.0
 grow_horizontal = 2
 texture = ExtResource("1_p3j0t")
 expand_mode = 1
@@ -113,33 +113,27 @@ horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="." unique_id=2044509784]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 55.0
-offset_top = 117.0
-offset_right = 104.0
-offset_bottom = 140.0
+offset_left = -24.630005
+offset_top = 136.0
+offset_right = 24.369995
+offset_bottom = 159.0
 grow_horizontal = 2
-grow_vertical = 2
 text = "Offers"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=361637903]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 54.0
-offset_top = 402.0
-offset_right = 105.0
-offset_bottom = 425.0
+offset_left = -25.630005
+offset_top = 430.0
+offset_right = 25.369995
+offset_bottom = 453.0
 grow_horizontal = 2
-grow_vertical = 2
 text = "Picked"
 horizontal_alignment = 1
 
@@ -149,10 +143,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 4.0
-offset_top = 30.0
-offset_right = 154.0
-offset_bottom = 115.0
+offset_left = -74.630005
+offset_top = 41.0
+offset_right = 75.369995
+offset_bottom = 126.0
 grow_horizontal = 2
 texture = ExtResource("1_p3j0t")
 expand_mode = 1
@@ -171,128 +165,78 @@ horizontal_alignment = 1
 
 [node name="ComingFrom" type="Label" parent="." unique_id=319424260]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 29.5
-offset_top = 9.0
-offset_right = 129.5
-offset_bottom = 32.0
+offset_left = -49.630005
+offset_top = 18.0
+offset_right = 50.369995
+offset_bottom = 41.0
 grow_horizontal = 2
-grow_vertical = 2
 text = "Driving From"
-horizontal_alignment = 1
-
-[node name="Label3" type="Label" parent="." unique_id=881030339]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 20.0
-offset_top = 511.0
-offset_right = 140.0
-offset_bottom = 534.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Random Picked"
-horizontal_alignment = 1
-
-[node name="Date" type="Label" parent="." unique_id=298886408]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 20.0
-offset_top = 1.0
-offset_right = 140.0
-offset_bottom = 24.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 10
-text = "6/9/2067"
-horizontal_alignment = 1
-
-[node name="MyVR" type="Label" parent="." unique_id=15294003]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 20.0
-offset_top = 625.0
-offset_right = 140.0
-offset_bottom = 648.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 10
-text = " My VR: 9999"
-horizontal_alignment = 1
-
-[node name="AverageVR" type="Label" parent="." unique_id=568288882]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 20.0
-offset_top = 634.0
-offset_right = 140.0
-offset_bottom = 657.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 10
-text = "Average VR: 3000"
 horizontal_alignment = 1
 
 [node name="Driver" type="TextureRect" parent="." unique_id=1071211231]
 layout_mode = 0
 offset_left = 26.0
-offset_top = 545.0
+offset_top = 540.0
 offset_right = 90.0
-offset_bottom = 627.0
+offset_bottom = 622.0
 scale = Vector2(0.55, 0.55)
 texture = ExtResource("3_05q53")
 
 [node name="Kart" type="TextureRect" parent="." unique_id=1378838176]
 layout_mode = 0
 offset_left = 71.0
-offset_top = 545.0
+offset_top = 540.0
 offset_right = 135.0
-offset_bottom = 590.0
+offset_bottom = 585.0
 texture = ExtResource("4_fbnc7")
 
 [node name="Place" type="TextureRect" parent="." unique_id=640910260]
+texture_filter = 1
 layout_mode = 0
 offset_left = 14.0
-offset_top = 596.0
+offset_top = 591.0
 offset_right = 91.0
-offset_bottom = 636.0
+offset_bottom = 631.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("5_saope")
 
 [node name="RacerCount" type="TextureRect" parent="." unique_id=749020026]
+texture_filter = 1
 layout_mode = 0
 offset_left = 89.0
-offset_top = 596.0
+offset_top = 591.0
 offset_right = 166.0
-offset_bottom = 636.0
+offset_bottom = 631.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("5_saope")
 
 [node name="Label4" type="Label" parent="." unique_id=813250226]
 layout_mode = 0
 offset_left = 70.0
-offset_top = 576.0
+offset_top = 571.0
 offset_right = 110.0
-offset_bottom = 640.0
+offset_bottom = 635.0
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 46
 text = "/"
+
+[node name="Rework" type="Button" parent="." unique_id=209090642]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 623.0
+offset_right = 75.0
+offset_bottom = 643.0
+theme_override_font_sizes/font_size = 8
+text = "Rework"
+
+[node name="Trash" type="Button" parent="." unique_id=1100230800]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 623.0
+offset_right = 151.11111
+offset_bottom = 643.0
+theme_override_font_sizes/font_size = 8
+text = "Delete"

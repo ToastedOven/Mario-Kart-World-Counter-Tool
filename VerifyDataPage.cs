@@ -8,23 +8,50 @@ using CounterTool;
 public partial class VerifyDataPage : Control
 {
     [Export] private GridContainer historyDataContainer;
-    [Export] Button confirmButton;
+    [Export] Button confirmButton, switchViewButton;
     [Export] PackedScene historyDataScene;
+    [Export] private HistoryCardEditor editor; 
     private static List<HistoryInfo> dataSets = new();
-    string currentHistory = "";
     private double autoConfirmTimer;
     public static VerifyDataPage instance;
+    private static HistoryCard currentCard;
 
     public override void _Ready()
     {
         confirmButton.Pressed += ConfirmButtonOnPressed;
         instance = this;
+        switchViewButton.Pressed += SwitchViewButtonOnPressed;
+        editor.ItemInteracted += () => autoConfirming = false;
+    }
+
+    private void SwitchViewButtonOnPressed()
+    {
+        autoConfirming = false;
+        historyDataContainer.Visible = !historyDataContainer.Visible; 
+        editor.Visible = !historyDataContainer.Visible;
+        if (editor.Visible)
+        {
+            SaveRawData();
+            editor.LoadCard(currentCard);
+            switchViewButton.Text = "Raw View";
+        }
+        else
+        {
+            editor.SaveCard();
+            LoadHistoryInfo(currentCard);
+            switchViewButton.Text = "Editor View";
+        }
     }
 
     public override void _Process(double delta)
     {
         if (autoConfirmTimer > 0)
         {
+            if (!autoConfirming)
+            {
+                autoConfirmTimer = 0;
+                return;
+            }
             autoConfirmTimer -= delta;
             confirmButton.Text = $"Confirming in {(int)autoConfirmTimer}";
             if (autoConfirmTimer <= 0)
@@ -37,49 +64,112 @@ public partial class VerifyDataPage : Control
     private async void ConfirmButtonOnPressed()
     {
         autoConfirmTimer = 0;
-        StringBuilder sb = new();
+        
+        SaveCard();
+        Visible = false;
+        
+        await FinishHistory();
+    }
+
+    private void SaveCard()
+    {
+        if (editor.Visible)
+        {
+            editor.SaveCard();
+        }
+        else
+        {
+            SaveRawData();
+        }
+    }
+
+    private static void SaveRawData()
+    {
         foreach (var data in dataSets)
         {
-            sb.Append($"{data.name.Text}>>{data.data.Text},");
+            currentCard.info[data.name.Text] = data.data.Text;
+            data.QueueFree();
         }
-        sb.Remove(sb.Length - 1, 1);
-        currentHistory = sb.ToString();
-        Visible = false;
+
+        dataSets.Clear();
+    }
+
+    private bool autoConfirming
+    {
+        get;
+        set
+        {
+            field = value;
+            if (!field)
+            {
+                confirmButton.Text = "Confirm";
+            }
+        }
+    } = true;
+
+    private static bool editing;
+    public void SetupHistoryCard(HistoryCard card)
+    {
+        Visible = true;
+        editing = true;
+        autoConfirming = false;
+        currentCard = card;
+        editor.LoadCard(currentCard);
+        LoadHistoryInfo(currentCard);
+    }
+    public void SetupHistoryCard(string matchInfo)
+    {
+        Visible = true;
+        autoConfirmTimer = 30;
+        autoConfirming = true;
+        currentCard = HistoryHandler.instance.CreateCard(matchInfo);
+        editor.LoadCard(currentCard);
+        LoadHistoryInfo(currentCard);
+    }
+
+    private void LoadHistoryInfo(HistoryCard card)
+    {
         foreach (var thing in dataSets)
         {
             thing.QueueFree();
         }
         dataSets.Clear();
-        await FinishHistory(currentHistory);
-    }
-
-    public void LoadHistoryInfo(string history)
-    {
-        Visible = true;
-        autoConfirmTimer = 30;
-        currentHistory = history;
-        foreach (var dataPoint in currentHistory.Split(","))
+        foreach (var kvp in card.info)
         {
             HistoryInfo info = historyDataScene.Instantiate<HistoryInfo>();
-            info.name.Text = dataPoint.Split(">>")[0];
-            info.data.Text = dataPoint.Split(">>")[1];
+            info.name.Text = kvp.Key;
+            info.data.Text = kvp.Value;
             historyDataContainer.AddChild(info);
             dataSets.Add(info);
-            info.data.TextChanged += text => { autoConfirmTimer = 30; };
+            info.data.TextChanged += text => { autoConfirming = false; };
+            info.data.FocusEntered += () => {  autoConfirming = false;  };
         }
     }
     
-    private static async Task FinishHistory(string matchInfo)
+    private static async Task FinishHistory()
     {
-        var historyCard = HistoryHandler.instance.CreateCard(matchInfo);
-        var newMatch = historyCard.GetHistoryInfoForDb();
+        var newMatch = currentCard.GetHistoryInfoForDb();
             
-        if (SettingsPage.autoUpload)
+        if (SettingsPage.autoUpload && !editing)
         {
             var d1Client = new CloudflareClient(SettingsPage.dbUrl, ApiKeyEntry.apiKey);
-            await d1Client.InsertHistoryEntryAsync(newMatch);   
-            HistoryHandler.instance.RemoveLatestCard();
+            var (worked, output) = await d1Client.InsertHistoryEntryAsync(newMatch);
+            if (worked)
+            {
+                HistoryHandler.instance.RemoveLatestCard();
+            }
+            else
+            {
+                ControlManager.instance.CreatePopup(output);
+            }
         }
+        else if (editing)
+        {
+            instance.SaveCard();
+            currentCard.ReSetup();
+        }
+
+        editing = false;
         SaveManager.Save();
         PositionButton.currentRacePosition = -1;
     }
