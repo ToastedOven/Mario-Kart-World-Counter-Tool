@@ -19,6 +19,9 @@ public partial class VRAverageCalculator : Node
     [Export] private Array<Button> vrButtons;
     [Export] private Button resetButton;
     [Export] private Label averageVR, myVR, racerCount;
+
+    public static readonly string baseImagesPath = ProjectSettings.GlobalizePath("user://BaseImages");
+    public static  readonly string ocrImagesPath = ProjectSettings.GlobalizePath("user://OcrImages");
     
     private int prevAverageVR = -1;
 
@@ -29,8 +32,10 @@ public partial class VRAverageCalculator : Node
         {
             button.Pressed += ButtonOnPressed;
         }
-
         resetButton.Pressed += Reset;
+
+        Directory.CreateDirectory(baseImagesPath);
+        Directory.CreateDirectory(ocrImagesPath);
     }
 
     private void ButtonOnPressed()
@@ -54,7 +59,9 @@ public partial class VRAverageCalculator : Node
         myVR.Text = "My VR: checking...";
         racerCount.Text = "Real Player Count: checking...";
 
-        await GetSourceImage("BaseImages/ligmaballs.tiff");
+        string sourceFile = Path.Combine(baseImagesPath, "ligmaballs.tiff");
+
+        await GetSourceImage(sourceFile);
         if (!gotCapture)
         {
             Reset();
@@ -68,8 +75,12 @@ public partial class VRAverageCalculator : Node
             for (int y = 0; y < 12; y++)
             {
                 string bounds = $"{85}:{25}:{(x == 0 ? 440 : 940)}:{(110 + (y * 76))}";
-                cropTasks.Add(ProcessImageAsync(bounds, $"OcrImages/{x},{y}.tiff", 90, "BaseImages/ligmaballs.tiff"));
-                cropTasks.Add(ProcessImageAsync(bounds, $"OcrImages/myScore_{x},{y}.tiff", 200, "BaseImages/ligmaballs.tiff"));
+                
+                string ocrFile = Path.Combine(ocrImagesPath, $"{x},{y}.tiff");
+                string myScoreFile = Path.Combine(ocrImagesPath, $"myScore_{x},{y}.tiff");
+
+                cropTasks.Add(ProcessImageAsync(bounds, ocrFile, 90, sourceFile));
+                cropTasks.Add(ProcessImageAsync(bounds, myScoreFile, 200, sourceFile));
             }
         }
 
@@ -82,8 +93,11 @@ public partial class VRAverageCalculator : Node
         {
             for (int y = 0; y < 12; y++)
             {
-                myScoreOcrTasks.Add(RunOcrForRegion($"OcrImages/myScore_{x},{y}.tiff", x, y));
-                ocrTasks.Add(RunOcrForRegion($"OcrImages/{x},{y}.tiff", x, y));
+                string ocrFile = Path.Combine(ocrImagesPath, $"{x},{y}.tiff");
+                string myScoreFile = Path.Combine(ocrImagesPath, $"myScore_{x},{y}.tiff");
+
+                myScoreOcrTasks.Add(RunOcrForRegion(myScoreFile, x, y));
+                ocrTasks.Add(RunOcrForRegion(ocrFile, x, y));
             }
         }
 
@@ -157,7 +171,7 @@ public partial class VRAverageCalculator : Node
     }
 
     public static bool gotCapture;
-    public async Task GetSourceImage(string filename)
+    public async Task GetSourceImage(string fullFilePath)
     {
         gotCapture = false;
         await Task.Run(() =>
@@ -171,7 +185,7 @@ public partial class VRAverageCalculator : Node
                 CameraSetup.ApplyTransforms(frame);
                 using var newFrame = new Mat();
                 Cv2.Resize(frame, newFrame, new Size(1920, 1080));
-                Cv2.ImWrite(filename, newFrame);
+                Cv2.ImWrite(fullFilePath, newFrame);
                 gotCapture = true;
             }
         });
@@ -205,14 +219,14 @@ public partial class VRAverageCalculator : Node
         });
     }
 
-    private async Task<(int score, int x, int y)> RunOcrForRegion(string filename, int x, int y)
+    private async Task<(int score, int x, int y)> RunOcrForRegion(string fullFilePath, int x, int y)
     {
         return await Task.Run(() =>
         {
             string tessDataPath = ProjectSettings.GlobalizePath("res://tessdata/");
             var tesseractInfo = new ProcessStartInfo {
-                FileName = "tesseract",
-                Arguments = $"{filename} stdout --psm 11 -c tessedit_char_whitelist=0123456789 --tessdata-dir {tessDataPath} -l eng2",
+                FileName = OperatingSystem.IsWindows() ? "tesseract.exe" : "tesseract",
+                Arguments = $"\"{fullFilePath}\" stdout --psm 11 -c tessedit_char_whitelist=0123456789 --tessdata-dir \"{tessDataPath}\" -l eng2",
                 RedirectStandardOutput = true,
                 UseShellExecute = false, 
                 CreateNoWindow = true

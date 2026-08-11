@@ -63,12 +63,19 @@ public partial class VerifyDataPage : Control
 
     private async void ConfirmButtonOnPressed()
     {
-        autoConfirmTimer = 0;
+        try
+        {
+            autoConfirmTimer = 0;
         
-        SaveCard();
-        Visible = false;
+            SaveCard();
+            Visible = false;
         
-        await FinishHistory();
+            await FinishHistory();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
 
     private void SaveCard()

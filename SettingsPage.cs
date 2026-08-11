@@ -77,7 +77,7 @@ public partial class SettingsPage : GenericPage
         ControlManager.instance.autoUpload1.Pressed += AutoUploadToggle;
         ControlManager.instance.autoUpload2.Pressed += AutoUploadToggle;
         ControlManager.instance.autoScanForTracks.Pressed += () => { autoScanOptions = ControlManager.instance.autoScanForTracks.IsPressed(); };
-        ControlManager.instance.autoScanForVr.Pressed += () => { autoScanOptions = ControlManager.instance.autoScanForVr.IsPressed(); };
+        ControlManager.instance.autoScanForVr.Pressed += () => { autoScanVR = ControlManager.instance.autoScanForVr.IsPressed(); };
         ControlManager.instance.pullVersionButton.Pressed += PullVersionButtonOnPressed;
     }
 
@@ -110,7 +110,7 @@ public partial class SettingsPage : GenericPage
     public static void Save()
     {
         StringBuilder saveInfo = new StringBuilder();
-        var saveFile = FileAccess.Open("user://CounterTool.settings", FileAccess.ModeFlags.Write);
+        using var saveFile = FileAccess.Open("user://CounterTool.settings", FileAccess.ModeFlags.Write);
         saveInfo.Append($"API:::{ApiKeyEntry.apiKey}:::{ApiKeyEntry.apiKeyDate}\n");
         saveInfo.Append($"CAMERA:::{CameraSetup.currentCamera}:::{CameraSetup.currentRotation}:::{CameraSetup.currentFlip}\n");
         saveInfo.Append($"TIMESTAMP:::{hiddenTimestamp}\n");
@@ -125,10 +125,10 @@ public partial class SettingsPage : GenericPage
 
     public void Load()
     {
-        var saveFile = FileAccess.Open("user://CounterTool.settings", FileAccess.ModeFlags.Read);
+        using var saveFile = FileAccess.Open("user://CounterTool.settings", FileAccess.ModeFlags.Read);
         if (saveFile is not null)
         {
-            var fileContents = saveFile.GetAsText().Split("\n");
+            var fileContents = saveFile.GetAsText().Replace("\r\n", "\n").Split('\n');
             foreach (var line in fileContents)
             {
                 var lineContents = line.Split(":::");
