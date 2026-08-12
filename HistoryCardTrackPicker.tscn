@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://csjxbq2gqp257"]
+
+[ext_resource type="Texture2D" uid="uid://uachs8dsw63a" path="res://Tracks/1.png" id="1_1i420"]
+[ext_resource type="Script" uid="uid://dnmx8plahtn0g" path="res://HistoryCardTrackPicker.cs" id="2_m3gdh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkp08"]
+
+[node name="TextureRect" type="TextureRect" unique_id=1020966983 node_paths=PackedStringArray("mainButton", "threeLapButton", "intermissionButton", "label")]
+custom_minimum_size = Vector2(150, 85)
+texture = ExtResource("1_1i420")
+expand_mode = 1
+script = ExtResource("2_m3gdh")
+mainButton = NodePath("MainButton")
+threeLapButton = NodePath("3LapButton")
+intermissionButton = NodePath("IntermissionButton")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="." unique_id=1159935800]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 26.0
+offset_right = 147.0
+offset_bottom = 61.0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 23
+text = "Intermission"
+horizontal_alignment = 1
+
+[node name="MainButton" type="Button" parent="." unique_id=692905590]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 85.0
+theme_override_constants/outline_size = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jkp08")
+button_mask = 3
+
+[node name="3LapButton" type="Button" parent="." unique_id=1033925073]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.0
+offset_right = 75.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 6
+text = "3 Lap"
+
+[node name="IntermissionButton" type="Button" parent="." unique_id=352643890]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -41.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 6
+text = "Intermission"

@@ -16,9 +16,9 @@ public partial class UrlEntry : GenericPage
         urlLabel.Text = $"Database URL: {SettingsPage.dbUrl}";
     }
 
-    public virtual async void SubmitKey(string text)
+    public virtual void SubmitKey(string text)
     {
-        SettingsPage.dbUrl = text;
+        SettingsPage.dbUrl = text?.Trim() ?? string.Empty;
         urlLabel.Text = $"Database URL: {SettingsPage.dbUrl}";
         SettingsPage.Save();
     }

@@ -22,7 +22,7 @@ public class SaveManager
         {
             saveInfo.Append($"{historyCard.GetDataForSaving()}|");
         }
-        var saveFile = FileAccess.Open("user://marioKartCourseTracker.save", FileAccess.ModeFlags.Write);
+        using var saveFile = FileAccess.Open("user://marioKartCourseTracker.save", FileAccess.ModeFlags.Write);
         saveFile.StoreString(saveInfo.ToString());
         saveFile.Close();
     }
@@ -33,10 +33,10 @@ public class SaveManager
         {
             ButtonThing.buttons[i].intermissionButton = true;
         }
-        var saveFile = FileAccess.Open("user://marioKartCourseTracker.save", FileAccess.ModeFlags.Read);
+        using var saveFile = FileAccess.Open("user://marioKartCourseTracker.save", FileAccess.ModeFlags.Read);
         if (saveFile is not null)
         {
-            var fileContents = saveFile.GetAsText();
+            var fileContents = saveFile.GetAsText().Replace("\r\n", "\n");
             var numbers = fileContents.Split(" ");
             foreach (var button in ButtonThing.buttons)
             {

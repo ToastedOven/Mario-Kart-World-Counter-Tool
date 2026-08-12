@@ -17,6 +17,7 @@ public partial class PickPercentageThing : Node
     private bool _needToGrabResult;
     private bool _courseSelected;
     private string _selectedTrackName = "Unknown";
+    public static readonly string iconsForVotesPath = ProjectSettings.GlobalizePath("res://IconsForVotes");
 
     static readonly Dictionary<string, int> CurrentTrackCounts = new();
 
@@ -24,10 +25,11 @@ public partial class PickPercentageThing : Node
     {
         var results = await Task.Run(async () =>
         {
-            List<Mat> loadedLargerImages = await PrepareSlotImagesAsync("BaseImages/votes.tiff", "pick");
+            string baseVotesPath = Path.Combine(VRAverageCalculator.baseImagesPath, "votes.tiff");
+            List<Mat> loadedLargerImages = await PrepareSlotImagesAsync(baseVotesPath, "pick");
 
             RandomSlotIndices.Clear();
-            string randomPath = "IconsForVotes/Random.png";
+            string randomPath = Path.Combine(iconsForVotesPath, "Random.png");
             if (File.Exists(randomPath))
             {
                 using Mat randomTemplate = Cv2.ImRead(randomPath, ImreadModes.Color);
@@ -40,7 +42,7 @@ public partial class PickPercentageThing : Node
                 }
             }
 
-            var tempCounts = Directory.GetFiles("IconsForVotes", "*.png")
+            var tempCounts = Directory.GetFiles(iconsForVotesPath, "*.png")
                 .ToDictionary(
                     Path.GetFileNameWithoutExtension,
                     file => CountTemplateMatches(file, loadedLargerImages)
@@ -49,12 +51,14 @@ public partial class PickPercentageThing : Node
             foreach (var mat in loadedLargerImages) mat?.Dispose();
             return tempCounts;
         });
+
         if (!VRAverageCalculator.gotCapture)
         {
             activelyScanning = false;
             _needToGrabResult = false;
             return;
         }
+
         foreach (var kvp in results) CurrentTrackCounts[kvp.Key] = kvp.Value;
         CompleteScan();
     }
@@ -81,7 +85,7 @@ public partial class PickPercentageThing : Node
 
     private static double GetMatchConfidence(Mat smallerImage, Mat largerImage)
     {
-        if (smallerImage.Width > largerImage.Width || smallerImage.Height > largerImage.Height)
+        if (smallerImage == null || largerImage == null || smallerImage.Width > largerImage.Width || smallerImage.Height > largerImage.Height)
             return 0;
 
         using Mat matchResult = new Mat();
@@ -141,27 +145,46 @@ public partial class PickPercentageThing : Node
 
             if (_selectedTrackName != "Unknown")
             {
-                GD.Print($"selection is: {_selectedTrackName} (Index: {HistoryCard.trackNames.IndexOf(_selectedTrackName)}, Random Pick: {pickedWasRandom})");
-                RecentTrackTracker.instance.randomCheckbox.SetPressed(pickedWasRandom);
-                int trackNum = HistoryCard.trackNames.IndexOf(_selectedTrackName);
-                foreach (var track in RecentTrackTracker.instance.recentTracks)
+                int trackNum = HistoryCard.trackNames != null ? HistoryCard.trackNames.IndexOf(_selectedTrackName) : -1;
+                GD.Print($"selection is: {_selectedTrackName} (Index: {trackNum}, Random Pick: {pickedWasRandom})");
+
+                if (RecentTrackTracker.instance?.randomCheckbox != null)
                 {
-                    if (ButtonThing.buttons.IndexOf(track) == trackNum || ButtonThing.buttons.IndexOf(track) == trackNum + 30)
+                    RecentTrackTracker.instance.randomCheckbox.SetPressed(pickedWasRandom);
+                }
+
+                if (trackNum >= 0 && RecentTrackTracker.instance != null)
+                {
+                    foreach (var track in RecentTrackTracker.instance.recentTracks)
                     {
-                        RecentTrackTracker.instance.AddTrack(track);
-                        break;
+                        int btnIdx = ButtonThing.buttons.IndexOf(track);
+                        if (btnIdx == trackNum || btnIdx == trackNum + 30)
+                        {
+                            RecentTrackTracker.instance.AddTrack(track);
+                            break;
+                        }
+                    }
+
+                    if (RecentTrackTracker.instance.recentTracks.Count != 4)
+                    {
+                        RecentTrackTracker.instance.AddTrack(trackNum);
                     }
                 }
-                if (RecentTrackTracker.instance.recentTracks.Count != 4)
-                {
-                    RecentTrackTracker.instance.AddTrack(trackNum);
-                }
+
                 scanningForPickedCourse = false;
+
                 if (SettingsPage.autoScanVR)
                 {
-                    await ToSignal(GetTree().CreateTimer(RecentTrackTracker.recentTrackTimeToAutoVrScan), SceneTreeTimer.SignalName.Timeout);
-                    GD.Print("scanning for VR automatically");
-                    VRAverageCalculator.instance.ProcessVR();   
+                    try
+                    {
+                        await ToSignal(GetTree().CreateTimer(RecentTrackTracker.recentTrackTimeToAutoVrScan), SceneTreeTimer.SignalName.Timeout);
+                        GD.Print("scanning for VR automatically");
+                        VRAverageCalculator.instance?.ProcessVR();   
+                    }
+                    catch (Exception ex)
+                    {
+                        GD.PrintErr($"VR AutoScan timer error: {ex.Message}");
+                    }
                 }
             }
         }
@@ -190,14 +213,15 @@ public partial class PickPercentageThing : Node
         }
     }
 
-    private async Task IdentifySelectedTrackAsync()
+    private async void IdentifySelectedTrackAsync()
     {
         _selectedTrackName = await Task.Run(async () =>
         {
-            List<Mat> slotMats = await PrepareSlotImagesAsync("BaseImages/votes_final.tiff", "selected_pick");
+            string baseVotesFinalPath = Path.Combine(VRAverageCalculator.baseImagesPath, "votes_final.tiff");
+            List<Mat> slotMats = await PrepareSlotImagesAsync(baseVotesFinalPath, "selected_pick");
             int winningSlotIndex = -1;
 
-            string borderPath = "IconsForVotes/SelectionHappening.png";
+            string borderPath = Path.Combine(iconsForVotesPath, "SelectionHappening.png");
             if (File.Exists(borderPath))
             {
                 using Mat borderTemplate = Cv2.ImRead(borderPath, ImreadModes.Color);
@@ -213,10 +237,10 @@ public partial class PickPercentageThing : Node
                 Mat winningSlotMat = slotMats[winningSlotIndex];
                 double highestScore = 0.67;
 
-                foreach (var file in Directory.GetFiles("IconsForVotes", "*.png"))
+                foreach (var file in Directory.GetFiles(iconsForVotesPath, "*.png"))
                 {
                     string trackName = Path.GetFileNameWithoutExtension(file);
-                    if (trackName == "SelectionHappening") continue;
+                    if (trackName == "SelectionHappening" || trackName == "Random") continue;
 
                     using Mat trackTemplate = Cv2.ImRead(file, ImreadModes.Color);
                     double score = GetMatchConfidence(trackTemplate, winningSlotMat);
@@ -257,8 +281,21 @@ public partial class PickPercentageThing : Node
         List<Mat> mats = new();
         for (int i = 1; i <= 24; i++)
         {
-            string path = $"Votes/{prefix}_{i}.tiff";
-            mats.Add(File.Exists(path) ? Cv2.ImRead(path, ImreadModes.Color) : null);
+            string path = Path.Combine(VRAverageCalculator.ocrImagesPath, $"{prefix}_{i}.tiff");
+            
+            Mat loadedMat = null;
+            if (File.Exists(path))
+            {
+                try
+                {
+                    loadedMat = Cv2.ImRead(path, ImreadModes.Color);
+                }
+                catch (Exception ex)
+                {
+                    GD.PrintErr($"Failed to read image {path}: {ex.Message}");
+                }
+            }
+            mats.Add(loadedMat);
         }
         return mats;
     }
@@ -270,7 +307,8 @@ public partial class PickPercentageThing : Node
             for (int y = 0; y < 2; y++)
             {
                 string bounds = $"{200}:{150}:{(28 + x * 237)}:{(y == 0 ? 25 : 905)}";
-                cropTasks.Add(VRAverageCalculator.instance.ProcessImageAsync(bounds, $"Votes/{prefix}_{1 + x + (y * 12)}.tiff", 0, filePath));
+                string outputPath = Path.Combine(VRAverageCalculator.ocrImagesPath, $"{prefix}_{1 + x + (y * 12)}.tiff");
+                cropTasks.Add(VRAverageCalculator.instance.ProcessImageAsync(bounds, outputPath, 0, filePath));
             }
         }
 
@@ -279,7 +317,8 @@ public partial class PickPercentageThing : Node
             for (int y = 0; y < 4; y++)
             {
                 string bounds = $"{200}:{150}:{(35 + x * 1659)}:{(26 + 176 + (y * 176))}";
-                cropTasks.Add(VRAverageCalculator.instance.ProcessImageAsync(bounds, $"Votes/{prefix}_{9 + y + (x * 12)}.tiff", 0, filePath));
+                string outputPath = Path.Combine(VRAverageCalculator.ocrImagesPath, $"{prefix}_{9 + y + (x * 12)}.tiff");
+                cropTasks.Add(VRAverageCalculator.instance.ProcessImageAsync(bounds, outputPath, 0, filePath));
             }
         }
     }
@@ -288,11 +327,15 @@ public partial class PickPercentageThing : Node
     {
         _courseSelected = await Task.Run(async () =>
         {
-            await VRAverageCalculator.instance.GetSourceImage("BaseImages/CheckForSelected.tiff");
-            await VRAverageCalculator.instance.ProcessImageAsync("1000:80:480:240", "BaseImages/selectedBanner.tiff", 0, "BaseImages/CheckForSelected.tiff");
+            string checkForSelectedPath = Path.Combine(VRAverageCalculator.baseImagesPath, "CheckForSelected.tiff");
+            string selectedBannerPath = Path.Combine(VRAverageCalculator.baseImagesPath, "selectedBanner.tiff");
+            string courseSelectedPath = Path.Combine(VRAverageCalculator.baseImagesPath, "CourseSelected.png");
+
+            await VRAverageCalculator.instance.GetSourceImage(checkForSelectedPath);
+            await VRAverageCalculator.instance.ProcessImageAsync("1000:80:480:240", selectedBannerPath, 0, checkForSelectedPath);
             
-            using Mat smallerImage = Cv2.ImRead("BaseImages/CourseSelected.png");
-            using Mat largerImage = Cv2.ImRead("BaseImages/selectedBanner.tiff");
+            using Mat smallerImage = File.Exists(courseSelectedPath) ? Cv2.ImRead(courseSelectedPath) : null;
+            using Mat largerImage = File.Exists(selectedBannerPath) ? Cv2.ImRead(selectedBannerPath) : null;
             return CheckMatch(.67, smallerImage, largerImage) > 0;
         });
 

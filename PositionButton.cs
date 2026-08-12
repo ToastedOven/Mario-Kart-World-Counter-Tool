@@ -39,11 +39,6 @@ public partial class PositionButton : TextureRect
         string timeStamp = "-1";
         if (!SettingsPage.hiddenTimestamp)
         {
-            string tzId = TimeZoneInfo.Local.Id;
-            if (!TimeZoneInfo.Local.HasIanaId && TimeZoneInfo.TryConvertWindowsIdToIanaId(tzId, out var ianaId))
-            {
-                tzId = ianaId;
-            }
             timeStamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString();
         }
 

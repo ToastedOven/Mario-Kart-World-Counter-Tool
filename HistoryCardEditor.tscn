@@ -1,0 +1,248 @@
+[gd_scene format=3 uid="uid://cyjeh54rlltff"]
+
+[ext_resource type="Script" uid="uid://4sct67ua6l67" path="res://HistoryCardEditor.cs" id="1_7j3af"]
+[ext_resource type="PackedScene" uid="uid://csjxbq2gqp257" path="res://HistoryCardTrackPicker.tscn" id="2_kb3nw"]
+[ext_resource type="Texture2D" uid="uid://b55g3fxs2lys" path="res://Combo Icons/Drivers/baby-daisy.png" id="3_oc4b3"]
+[ext_resource type="Texture2D" uid="uid://b3ttlm2fn5cd5" path="res://Combo Icons/Karts/b-dasher.png" id="4_k06ku"]
+
+[node name="ColorRect" type="ColorRect" unique_id=289421652 node_paths=PackedStringArray("Option1", "Option2", "Option3", "Picked", "ComingFrom", "Combo", "racer", "kart", "Random", "Mirror", "Disconnected", "NewSession", "Option1Votes", "Option2Votes", "Option3Votes", "RandomVotes", "Version", "Position", "PlayerCount")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -300.0
+offset_right = 375.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3328807, 0.33288068, 0.33288068, 1)
+script = ExtResource("1_7j3af")
+Option1 = NodePath("VBoxContainer/HBoxContainer/VBoxContainer2/TextureRect")
+Option2 = NodePath("VBoxContainer/HBoxContainer/VBoxContainer3/TextureRect")
+Option3 = NodePath("VBoxContainer/HBoxContainer/VBoxContainer4/TextureRect")
+Picked = NodePath("VBoxContainer/HBoxContainer/VBoxContainer5/TextureRect")
+ComingFrom = NodePath("VBoxContainer/HBoxContainer/VBoxContainer/TextureRect")
+Combo = NodePath("VBoxContainer/HBoxContainer3/Button")
+racer = NodePath("VBoxContainer/HBoxContainer3/CurrentDriver")
+kart = NodePath("VBoxContainer/HBoxContainer3/CurrentKart")
+Random = NodePath("VBoxContainer/HBoxContainer2/Random")
+Mirror = NodePath("VBoxContainer/HBoxContainer2/Mirror")
+Disconnected = NodePath("VBoxContainer/HBoxContainer2/DC")
+NewSession = NodePath("VBoxContainer/HBoxContainer2/NewSession")
+Option1Votes = NodePath("VBoxContainer/HBoxContainer/VBoxContainer2/LineEdit")
+Option2Votes = NodePath("VBoxContainer/HBoxContainer/VBoxContainer3/LineEdit")
+Option3Votes = NodePath("VBoxContainer/HBoxContainer/VBoxContainer4/LineEdit")
+RandomVotes = NodePath("VBoxContainer/HBoxContainer4/VBoxContainer4/RandomVotes")
+Version = NodePath("VBoxContainer/HBoxContainer4/VBoxContainer/Version")
+Position = NodePath("VBoxContainer/HBoxContainer4/VBoxContainer2/Position")
+PlayerCount = NodePath("VBoxContainer/HBoxContainer4/VBoxContainer3/PlayerCount")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2109986719]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -479.0
+offset_right = 479.0
+offset_bottom = 174.0
+grow_horizontal = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1154203878]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=206912669]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1225131457]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Coming From"
+horizontal_alignment = 1
+
+[node name="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1020966983 instance=ExtResource("2_kb3nw")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=599499807]
+layout_mode = 2
+text = "                      "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=335556919]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=317402050]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Option 1"
+horizontal_alignment = 1
+
+[node name="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1883046062 instance=ExtResource("2_kb3nw")]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=2047317029]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Option 1 Votes"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=10733716]
+layout_mode = 2
+placeholder_text = "0-24"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=430231652]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=239621328]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Option 2"
+horizontal_alignment = 1
+
+[node name="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=150229000 instance=ExtResource("2_kb3nw")]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=1485382073]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Option 2 Votes"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer3" unique_id=485157236]
+layout_mode = 2
+placeholder_text = "0-24"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1037560363]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer4" unique_id=1534724775]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Option 3"
+horizontal_alignment = 1
+
+[node name="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer4" unique_id=1076142939 instance=ExtResource("2_kb3nw")]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer4" unique_id=98162541]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Option 3 Votes"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer4" unique_id=14366283]
+layout_mode = 2
+placeholder_text = "0-24"
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1232370379]
+layout_mode = 2
+text = "                      "
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=722752284]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer5" unique_id=117122939]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Picked"
+horizontal_alignment = 1
+
+[node name="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer5" unique_id=1796991411 instance=ExtResource("2_kb3nw")]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=2129839879]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Random" type="CheckBox" parent="VBoxContainer/HBoxContainer2" unique_id=914241867]
+layout_mode = 2
+text = "Random Picked"
+
+[node name="Mirror" type="CheckBox" parent="VBoxContainer/HBoxContainer2" unique_id=790926169]
+layout_mode = 2
+text = "Mirror"
+
+[node name="DC" type="CheckBox" parent="VBoxContainer/HBoxContainer2" unique_id=352565087]
+layout_mode = 2
+text = "Disconnected"
+
+[node name="NewSession" type="CheckBox" parent="VBoxContainer/HBoxContainer2" unique_id=950606165]
+layout_mode = 2
+text = "New Session"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=250371145]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1086925557]
+layout_mode = 2
+text = "Change Combo"
+
+[node name="CurrentDriver" type="TextureRect" parent="VBoxContainer/HBoxContainer3" unique_id=1222205713]
+layout_mode = 2
+texture = ExtResource("3_oc4b3")
+
+[node name="CurrentKart" type="TextureRect" parent="VBoxContainer/HBoxContainer3" unique_id=1714292557]
+layout_mode = 2
+texture = ExtResource("4_k06ku")
+expand_mode = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=230070690]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer4" unique_id=1777575961]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer4/VBoxContainer" unique_id=771302448]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Game Version"
+horizontal_alignment = 1
+
+[node name="Version" type="LineEdit" parent="VBoxContainer/HBoxContainer4/VBoxContainer" unique_id=418173192]
+layout_mode = 2
+placeholder_text = "ex: 1.7.0"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer4" unique_id=40495487]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer4/VBoxContainer2" unique_id=1434762998]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Position"
+horizontal_alignment = 1
+
+[node name="Position" type="LineEdit" parent="VBoxContainer/HBoxContainer4/VBoxContainer2" unique_id=2064853554]
+layout_mode = 2
+placeholder_text = "1-24"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/HBoxContainer4" unique_id=1054639495]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer4/VBoxContainer3" unique_id=2037621283]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Player Count"
+horizontal_alignment = 1
+
+[node name="PlayerCount" type="LineEdit" parent="VBoxContainer/HBoxContainer4/VBoxContainer3" unique_id=254951651]
+layout_mode = 2
+placeholder_text = "1-24"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer/HBoxContainer4" unique_id=757067279]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer4/VBoxContainer4" unique_id=650697659]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+text = "Random Votes"
+horizontal_alignment = 1
+
+[node name="RandomVotes" type="LineEdit" parent="VBoxContainer/HBoxContainer4/VBoxContainer4" unique_id=150097715]
+layout_mode = 2
+placeholder_text = "0-24"
