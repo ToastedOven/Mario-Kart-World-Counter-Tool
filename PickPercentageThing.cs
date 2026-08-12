@@ -29,7 +29,7 @@ public partial class PickPercentageThing : Node
             List<Mat> loadedLargerImages = await PrepareSlotImagesAsync(baseVotesPath, "pick");
 
             RandomSlotIndices.Clear();
-            string randomPath = "IconsForVotes/Random.png";
+            string randomPath = Path.Combine(iconsForVotesPath, "Random.png");
             if (File.Exists(randomPath))
             {
                 using Mat randomTemplate = Cv2.ImRead(randomPath, ImreadModes.Color);
@@ -42,7 +42,7 @@ public partial class PickPercentageThing : Node
                 }
             }
 
-            var tempCounts = Directory.GetFiles("IconsForVotes", "*.png")
+            var tempCounts = Directory.GetFiles(iconsForVotesPath, "*.png")
                 .ToDictionary(
                     Path.GetFileNameWithoutExtension,
                     file => CountTemplateMatches(file, loadedLargerImages)
@@ -221,7 +221,7 @@ public partial class PickPercentageThing : Node
             List<Mat> slotMats = await PrepareSlotImagesAsync(baseVotesFinalPath, "selected_pick");
             int winningSlotIndex = -1;
 
-            string borderPath = "IconsForVotes/SelectionHappening.png";
+            string borderPath = Path.Combine(iconsForVotesPath, "SelectionHappening.png");
             if (File.Exists(borderPath))
             {
                 using Mat borderTemplate = Cv2.ImRead(borderPath, ImreadModes.Color);
@@ -237,7 +237,7 @@ public partial class PickPercentageThing : Node
                 Mat winningSlotMat = slotMats[winningSlotIndex];
                 double highestScore = 0.67;
 
-                foreach (var file in Directory.GetFiles("IconsForVotes", "*.png"))
+                foreach (var file in Directory.GetFiles(iconsForVotesPath, "*.png"))
                 {
                     string trackName = Path.GetFileNameWithoutExtension(file);
                     if (trackName == "SelectionHappening" || trackName == "Random") continue;

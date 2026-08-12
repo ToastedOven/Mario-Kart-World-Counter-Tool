@@ -104,8 +104,7 @@ public partial class CameraSetup : Node
 
                 // Safely copy the raw memory bytes from the native C++ pointer to managed space
                 int byteCount = (int)(rgbFrame.Total() * rgbFrame.Channels());
-                byte[] rawData = new byte[byteCount];
-                Marshal.Copy(rgbFrame.Data, rawData, 0, byteCount);
+                byte[] rawData = rgbFrame.ToBytes();
 
                 // Build the Godot Image asset and pass it onto the UI component
                 var imageTexture = Godot.Image.CreateFromData(rgbFrame.Width, rgbFrame.Height, false, Godot.Image.Format.Rgb8, rawData);
