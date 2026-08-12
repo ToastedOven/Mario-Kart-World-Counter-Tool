@@ -20,8 +20,8 @@ public partial class VRAverageCalculator : Node
     [Export] private Button resetButton;
     [Export] private Label averageVR, myVR, racerCount;
 
-    public static readonly string baseImagesPath = ProjectSettings.GlobalizePath("user://BaseImages");
-    public static  readonly string ocrImagesPath = ProjectSettings.GlobalizePath("user://OcrImages");
+    public static readonly string baseImagesPath = ProjectSettings.GlobalizePath("res://BaseImages");
+    public static  readonly string ocrImagesPath = ProjectSettings.GlobalizePath("res://OcrImages");
     
     private int prevAverageVR = -1;
 
