@@ -225,7 +225,7 @@ public partial class VRAverageCalculator : Node
         {
             string tessDataPath = ProjectSettings.GlobalizePath("res://tessdata/");
             var tesseractInfo = new ProcessStartInfo {
-                FileName = OperatingSystem.IsWindows() ? "tesseract.exe" : "tesseract",
+                FileName = "tesseract",
                 Arguments = $"\"{fullFilePath}\" stdout --psm 11 -c tessedit_char_whitelist=0123456789 --tessdata-dir \"{tessDataPath}\" -l eng2",
                 RedirectStandardOutput = true,
                 UseShellExecute = false, 
@@ -245,5 +245,37 @@ public partial class VRAverageCalculator : Node
 
             return (0, x, y);
         });
+    }
+    
+    
+    public static bool IsTesseractInstalled()
+    {
+        try
+        {
+            using var process = new Process();
+            process.StartInfo = new ProcessStartInfo
+            {
+                FileName = "tesseract",
+                Arguments = "--version",
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
+            process.Start();
+            
+            process.WaitForExit(3000);
+
+            if (process.ExitCode == 0)
+            {
+                return true;
+            }
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
+        return false;
     }
 }

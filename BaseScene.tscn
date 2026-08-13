@@ -176,7 +176,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "settingsPage", "urlPage", "trackSelectionPage", "autoUpload1", "autoUpload2", "hideTimestamp1", "hideTimestamp2", "autoScanForTracks", "autoScanForVr", "mirrorMode", "historyButton", "cameraSetup", "enterApiKey", "settings", "enterCustomUrl", "dcButton", "pullVersionButton", "versionLine", "postMatchInstructions")]
+[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "settingsPage", "urlPage", "trackSelectionPage", "autoUpload1", "autoUpload2", "hideTimestamp1", "hideTimestamp2", "autoScanForTracks", "autoScanForVr", "mirrorMode", "autoSetPlayerCount", "historyButton", "cameraSetup", "enterApiKey", "settings", "enterCustomUrl", "dcButton", "pullVersionButton", "versionLine", "postMatchInstructions")]
 script = ExtResource("134_28v50")
 pickerPage = NodePath("../PickerPage")
 historyPage = NodePath("../HistoryPage")
@@ -194,6 +194,7 @@ hideTimestamp2 = NodePath("../SettingsPage/VBoxContainer/Hide Timestamp")
 autoScanForTracks = NodePath("../SettingsPage/VBoxContainer/Auto Scan Tracks")
 autoScanForVr = NodePath("../SettingsPage/VBoxContainer/Auto Scan VR")
 mirrorMode = NodePath("../Post Match/PostMatchOptions/Mirror")
+autoSetPlayerCount = NodePath("../SettingsPage/VBoxContainer/Auto Determine Player Count")
 historyButton = NodePath("../HBoxContainer/ShowHistory")
 cameraSetup = NodePath("../SettingsPage/VBoxContainer/Camera Setup")
 enterApiKey = NodePath("../SettingsPage/VBoxContainer/API Key")
@@ -573,7 +574,6 @@ theme_override_constants/outline_size = 4
 text = "Close"
 
 [node name="SettingsPage" type="Control" parent="." unique_id=654584262 node_paths=PackedStringArray("apiLabel", "close")]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -647,17 +647,26 @@ text = "Timestamp Hidden"
 [node name="Auto Upload" type="CheckBox" parent="SettingsPage/VBoxContainer" unique_id=1642810085]
 layout_mode = 2
 theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
+button_pressed = true
 text = "Auto Upload History"
 
 [node name="Auto Scan Tracks" type="CheckBox" parent="SettingsPage/VBoxContainer" unique_id=1428852087]
 layout_mode = 2
 theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
+button_pressed = true
 text = "Auto Scan For Track Options"
 
 [node name="Auto Scan VR" type="CheckBox" parent="SettingsPage/VBoxContainer" unique_id=1030172346]
 layout_mode = 2
 theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
-text = "Auto Scan For VR (Requires Tesseract)"
+button_pressed = true
+text = "Auto Scan For VR"
+
+[node name="Auto Determine Player Count" type="CheckBox" parent="SettingsPage/VBoxContainer" unique_id=230429342]
+layout_mode = 2
+theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
+button_pressed = true
+text = "Auto Determine Player Count"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SettingsPage/VBoxContainer" unique_id=2864270]
 layout_mode = 2

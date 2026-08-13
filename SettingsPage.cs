@@ -40,11 +40,12 @@ public partial class SettingsPage : GenericPage
     } = true;
     public static bool autoScanVR
     {
-        get;
+        get => field && !ControlManager.instance.autoScanForVr.Disabled;
         set
         {
             field = value;
             ControlManager.instance.autoScanForVr.SetPressed(value);
+            ControlManager.instance.autoSetPlayerCount.SetDisabled(!value);
             Save();
         }
     } = true;
@@ -59,6 +60,16 @@ public partial class SettingsPage : GenericPage
             Save();
         }
     } = "";
+    public static bool autoSetPlayerCount
+    {
+        get => field && !ControlManager.instance.autoSetPlayerCount.Disabled;
+        set
+        {
+            field = value;
+            ControlManager.instance.autoSetPlayerCount.SetPressed(value);
+            Save();
+        }
+    } = true;
 
     public static SettingsPage instance;
     public static string dbUrl = "https://mkw-db.nunchuk.xyz/";
@@ -72,6 +83,10 @@ public partial class SettingsPage : GenericPage
         {
             PullVersionButtonOnPressed();
         }
+        else
+        {
+            CompareVersionToDB();
+        }
         ControlManager.instance.hideTimestamp1.Pressed += TimeStampToggle;
         ControlManager.instance.hideTimestamp2.Pressed += TimeStampToggle;
         ControlManager.instance.autoUpload1.Pressed += AutoUploadToggle;
@@ -79,6 +94,12 @@ public partial class SettingsPage : GenericPage
         ControlManager.instance.autoScanForTracks.Pressed += () => { autoScanOptions = ControlManager.instance.autoScanForTracks.IsPressed(); };
         ControlManager.instance.autoScanForVr.Pressed += () => { autoScanVR = ControlManager.instance.autoScanForVr.IsPressed(); };
         ControlManager.instance.pullVersionButton.Pressed += PullVersionButtonOnPressed;
+        if (!VRAverageCalculator.IsTesseractInstalled())
+        {
+            ControlManager.instance.autoScanForVr.SetDisabled(true);
+            ControlManager.instance.autoScanForVr.Text = "Auto Scan For VR (TESSERACT NOT INSTALLED)";
+            ControlManager.instance.autoSetPlayerCount.SetDisabled(true);
+        }
     }
 
     public override void CloseOnPressed()
@@ -94,6 +115,20 @@ public partial class SettingsPage : GenericPage
         if (response.Contains("\"version\""))
         {
             currentVersion = response.Split("\"")[3];
+        }
+    }
+
+    private async void CompareVersionToDB()
+    {
+        CloudflareClient client = new CloudflareClient(dbUrl, "");
+        string response = await client.GetGameVersionFromDb();
+        if (response.Contains("\"version\""))
+        {
+            var dbVersion = response.Split("\"")[3];
+            if (currentVersion != dbVersion)
+            {
+                ControlManager.instance.CreatePopup($"Your game version [{currentVersion}] does not match the current version on the DB [{dbVersion}]");
+            }
         }
     }
 
@@ -119,6 +154,7 @@ public partial class SettingsPage : GenericPage
         saveInfo.Append($"SCANVR:::{autoScanVR}\n");
         saveInfo.Append($"DBURL:::{dbUrl}\n");
         saveInfo.Append($"VERSION:::{currentVersion}\n");
+        saveInfo.Append($"AUTOSETPLAYERS:::{autoSetPlayerCount}\n");
         saveFile.StoreString(saveInfo.ToString());
         saveFile.Close();
     }
@@ -161,6 +197,9 @@ public partial class SettingsPage : GenericPage
                         break;
                     case "VERSION":
                         currentVersion = lineContents[1];
+                        break;
+                    case "AUTOSETPLAYERS":
+                        autoSetPlayerCount = bool.Parse(lineContents[1]);
                         break;
                 }
             }
