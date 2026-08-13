@@ -147,7 +147,7 @@ public partial class SettingsPage : GenericPage
         StringBuilder saveInfo = new StringBuilder();
         using var saveFile = FileAccess.Open("user://CounterTool.settings", FileAccess.ModeFlags.Write);
         saveInfo.Append($"API:::{ApiKeyEntry.apiKey}:::{ApiKeyEntry.apiKeyDate}\n");
-        saveInfo.Append($"CAMERA:::{CameraSetup.currentCamera}:::{CameraSetup.currentRotation}:::{CameraSetup.currentFlip}\n");
+        saveInfo.Append($"CAMERA:::{CameraSetup.currentCameraIndex}:::{CameraSetup.currentRotation}:::{CameraSetup.currentFlip}\n");
         saveInfo.Append($"TIMESTAMP:::{hiddenTimestamp}\n");
         saveInfo.Append($"UPLOAD:::{autoUpload}\n");
         saveInfo.Append($"SCANOPTIONS:::{autoScanOptions}\n");
@@ -176,7 +176,7 @@ public partial class SettingsPage : GenericPage
                         apiLabel.Text = $"API Key Set Date: {ApiKeyEntry.apiKeyDate}";
                         break;
                     case "CAMERA":
-                        CameraSetup.currentCamera = int.Parse(lineContents[1]);
+                        CameraSetup.currentCameraIndex = int.Parse(lineContents[1]);
                         CameraSetup.currentRotation = int.Parse(lineContents[2]);
                         CameraSetup.currentFlip = int.Parse(lineContents[3]);
                         break;

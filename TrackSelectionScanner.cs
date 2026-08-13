@@ -22,6 +22,7 @@ public partial class TrackSelectionScanner : Node
     private readonly ConcurrentQueue<Mat> frames = [];
     private readonly ConcurrentBag<TrackSelectionHelper.TrackSelectionResult> trackSelectionResults = [];
     private int framesWithoutTrackSelection;
+    public static TrackSelectionScanner instance;
 
     private bool tryScanning;
     
@@ -34,6 +35,7 @@ public partial class TrackSelectionScanner : Node
 
     public override void _Ready()
     {
+        instance = this;
         TrackSelectionHelper.LoadTemplatesAndMasks();
         
         // Call this in ready to prepare capture

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d5ad2cfe-6289-40a2-828b-e8204a2d26fd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/SettingsPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SettingsPage.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ToastedOven&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ToastedOven/Mario-Kart-World-Counter-Tool.git",
+    "accountId": "f96990f3-760e-4a39-a391-b72b7ce317a9"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "ToastedOven",
+    "repository": "Mario-Kart-World-Counter-Tool"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b2202cec34a44ea914b4df68a5ca71c5e7c00/43/bfff84a8/Array.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/34588703652c4d2782e7c04fa8ce17a81f600/70/85c33014/TesseractEngine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/22/d18d259f/InitHelpers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/89/655c66f1/ThrowHelpers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/a6/506b8082/Number.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/f0/8a783fcd/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/f2/c2eeac3b/MethodBaseInvoker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/780b10c4924b4c70b45876e5766da392199200/c8/1bbe58a1/HttpResponseMessage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7e3f8a67883485f96b34e55434971c664c00/86/5f8db497/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c85c00298a834c4984235806788d6a0283800/bf/567b925a/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cf0fda9068894d27906e5fc478b267ec611400/31/8b0e287c/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e929cb9673c947ad9269facdac90006adb3400/18/38026ff2/Task.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e929cb9673c947ad9269facdac90006adb3400/84/92c1c18c/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e929cb9673c947ad9269facdac90006adb3400/d6/1f6d6bf3/CastHelpers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/241db236b14e13198d9587481ef2cb42ecb0f94858d955fb74adbb9362cb9/Cv2_imgcodecs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9e95626176f3c0c84abd725d5be48163b1341f243c5ad8618b547e1a0c5aab3/DisplayServer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/CameraSetup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/CameraSetup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/CameraSetup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/RecentTrack.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/RecentTrackTracker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/VRAverageCalculator.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3EdtqaNOsKThL1pWTTF48xIGLkF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Executable.Editor.executor": "Debug",
+    ".NET Executable.Player.executor": "Debug",
+    "GdScript Start and Debug.Player GDScript.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "XThreadsFramesViewSplitterKey": "2.1875",
+    "git-widget-placeholder": "track-selection-detection",
+    "last_opened_file_path": "/home/nunchuk/Desktop/Godot_v4.7.1-stable_mono_linux_x86_64/Godot_v4.7.1-stable_mono_linux.x86_64",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected=".NET Executable.Editor">
+    <configuration name="Debug GDScript (Running session)" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory">
+      <option name="json" value="{&#10;  // Launch: &quot;Launch a new instance of the game&quot;,&#10;  // Attach: &quot;Attach to an already running game, which was started from the Godot Editor&quot;&#10;  &quot;request&quot; : &quot;Attach&quot;,&#10;  &quot;debugServer&quot; : 6006, // port should match the Debug Adapter port in the Godot Editor project settings.&#10;  &quot;scene&quot; : &quot;main&quot;, // main, current, res://path/to/file.tscn&#10;  &#10;  // &quot;playArgs&quot; : [ &quot;--editor&quot; ], // debugging a tool script&#10;  // &quot;playArgs&quot;: [&quot;--debug-collisions&quot;,&quot;--debug-navigation&quot;], // different options&#10;  &#10;  // one click deploy and debug via Godot Editor:&#10;  // &quot;platform&quot;: &quot;Android&quot;, // including Android, iOS, Web and W4 consoles&#10;  // &quot;device&quot;: &quot;0&quot;, // index of the device of a &quot;platform&quot; type&#10;}" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Player GDScript" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory">
+      <option name="json" value="{&#10;  // Launch: &quot;Launch a new instance of the game&quot;,&#10;  // Attach: &quot;Attach to an already running game, which was started from the Godot Editor&quot;&#10;  &quot;request&quot; : &quot;Launch&quot;,&#10;  &quot;debugServer&quot; : 6006, // port should match the Debug Adapter port in the Godot Editor project settings.&#10;  &quot;scene&quot; : &quot;main&quot;, // main, current, res://path/to/file.tscn&#10;  &#10;  // &quot;playArgs&quot; : [ &quot;--editor&quot; ], // debugging a tool script&#10;  // &quot;playArgs&quot;: [&quot;--debug-collisions&quot;,&quot;--debug-navigation&quot;], // different options&#10;  &#10;  // one click deploy and debug via Godot Editor:&#10;  // &quot;platform&quot;: &quot;Android&quot;, // including Android, iOS, Web and W4 consoles&#10;  // &quot;device&quot;: &quot;0&quot;, // index of the device of a &quot;platform&quot; type&#10;}" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Editor" type="RunExe" factoryName=".NET Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Godot_v4.7.1-stable_mono_linux_x86_64/Godot_v4.7.1-stable_mono_linux.x86_64" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="AUTO_ATTACH_CHILDREN" value="0" />
+      <option name="RUNTIME_TYPE" value="coreclr" />
+      <method v="2">
+        <option name="Build Solution" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Player" type="RunExe" factoryName=".NET Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Godot_v4.7.1-stable_mono_linux_x86_64/Godot_v4.7.1-stable_mono_linux.x86_64" />
+      <option name="PROGRAM_PARAMETERS" value="--path &quot;./&quot;" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="AUTO_ATTACH_CHILDREN" value="0" />
+      <option name="RUNTIME_TYPE" value="coreclr" />
+      <method v="2">
+        <option name="Build Solution" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue=".NET Executable.Editor" />
+      <item itemvalue=".NET Executable.Player" />
+      <item itemvalue="GdScript Start and Debug.Debug GDScript (Running session)" />
+      <item itemvalue="GdScript Start and Debug.Player GDScript" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5ad2cfe-6289-40a2-828b-e8204a2d26fd" name="Changes" comment="" />
+      <created>1780520467434</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780520467434</updated>
+      <workItem from="1780520470877" duration="1311000" />
+      <workItem from="1780530140871" duration="2728000" />
+      <workItem from="1780539196985" duration="4898000" />
+      <workItem from="1780609955971" duration="14694000" />
+      <workItem from="1781754822746" duration="2207000" />
+      <workItem from="1781757320816" duration="1253000" />
+      <workItem from="1781806457981" duration="11444000" />
+      <workItem from="1781976795563" duration="376000" />
+      <workItem from="1782017605775" duration="6344000" />
+      <workItem from="1782074630743" duration="5924000" />
+      <workItem from="1782159838390" duration="23120000" />
+      <workItem from="1782194756336" duration="2128000" />
+      <workItem from="1782241224412" duration="44000" />
+      <workItem from="1783123207102" duration="26000" />
+      <workItem from="1783196884012" duration="11688000" />
+      <workItem from="1783393227586" duration="102000" />
+      <workItem from="1783538419390" duration="8691000" />
+      <workItem from="1783913624861" duration="2788000" />
+      <workItem from="1783968397909" duration="703000" />
+      <workItem from="1783987503163" duration="9737000" />
+      <workItem from="1784053357569" duration="18469000" />
+      <workItem from="1784143255691" duration="22513000" />
+      <workItem from="1784225013661" duration="744000" />
+      <workItem from="1784226071802" duration="14815000" />
+      <workItem from="1784433641844" duration="744000" />
+      <workItem from="1784503765888" duration="7847000" />
+      <workItem from="1784569399101" duration="17189000" />
+      <workItem from="1784655368759" duration="6055000" />
+      <workItem from="1784697941718" duration="1805000" />
+      <workItem from="1784743106009" duration="661000" />
+      <workItem from="1784754253078" duration="1423000" />
+      <workItem from="1784780524502" duration="4221000" />
+      <workItem from="1784840953418" duration="9885000" />
+      <workItem from="1784912514349" duration="1919000" />
+      <workItem from="1785351555601" duration="17000000" />
+      <workItem from="1785434822617" duration="5708000" />
+      <workItem from="1785470247288" duration="783000" />
+      <workItem from="1785644955221" duration="4305000" />
+      <workItem from="1785782878307" duration="7743000" />
+      <workItem from="1785814147147" duration="8000" />
+      <workItem from="1786040581328" duration="2185000" />
+      <workItem from="1786064083753" duration="1557000" />
+      <workItem from="1786075726628" duration="17000" />
+      <workItem from="1786388666104" duration="112000" />
+      <workItem from="1786398971687" duration="3504000" />
+      <workItem from="1786409774165" duration="2636000" />
+      <workItem from="1786479237784" duration="6311000" />
+      <workItem from="1786646005924" duration="6688000" />
+    </task>
+    <task id="LOCAL-00001" summary="lots of changes">
+      <option name="closed" value="true" />
+      <created>1786411160407</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1786411160407</updated>
+    </task>
+    <task id="LOCAL-00002" summary="I forgot to push this">
+      <option name="closed" value="true" />
+      <created>1786423555514</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1786423555514</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixing windows issues">
+      <option name="closed" value="true" />
+      <created>1786482472058</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1786482472059</updated>
+    </task>
+    <task id="LOCAL-00004" summary="finalized windows fixes probably">
+      <option name="closed" value="true" />
+      <created>1786499422868</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1786499422868</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fixed not getting right path">
+      <option name="closed" value="true" />
+      <created>1786509991878</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1786509991878</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Couple bug fixes">
+      <option name="closed" value="true" />
+      <created>1786650733495</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1786650733495</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix for track swapping">
+      <option name="closed" value="true" />
+      <created>1786653234363</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1786653234363</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="auto-vr-scan" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="lots of changes" />
+    <MESSAGE value="I forgot to push this" />
+    <MESSAGE value="fixing windows issues" />
+    <MESSAGE value="finalized windows fixes probably" />
+    <MESSAGE value="fixed not getting right path" />
+    <MESSAGE value="Couple bug fixes" />
+    <MESSAGE value="fix for track swapping" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix for track swapping" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.DllNotFoundException" breakIfHandledByUserCode="true" isInternal="false" displayValue="DllNotFoundException" namespaceName="System">
+            <option name="internal" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="RunExe">
+        <watch expression="buttons[i].value / (float)totalValue" language="C#" />
+        <watch expression="620f * (myValue / (float)totalValue)" language="C#" />
+        <watch expression="numbers[buttons.IndexOf(button) + 60]" language="C#" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
