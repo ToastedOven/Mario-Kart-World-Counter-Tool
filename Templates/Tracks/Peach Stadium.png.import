@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwnoa7a2ojwc3"
-path="res://.godot/imported/Peach Stadium.png-1790f301a5be951d30360467b33d3804.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Tracks/Peach Stadium.png"
-dest_files=["res://.godot/imported/Peach Stadium.png-1790f301a5be951d30360467b33d3804.ctex"]
 
 [params]
 

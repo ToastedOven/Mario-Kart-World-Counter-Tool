@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyqhwiyyndxv2"
-path="res://.godot/imported/Random - Track Selection.png-18e9fb85527bb05823dfd3ebdd4d2ec1.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Random - Track Selection.png"
-dest_files=["res://.godot/imported/Random - Track Selection.png-18e9fb85527bb05823dfd3ebdd4d2ec1.ctex"]
 
 [params]
 

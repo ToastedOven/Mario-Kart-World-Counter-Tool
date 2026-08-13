@@ -5,7 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5ad2cfe-6289-40a2-828b-e8204a2d26fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SettingsPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SettingsPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/BaseScene.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CounterTool.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CounterTool.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HistoryCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HistoryCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IconsForVotes/Great ? Block Ruins.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IconsForVotes/Great ? Block Ruins.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecentTrackTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecentTrackTracker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Random - Track Selection.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Random - Track Selection.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Track-Selection-Arrow-Segment-Mask.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Track-Selection-Arrow-Segment-Mask.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Track-Selection-Arrow-Segment.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Track-Selection-Arrow-Segment.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Airship Fortress.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Airship Fortress.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Bowsers Castle.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Bowsers Castle.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Choco Mountain.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Choco Mountain.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Crown City.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Crown City.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/DK Spaceport.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/DK Spaceport.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Desert Hills.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Desert Hills.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Great ? Block Ruins.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mario Bros Circuit.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Mario Bros Circuit.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mask.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Mask.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Moo Moo Meadows.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Moo Moo Meadows.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Peach Beach.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Peach Beach.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Peach Stadium.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Peach Stadium.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Shy Guy Bazaar.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Shy Guy Bazaar.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Starview Peak.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Starview Peak.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Toads Factory.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Toads Factory.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Wario Stadium.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Wario Stadium.png.import" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +79,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/f0/8a783fcd/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/f2/c2eeac3b/MethodBaseInvoker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/780b10c4924b4c70b45876e5766da392199200/c8/1bbe58a1/HttpResponseMessage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b53480f4bb724269a8e0a810e21b5c08bb000/ec/407ad810/QueryTaskGroupState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7e3f8a67883485f96b34e55434971c664c00/86/5f8db497/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c85c00298a834c4984235806788d6a0283800/bf/567b925a/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cf0fda9068894d27906e5fc478b267ec611400/31/8b0e287c/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
@@ -65,9 +91,12 @@
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/CameraSetup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/CameraSetup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/CameraSetup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/HistoryCard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/RecentTrack.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/RecentTrackTracker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionScanner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/VRAverageCalculator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -201,7 +230,7 @@
       <workItem from="1786398971687" duration="3504000" />
       <workItem from="1786409774165" duration="2636000" />
       <workItem from="1786479237784" duration="6311000" />
-      <workItem from="1786646005924" duration="6688000" />
+      <workItem from="1786646005924" duration="10180000" />
     </task>
     <task id="LOCAL-00001" summary="lots of changes">
       <option name="closed" value="true" />
@@ -259,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786653234363</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed names">
+      <option name="closed" value="true" />
+      <created>1786654286701</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1786654286701</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +315,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="auto-vr-scan" />
+                        <option value="track-selection-detection" />
                       </list>
                     </value>
                   </entry>
@@ -299,7 +336,8 @@
     <MESSAGE value="fixed not getting right path" />
     <MESSAGE value="Couple bug fixes" />
     <MESSAGE value="fix for track swapping" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix for track swapping" />
+    <MESSAGE value="fixed names" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed names" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

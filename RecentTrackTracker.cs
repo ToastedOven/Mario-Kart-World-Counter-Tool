@@ -50,6 +50,7 @@ public partial class RecentTrackTracker : VBoxContainer
         {
             comingFrom.Texture = trackButton.Texture;
             comingFromId = ButtonThing.buttons.IndexOf(trackButton) % 30;
+            TrackSelectionScanner.instance.TestScan();
             return;
         }
         if (recentTracks.Count >= 4)

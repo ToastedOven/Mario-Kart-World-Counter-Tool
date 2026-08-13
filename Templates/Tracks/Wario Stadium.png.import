@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k0h8wqkdx0tm"
-path="res://.godot/imported/Wario Stadium.png-bb1f4800674cd03467c6c190de74d515.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Tracks/Wario Stadium.png"
-dest_files=["res://.godot/imported/Wario Stadium.png-bb1f4800674cd03467c6c190de74d515.ctex"]
 
 [params]
 

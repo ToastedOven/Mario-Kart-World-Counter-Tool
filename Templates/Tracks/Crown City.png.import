@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc7yrvriuxa3"
-path="res://.godot/imported/Crown City.png-b2a3955080d35a775ccb5194989f5041.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Tracks/Crown City.png"
-dest_files=["res://.godot/imported/Crown City.png-b2a3955080d35a775ccb5194989f5041.ctex"]
 
 [params]
 

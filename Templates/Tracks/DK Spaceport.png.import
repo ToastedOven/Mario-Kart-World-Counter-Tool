@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7gn5lt7dn02l"
-path="res://.godot/imported/DK Spaceport.png-4eef73adf8ead307df0e51c486badd0d.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Tracks/DK Spaceport.png"
-dest_files=["res://.godot/imported/DK Spaceport.png-4eef73adf8ead307df0e51c486badd0d.ctex"]
 
 [params]
 

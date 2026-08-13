@@ -167,6 +167,7 @@
 [ext_resource type="Texture2D" uid="uid://h4o6bwrjtq43" path="res://Tracks/28.png" id="160_oe45t"]
 [ext_resource type="Texture2D" uid="uid://f63xm516opee" path="res://Tracks/29.png" id="161_gdycy"]
 [ext_resource type="Texture2D" uid="uid://buy3kls7kxmpg" path="res://Tracks/30.png" id="162_yh4el"]
+[ext_resource type="Script" uid="uid://blpjnn2rpliik" path="res://TrackSelectionScanner.cs" id="168_r1sk8"]
 
 [node name="Control" type="Control" unique_id=1425128816]
 layout_mode = 3
@@ -2008,5 +2009,9 @@ expand_mode = 1
 [node name="PickPercentageThing" type="Node" parent="." unique_id=362714986]
 script = ExtResource("131_ecun1")
 metadata/_custom_type_script = "uid://5h4wd572nuu2"
+
+[node name="TrackSelectionScanner" type="Node" parent="." unique_id=2094949448]
+script = ExtResource("168_r1sk8")
+metadata/_custom_type_script = "uid://blpjnn2rpliik"
 
 [editable path="PickerPage/RecentPicks/DrivingFrom/TextureRect"]

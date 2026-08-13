@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3ug53n86cr1t"
-path="res://.godot/imported/Desert Hills.png-9f922eae4a46b9e0768d66229bf7c8d2.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Tracks/Desert Hills.png"
-dest_files=["res://.godot/imported/Desert Hills.png-9f922eae4a46b9e0768d66229bf7c8d2.ctex"]
 
 [params]
 

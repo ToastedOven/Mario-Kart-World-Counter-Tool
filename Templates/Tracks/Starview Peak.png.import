@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxyhdfmx2qn0y"
-path="res://.godot/imported/Starview Peak.png-77e5450fc6f7c23e496337c13dc768e5.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Tracks/Starview Peak.png"
-dest_files=["res://.godot/imported/Starview Peak.png-77e5450fc6f7c23e496337c13dc768e5.ctex"]
 
 [params]
 

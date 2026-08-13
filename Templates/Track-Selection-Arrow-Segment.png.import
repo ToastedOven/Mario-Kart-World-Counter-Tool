@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kx71cqxaqi8i"
-path="res://.godot/imported/Track-Selection-Arrow-Segment.png-1c335868208085062a08b8079afc6597.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Track-Selection-Arrow-Segment.png"
-dest_files=["res://.godot/imported/Track-Selection-Arrow-Segment.png-1c335868208085062a08b8079afc6597.ctex"]
 
 [params]
 

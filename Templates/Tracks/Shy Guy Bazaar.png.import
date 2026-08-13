@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnvdiyq212n1w"
-path="res://.godot/imported/Shy Guy Bazaar.png-20e954f43540db66982fd62d1e1de89f.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Tracks/Shy Guy Bazaar.png"
-dest_files=["res://.godot/imported/Shy Guy Bazaar.png-20e954f43540db66982fd62d1e1de89f.ctex"]
 
 [params]
 

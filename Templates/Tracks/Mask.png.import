@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b14qhn217lh65"
-path="res://.godot/imported/Mask.png-96118c6ed0cda49682e6bc845715fbf1.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Tracks/Mask.png"
-dest_files=["res://.godot/imported/Mask.png-96118c6ed0cda49682e6bc845715fbf1.ctex"]
 
 [params]
 

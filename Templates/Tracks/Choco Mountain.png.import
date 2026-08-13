@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpci44gwan1pe"
-path="res://.godot/imported/Choco Mountain.png-f12fccf99020808be2558c9d0b13913f.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Tracks/Choco Mountain.png"
-dest_files=["res://.godot/imported/Choco Mountain.png-f12fccf99020808be2558c9d0b13913f.ctex"]
 
 [params]
 

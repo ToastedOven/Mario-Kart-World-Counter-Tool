@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c16v01nuncak1"
-path="res://.godot/imported/Great ? Block Ruins.png-1f1b915ccdfd3fea89dc6f0dd4f33ba2.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://c3ee6uvexf2gu"
+valid=false
 
 [deps]
 
-source_file="res://IconsForVotes/Great ? Block Ruins.png"
-dest_files=["res://.godot/imported/Great ? Block Ruins.png-1f1b915ccdfd3fea89dc6f0dd4f33ba2.ctex"]
+source_file="res://Templates/Tracks/Faraway Oasis.png"
 
 [params]
 

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bclv3biiybfc4"
-path="res://.godot/imported/Bowsers Castle.png-032ea4ecbdc64ed9e1aa18b0fe197fa5.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Templates/Tracks/Bowsers Castle.png"
-dest_files=["res://.godot/imported/Bowsers Castle.png-032ea4ecbdc64ed9e1aa18b0fe197fa5.ctex"]
 
 [params]
 
