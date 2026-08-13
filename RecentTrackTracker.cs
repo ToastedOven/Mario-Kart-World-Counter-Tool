@@ -39,13 +39,14 @@ public partial class RecentTrackTracker : VBoxContainer
         comingFromId = -1;
     }
 
-    public void AddTrack(int trackId)
+    public void AddTrack(int trackId, bool skipIncoming = false)
     {
-        AddTrack(ButtonThing.buttons[trackId]);
+        AddTrack(ButtonThing.buttons[trackId], skipIncoming);
     }
-    public void AddTrack(ButtonThing trackButton)
+    
+    public void AddTrack(ButtonThing trackButton, bool skipIncoming = false)
     {
-        if (comingFromId == -1)
+        if (comingFromId == -1 && !skipIncoming)
         {
             comingFrom.Texture = trackButton.Texture;
             comingFromId = ButtonThing.buttons.IndexOf(trackButton) % 30;
@@ -100,6 +101,15 @@ public partial class RecentTrackTracker : VBoxContainer
         }
         recentTracks[recentTracks.IndexOf(trackButton)] = newButton;
         return newButton;
+    }
+
+    public void ClearTracks()
+    {
+        comingFrom.Texture = null;
+        comingFromId = -1;
+
+        foreach (var recentTrack in recentTracks.Duplicate())
+            RemoveTrack(recentTrack);
     }
 
     public override void _Process(double delta)

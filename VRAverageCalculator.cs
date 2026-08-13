@@ -176,7 +176,7 @@ public partial class VRAverageCalculator : Node
         gotCapture = false;
         await Task.Run(() =>
         {
-            using var capture = new VideoCapture(CameraSetup.currentCamera);
+            using var capture = new VideoCapture(CameraSetup.currentCameraIndex);
             if (capture.IsOpened())
             {
                 CameraSetup.ConfigureResolution(capture);
