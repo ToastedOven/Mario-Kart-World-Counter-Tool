@@ -92,6 +92,15 @@ public partial class RecentTrackTracker : VBoxContainer
             recentTrackIcons[2].Reparent(this);
         }
     }
+    public ButtonThing SwapTrack(ButtonThing trackButton, ButtonThing newButton)
+    {
+        if (!recentTracks.Contains(trackButton))
+        {
+            return null;
+        }
+        recentTracks[recentTracks.IndexOf(trackButton)] = newButton;
+        return newButton;
+    }
 
     public override void _Process(double delta)
     {

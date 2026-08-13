@@ -26,7 +26,7 @@ public partial class RecentTrack : TextureRect
                 switch (mouseEvent.ButtonIndex)
                 {
                     case MouseButton.Left:
-                        myTrack = ButtonThing.buttons[(ButtonThing.buttons.IndexOf(myTrack) + 30) % 60];
+                        myTrack = RecentTrackTracker.instance.SwapTrack(myTrack, ButtonThing.buttons[(ButtonThing.buttons.IndexOf(myTrack) + 30) % 60]);
                         break;
 
                     case MouseButton.Right:

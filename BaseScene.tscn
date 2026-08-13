@@ -574,6 +574,7 @@ theme_override_constants/outline_size = 4
 text = "Close"
 
 [node name="SettingsPage" type="Control" parent="." unique_id=654584262 node_paths=PackedStringArray("apiLabel", "close")]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
