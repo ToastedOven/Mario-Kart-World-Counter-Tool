@@ -20,7 +20,7 @@ public partial class PositionButton : TextureRect
         {
             currentRacePosition = GetIndex();
             ControlManager.instance.postMatchInstructions.Text = "Pick player count";
-            if (VRAverageCalculator.currentMatchVRs.Count > 0)
+            if (VRAverageCalculator.currentMatchVRs.Count > 0 && SettingsPage.autoSetPlayerCount)
             {
                 currentRacePlayerCount = VRAverageCalculator.currentMatchVRs.Count - 1;
                 await FinalizeRace();
