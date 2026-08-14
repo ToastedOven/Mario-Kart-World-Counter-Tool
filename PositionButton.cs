@@ -55,6 +55,8 @@ public partial class PositionButton : TextureRect
             matchInfo = matchInfo.TrimEnd('?');
             VRAverageCalculator.instance.Reset();
         }
+        
+        TrackSelectionScanner.instance.TestScan();
         VerifyDataPage.instance.SetupHistoryCard(matchInfo);
         ControlManager.instance.postMatchPage.Visible = false;
     }

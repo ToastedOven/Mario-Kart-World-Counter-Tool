@@ -6,107 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d5ad2cfe-6289-40a2-828b-e8204a2d26fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CameraSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CameraSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecentTrack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecentTrack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecentTrackTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecentTrackTracker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Acorn Heights.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Acorn Heights.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Acorn Heights.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Acorn Heights.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Airship Fortress.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Airship Fortress.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Airship Fortress.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Airship Fortress.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Boo Cinema.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Boo Cinema.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Boo Cinema.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Boo Cinema.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Bowsers Castle.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Bowsers Castle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Bowsers Castle.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Bowsers Castle.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Cheep Cheep Falls.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Cheep Cheep Falls.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Cheep Cheep Falls.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Cheep Cheep Falls.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Choco Mountain.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Choco Mountain.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Choco Mountain.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Choco Mountain.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Crown City.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Crown City.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Crown City.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Crown City.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/DK Pass.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/DK Pass.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/DK Pass.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/DK Pass.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/DK Spaceport.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/DK Spaceport.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/DK Spaceport.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/DK Spaceport.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Dandelion Depths.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Dandelion Depths.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Dandelion Depths.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Dandelion Depths.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Desert Hills.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Desert Hills.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Desert Hills.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Desert Hills.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Dino Dino Jungle.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Dino Dino Jungle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Dino Dino Jungle.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Dino Dino Jungle.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Dry Bones Burnout.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Dry Bones Burnout.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Dry Bones Burnout.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Dry Bones Burnout.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Faraway Oasis.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Faraway Oasis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Faraway Oasis.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Faraway Oasis.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Great ? Block Ruins.png.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Great Block Ruins.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Great Block Ruins.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Great Block Ruins.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Great Block Ruins.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Koopa Troopa Beach.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Koopa Troopa Beach.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Koopa Troopa Beach.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Koopa Troopa Beach.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mario Bros Circuit.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Mario Bros Circuit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mario Bros Circuit.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Mario Bros Circuit.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mario Circuit.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Mario Circuit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mario Circuit.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Mario Circuit.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mask.png.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Moo Moo Meadows.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Moo Moo Meadows.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Moo Moo Meadows.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Moo Moo Meadows.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Peach Beach.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Peach Beach.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Peach Beach.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Peach Beach.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Peach Stadium.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Peach Stadium.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Peach Stadium.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Peach Stadium.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Rainbow Road.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Rainbow Road.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Rainbow Road.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Rainbow Road.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Salty Salty Speedway.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Salty Salty Speedway.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Salty Salty Speedway.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Salty Salty Speedway.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Shy Guy Bazaar.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Shy Guy Bazaar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Shy Guy Bazaar.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Shy Guy Bazaar.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Sky High Sundae.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Sky High Sundae.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Sky High Sundae.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Sky High Sundae.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Starview Peak.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Starview Peak.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Starview Peak.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Starview Peak.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Toads Factory.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Toads Factory.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Toads Factory.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Toads Factory.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Tracks.xcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Wario Shipyard.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Wario Shipyard.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Wario Shipyard.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Wario Shipyard.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Wario Stadium.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Wario Stadium.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Wario Stadium.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Wario Stadium.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Whistlestop Summit.png" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Whistlestop Summit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Whistlestop Summit.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Tracks/Whistlestop Summit.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Acorn Heights.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Airship Fortress.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Boo Cinema.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Bowsers Castle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Cheep Cheep Falls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Choco Mountain.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Crown City.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/DK Pass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/DK Spaceport.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Dandelion Depths.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Desert Hills.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Dino Dino Jungle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Dry Bones Burnout.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Faraway Oasis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Great Block Ruins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Koopa Troopa Beach.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Mario Bros Circuit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Mario Circuit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Moo Moo Meadows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Peach Beach.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Peach Stadium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Rainbow Road.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Random.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Salty Salty Speedway.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Shy Guy Bazaar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Sky High Sundae.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Starview Peak.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Toads Factory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Wario Shipyard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Wario Stadium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Tracks2/Whistlestop Summit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PositionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PositionButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrackSelectionHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrackSelectionHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrackSelectionScanner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrackSelectionScanner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VRAverageCalculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VRAverageCalculator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,22 +31,22 @@
     &quot;assignee&quot;: &quot;ToastedOven&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ToastedOven/Mario-Kart-World-Counter-Tool.git",
-    "accountId": "f96990f3-760e-4a39-a391-b72b7ce317a9"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ToastedOven/Mario-Kart-World-Counter-Tool.git&quot;,
+    &quot;accountId&quot;: &quot;f96990f3-760e-4a39-a391-b72b7ce317a9&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "ToastedOven",
-    "repository": "Mario-Kart-World-Counter-Tool"
+    &quot;owner&quot;: &quot;ToastedOven&quot;,
+    &quot;repository&quot;: &quot;Mario-Kart-World-Counter-Tool&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b2202cec34a44ea914b4df68a5ca71c5e7c00/43/bfff84a8/Array.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/34588703652c4d2782e7c04fa8ce17a81f600/70/85c33014/TesseractEngine.cs" root0="SKIP_HIGHLIGHTING" />
@@ -174,7 +75,11 @@
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionScanner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/Utils/Cv2Extensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/VRAverageCalculator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -195,7 +100,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "XThreadsFramesViewSplitterKey": "2.1875",
+    "XThreadsFramesViewSplitterKey": "2.8421052",
     "git-widget-placeholder": "track-selection-detection",
     "last_opened_file_path": "/home/nunchuk/Desktop/Godot_v4.7.1-stable_mono_linux_x86_64/Godot_v4.7.1-stable_mono_linux.x86_64",
     "node.js.detected.package.eslint": "true",

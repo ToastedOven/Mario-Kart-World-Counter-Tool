@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using CounterTool.Utils;
 using Godot;
 using OpenCvSharp;
@@ -17,9 +18,6 @@ public static class TrackSelectionHelper
     private static Mat _trackTemplateMask = new();
     private static Mat _arrowSegmentTemplate = new();
     private static Mat _arrowSegmentTemplateMask = new();
-    private const int TrackTemplateThreshold = 80;
-    private const double TrackTemplateClipLimit = 7.6;
-    private static readonly Size TrackTemplateGridSize = new(6, 7);
 
     public static void LoadTemplatesAndMasks()
     {
@@ -33,17 +31,8 @@ public static class TrackSelectionHelper
                 .Where(file => !file.EndsWith("Mask.png"))
                 .Select(file =>
                 {
-                    using var image = Cv2.ImRead(file);
-                    // var template = new Mat();
-                    using var contrastedTemplate = Cv2.ApplyClahe(image, TrackTemplateClipLimit, TrackTemplateGridSize);
-                    using var grayscale = new Mat();
-                    Cv2.CvtColor(contrastedTemplate, grayscale, ColorConversionCodes.BGR2GRAY);
-                    var template = new Mat();
-                    Cv2.Threshold(grayscale, template, TrackTemplateThreshold, 255, ThresholdTypes.BinaryInv);
-                    // var maskedTemplate = new Mat();
-                    // Cv2.BitwiseAnd(template, _trackTemplateMask, maskedTemplate);
+                    var template = Cv2.ImRead(file, ImreadModes.Color);
                     
-                    // Cv2.ImWrite($"Debug-Out/Template-{file.Split("/").Last()}.tiff", maskedTemplate);
                     return new TrackTemplate(file, template);
                 })
                 .ToArray();
@@ -71,7 +60,6 @@ public static class TrackSelectionHelper
 
     public static TrackSelectionResult[] DetectInFrame(Mat frame, ConcurrentBag<TrackSelectionResult> trackSelectionResults, int attempt)
     {
-        
         const int croppedWidth = 1920 / 5;
         const int croppedHeight = 1080 / 3;
 
@@ -85,7 +73,6 @@ public static class TrackSelectionHelper
         Cv2.CvtColor(contrastedCrop, grayCrop, ColorConversionCodes.BGR2GRAY);
         using var thresholdCrop = new Mat();
         Cv2.Threshold(grayCrop, thresholdCrop, 180, 255, ThresholdTypes.Binary);
-        
         
         var result = Cv2.InvariantMatchTemplate(thresholdCrop, _arrowSegmentTemplate, TemplateMatchModes.CCoeffNormed, ..360, 1, 10, 0.50, 0, mask: _arrowSegmentTemplateMask);
 
@@ -103,7 +90,7 @@ public static class TrackSelectionHelper
 
         if (existingDetectedTracks.Length >= 3)
         {
-            GD.Print($"Likely confidant we have all tracks detected! {attempt}");
+            GD.Print($"Likely confident we have all tracks detected! {attempt}");
         }
 
         var filter = _trackTemplates
@@ -114,16 +101,12 @@ public static class TrackSelectionHelper
             .Select(item => item.Name)
             .ToArray();
 
-        using var contrastedFrame = Cv2.ApplyClahe(frame, TrackTemplateClipLimit, TrackTemplateGridSize);
-
         (string track, Rect bounds)[] detectedTracks = existingDetectedTracks.Length >= 3
             ? existingDetectedTracks.Select(item => (item.Key, item.Bounds)).ToArray()
-            : DetectTracks(contrastedFrame, 0.3, filter, attempt);
-        
+            : DetectTracks(frame, 0.67, filter, attempt);
         
         foreach (var (track, bounds) in detectedTracks)
         {
-
             var connectedPathway = false;
 
             foreach (var (_, _, _, angle, score) in result)
@@ -155,37 +138,43 @@ public static class TrackSelectionHelper
     private static (string track, Rect bounds)[] DetectTracks(Mat frame, double threshold, string[] tracksToExclude, int attempt)
     {
         var trackCards = DetectTrackCards(frame);
-        
         var detectedTracks = new ConcurrentBag<(string track, Rect bounds)>();
-        
-        _trackTemplates
-            .AsParallel()
-            .Where(item => tracksToExclude.All(track => track != item.Name))
-            .ForAll(item =>
+
+        Parallel.ForEach(trackCards, trackCard =>
+        {
+            string? bestMatchName = null;
+            double highestScore = threshold;
+            Point bestLoc = default;
+            Size bestTemplateSize = default;
+
+            foreach (var item in _trackTemplates)
             {
-                foreach (var trackCard in trackCards)
+                if (tracksToExclude.Contains(item.Name)) 
+                    continue;
+
+                if (trackCard.TextRegionCrop.Width < item.Template.Width || 
+                    trackCard.TextRegionCrop.Height < item.Template.Height)
+                    continue;
+
+                using var output = new Mat();
+                Cv2.MatchTemplate(trackCard.TextRegionCrop, item.Template, output, TemplateMatchModes.CCoeffNormed);
+                Cv2.MinMaxLoc(output, out _, out double maxVal, out _, out Point maxLoc);
+
+                if (maxVal > highestScore)
                 {
-                    if (trackCard.TextRegionCrop.Width < item.Template.Width || trackCard.TextRegionCrop.Height < item.Template.Height)
-                        continue;
-                    using var grayFrame = new Mat();
-                    Cv2.CvtColor(trackCard.TextRegionCrop, grayFrame, ColorConversionCodes.BGR2GRAY);
-                    using var binaryFrame = new Mat();
-                    Cv2.Threshold(grayFrame, binaryFrame, TrackTemplateThreshold, 255, ThresholdTypes.BinaryInv);
-                    using var output = new Mat();
-                    Cv2.MatchTemplate(binaryFrame, item.Template, output, TemplateMatchModes.CCoeffNormed);
-                    Cv2.MinMaxLoc(output, out _, out Point max);
-
-                    if (output.At<float>(max.Y, max.X) > threshold)
-                    {
-                        detectedTracks.Add((item.Name, new Rect(max + trackCard.FullCardRect.TopLeft, trackCard.FullCardRect.Size)));
-
-                        var resourceDirectory = ProjectSettings.GlobalizePath("res://Templates/TestFolder/");
-                        string filePath = Path.Combine(resourceDirectory, $"{item.Name}_attempt{attempt}.png");
-                        Cv2.ImWrite(filePath, binaryFrame);
-                    }
+                    highestScore = maxVal;
+                    bestMatchName = item.Name;
+                    bestLoc = maxLoc;
+                    bestTemplateSize = item.Template.Size();
                 }
-            });
-        
+            }
+
+            if (bestMatchName != null)
+            {
+                detectedTracks.Add((bestMatchName, new Rect(bestLoc + trackCard.FullCardRect.TopLeft, bestTemplateSize)));
+            }
+        });
+
         return detectedTracks.ToArray();
     }
 
@@ -202,53 +191,100 @@ public static class TrackSelectionHelper
     {
         var matchedCards = new List<DetectedCard>();
 
-        if (borderTemplateContour == null)
-        {
-            GD.PrintErr("[TrackDetector] Template not initialized! Call InitializeTemplate() first.");
-            return matchedCards;
-        }
+        string debugFolder = Path.Combine(Directory.GetCurrentDirectory(), "Debug-Out");
+        Directory.CreateDirectory(debugFolder);
+
+        using var debugFrame = inputFrame.Clone();
+    
+        using var gray = new Mat();
+        Cv2.CvtColor(inputFrame, gray, ColorConversionCodes.BGR2GRAY);
+    
+        using var blurred = new Mat();
+        Cv2.GaussianBlur(gray, blurred, new Size(3, 3), 0);
+
+        using var edges = new Mat();
+        Cv2.Canny(blurred, edges, 50, 150);
+
+        using var kernel = Cv2.GetStructuringElement(MorphShapes.Rect, new Size(3, 3));
+        using var dilatedEdges = new Mat();
+        Cv2.Dilate(edges, dilatedEdges, kernel);
         
-        using var hsv = new Mat();
-        Cv2.CvtColor(inputFrame, hsv, ColorConversionCodes.BGR2HSV);
-
-        using var whiteMask = new Mat();
-        Cv2.InRange(hsv, new Scalar(0, 0, 200), new Scalar(180, 60, 255), whiteMask);
-
-            
         Cv2.FindContours(
-            whiteMask, 
+            dilatedEdges, 
             out Point[][] candidateContours, 
             out _, 
-            RetrievalModes.External, 
-            ContourApproximationModes.ApproxSimple
+        RetrievalModes.List, 
+        ContourApproximationModes.ApproxSimple
         );
+
+        var candidateRects = new List<Rect>();
 
         foreach (var candidate in candidateContours)
         {
             Rect rect = Cv2.BoundingRect(candidate);
-            if (rect.Width * rect.Height < 15_000) continue;
 
-            double matchScore = Cv2.MatchShapes(
-                borderTemplateContour, 
-                candidate, 
-                ShapeMatchModes.I1
-            );
+            if (rect.Width < 220 || rect.Width > 500) continue;
+            if (rect.Height < 140 || rect.Height > 350) continue;
 
-            if (matchScore < 4.1)
-            {
-                Rect safeRect = rect.Intersect(new Rect(0, 0, inputFrame.Width, inputFrame.Height));
+            double aspectRatio = (double)rect.Width / rect.Height;
+            if (aspectRatio < 1.1 || aspectRatio > 1.8) continue;
 
-                Mat croppedCard = new Mat(inputFrame, safeRect).Clone();
-
-                matchedCards.Add(new DetectedCard
-                {
-                    FullCardRect = safeRect,
-                    TextRegionCrop = croppedCard
-                });
-            }
+            candidateRects.Add(rect);
         }
 
+        var deduplicatedRects = GroupOverlappingRects(candidateRects, 0.5);
+
+        foreach (var rect in deduplicatedRects)
+        {
+            Rect safeRect = rect.Intersect(new Rect(0, 0, inputFrame.Width, inputFrame.Height));
+            Mat croppedCard = new Mat(inputFrame, safeRect).Clone();
+
+            matchedCards.Add(new DetectedCard
+            {
+                FullCardRect = safeRect,
+                TextRegionCrop = croppedCard
+            });
+
+            // // Draw green bounding boxes on debug frame
+            // Cv2.Rectangle(debugFrame, safeRect, new Scalar(0, 255, 0), 2);
+            // Cv2.PutText(
+            //     debugFrame, 
+            //     $"{safeRect.Width}x{safeRect.Height}", 
+            //     new Point(safeRect.X, Math.Max(25, safeRect.Y - 8)), 
+            //     HersheyFonts.HersheyComplex, 
+            //     0.6, 
+            //     new Scalar(0, 255, 0), 
+            //     2
+            // );
+        }
+
+        // Save annotated debug output
+        // Cv2.ImWrite(Path.Combine(debugFolder, "CardDetector_ContoursDebug.png"), debugFrame);
+
         return matchedCards;
+    }
+
+    private static List<Rect> GroupOverlappingRects(List<Rect> rects, double overlapThreshold)
+    {
+        var result = new List<Rect>();
+        var ordered = rects.OrderByDescending(r => r.Width * r.Height).ToList();
+
+        while (ordered.Count > 0)
+        {
+            var current = ordered[0];
+            result.Add(current);
+            ordered.RemoveAt(0);
+
+            ordered.RemoveAll(r =>
+            {
+                var intersect = current.Intersect(r);
+                double intersectionArea = intersect.Width * intersect.Height;
+                double minArea = Math.Min(current.Width * current.Height, r.Width * r.Height);
+                return (intersectionArea / minArea) > overlapThreshold;
+            });
+        }
+
+        return result;
     }
     
     public struct DetectedCard
