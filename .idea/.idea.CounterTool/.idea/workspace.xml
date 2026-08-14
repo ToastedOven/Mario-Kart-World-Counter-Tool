@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5ad2cfe-6289-40a2-828b-e8204a2d26fd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/libraries/GdSdk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/libraries/GdSdk.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PositionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PositionButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrackSelectionHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrackSelectionHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/BaseScene.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CameraSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CameraSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControlManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ControlManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CounterTool.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CounterTool.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +58,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/a6/506b8082/Number.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/f0/8a783fcd/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/f2/c2eeac3b/MethodBaseInvoker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b3ab7e14d724759ac204679ece0283d611400/20/2df9c22a/CSharpInstanceBridge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/780b10c4924b4c70b45876e5766da392199200/c8/1bbe58a1/HttpResponseMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b53480f4bb724269a8e0a810e21b5c08bb000/ec/407ad810/QueryTaskGroupState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7e3f8a67883485f96b34e55434971c664c00/86/5f8db497/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,24 +67,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e929cb9673c947ad9269facdac90006adb3400/18/38026ff2/Task.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e929cb9673c947ad9269facdac90006adb3400/84/92c1c18c/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e929cb9673c947ad9269facdac90006adb3400/d6/1f6d6bf3/CastHelpers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fcb4868840c8420bbfec48a292f3b833db3400/8e/3b75572e/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fcb4868840c8420bbfec48a292f3b833db3400/d9/4e29d640/AsyncVoidMethodBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/241db236b14e13198d9587481ef2cb42ecb0f94858d955fb74adbb9362cb9/Cv2_imgcodecs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/77c3e056bfce5ef7df47fe570ca2605522a391/CounterTool.CameraSetup_ScriptMethods.generated.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9e95626176f3c0c84abd725d5be48163b1341f243c5ad8618b547e1a0c5aab3/DisplayServer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/CameraSetup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/CameraSetup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/CameraSetup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/HistoryCard.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/RecentTrack.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/RecentTrackTracker.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cd2081581a57397285b1beba7fc14bdbc61c89e3ac09a962676d880d9dd3c/Node.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionScanner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/Utils/Cv2Extensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/VRAverageCalculator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -100,7 +94,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "XThreadsFramesViewSplitterKey": "2.8421052",
+    "XThreadsFramesViewSplitterKey": "2.1875",
     "git-widget-placeholder": "track-selection-detection",
     "last_opened_file_path": "/home/nunchuk/Desktop/Godot_v4.7.1-stable_mono_linux_x86_64/Godot_v4.7.1-stable_mono_linux.x86_64",
     "node.js.detected.package.eslint": "true",
@@ -214,6 +208,7 @@
       <workItem from="1786409774165" duration="2636000" />
       <workItem from="1786479237784" duration="6311000" />
       <workItem from="1786646005924" duration="22463000" />
+      <workItem from="1786727161706" duration="4516000" />
     </task>
     <task id="LOCAL-00001" summary="lots of changes">
       <option name="closed" value="true" />
@@ -352,6 +347,19 @@
           </properties>
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/PickPercentageThing.cs</url>
+          <line>141</line>
+          <properties documentPath="$PROJECT_DIR$/PickPercentageThing.cs" containingFunctionPresentation="Method 'PickScanning'">
+            <startOffsets>
+              <option value="4539" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4561" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

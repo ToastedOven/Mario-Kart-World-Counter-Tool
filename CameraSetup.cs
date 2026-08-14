@@ -38,6 +38,7 @@ public partial class CameraSetup : Node
         
         rotate.Pressed += () => { currentRotation = (currentRotation + 1) % 4; Preview(); };
         flip.Pressed += () => { currentFlip = (currentFlip + 1) % 4; Preview(); };
+        ControlManager.instance.rescanForCamera.Pressed += UpdateCamera;
     }
 
     private static void UpdateCamera()
@@ -50,6 +51,11 @@ public partial class CameraSetup : Node
         if (_currentCamera.IsOpened())
         {
             ConfigureResolution(_currentCamera);
+            ControlManager.instance.rescanForCamera.Visible = false;
+        }
+        else
+        {
+            ControlManager.instance.CreatePopup($"Camera is not available.");
         }
     }
 
@@ -63,8 +69,13 @@ public partial class CameraSetup : Node
             if (parentControl.Visible)
                 UpdatePreviewImage();
         }
-        
-        GrabFrame();
+
+        if (!GrabFrame() && _currentCamera.IsOpened())
+        {
+            _currentCamera?.Release();
+            ControlManager.instance.rescanForCamera.Visible = true;
+            ControlManager.instance.CreatePopup($"Camera disconnected.");
+        }
     }
 
     public static bool ReadFrame(Mat frame)
@@ -99,7 +110,6 @@ public partial class CameraSetup : Node
     {
         if (_currentCamera is null)
             UpdateCamera();
-        
         return _currentCamera!.Grab();
     }
 
