@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2dn1c1xdj0lb"
-valid=false
+uid="uid://d1eionm1ba58x"
+path="res://.godot/imported/Toads Factory.png-77c5c208c7d97db9755a47dea138bd3f.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Toads Factory.png"
+dest_files=["res://.godot/imported/Toads Factory.png-77c5c208c7d97db9755a47dea138bd3f.ctex"]
 
 [params]
 

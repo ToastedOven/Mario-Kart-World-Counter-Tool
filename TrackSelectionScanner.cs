@@ -2,9 +2,11 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using CounterTool.Utils;
 using Godot;
 using OpenCvSharp;
 
@@ -13,8 +15,8 @@ namespace CounterTool;
 [GlobalClass]
 public partial class TrackSelectionScanner : Node
 {
-    private const int MaxFrames = 20;
-    private const double TimeBetweenCaptures = 1.0 / 8.0;
+    private const int MaxFrames = 12;
+    private const double TimeBetweenCaptures = 1.0 / 12f;
     private double timer;
     private int attempts;
     private int framesCollected;
@@ -41,7 +43,7 @@ public partial class TrackSelectionScanner : Node
         // Call this in ready to prepare capture
         using var frame = new Mat();
         CameraSetup.ReadFrame(frame);
-        TrackSelectionHelper.IsInTrackSelection(frame, 0.75);
+        TrackSelectionHelper.IsInTrackSelection(frame, 0.67);
     }
 
     public override void _Process(double delta)
@@ -55,7 +57,7 @@ public partial class TrackSelectionScanner : Node
             var frame = new Mat();
             CameraSetup.ReadFrame(frame);
 
-            if (TrackSelectionHelper.IsInTrackSelection(frame, 0.75) && tryScanning && framesCollected < MaxFrames)
+            if (TrackSelectionHelper.IsInTrackSelection(frame, 0.67) && tryScanning && framesCollected < MaxFrames)
             {
                 if (framesCollected == 0)
                 {
@@ -135,7 +137,6 @@ public partial class TrackSelectionScanner : Node
             
             ThreadPool.QueueUserWorkItem(_ =>
             {
-                // Cv2.ImWrite($"Debug-Out/Track-Selection-{attempt}.tiff", result);
                 var results = TrackSelectionHelper.DetectInFrame(result, trackSelectionResults, attempt);
                 
                 foreach (var trackResult in results)
@@ -183,7 +184,7 @@ public partial class TrackSelectionScanner : Node
             return;
         }
 
-        foreach (var (trackFile, _) in tracks)
+        foreach (var (trackFile, _) in tracks.Take(3))
         {
             var track = trackFile.Split("/").Last().Replace(".png", "").Trim();
             var trackIndex = HistoryCard.trackNames.IndexOf(track);

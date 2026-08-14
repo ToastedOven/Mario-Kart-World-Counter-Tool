@@ -67,12 +67,12 @@ public partial class CameraSetup : Node
         GrabFrame();
     }
 
-    public static void ReadFrame(Mat frame)
+    public static bool ReadFrame(Mat frame)
     {
         if (_currentCamera is null || !_currentCamera.IsOpened())
         {
             DefaultFrame(frame);
-            return;
+            return false;
         }
         
         using var read = new Mat();
@@ -81,11 +81,12 @@ public partial class CameraSetup : Node
         if (read.Empty())
         {
             DefaultFrame(frame);
-            return;
+            return false;
         }
         
         ApplyTransforms(read);
         Cv2.Resize(read, frame, new Size(1920, 1080));
+        return true;
     }
 
     private static void DefaultFrame(Mat frame)

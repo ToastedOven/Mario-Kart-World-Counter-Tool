@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqdxragbpkl1j"
-valid=false
+uid="uid://ni4kad6hpym2"
+path="res://.godot/imported/Salty Salty Speedway.png-e55f1a555f2f257fb1895f6b6666868b.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Salty Salty Speedway.png"
+dest_files=["res://.godot/imported/Salty Salty Speedway.png-e55f1a555f2f257fb1895f6b6666868b.ctex"]
 
 [params]
 

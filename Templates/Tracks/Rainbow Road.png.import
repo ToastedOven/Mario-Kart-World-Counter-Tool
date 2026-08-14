@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0l33hppmnv3d"
-valid=false
+uid="uid://dwge6j6gswosv"
+path="res://.godot/imported/Rainbow Road.png-55d7e815e6571fadb2b9370466a29472.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Rainbow Road.png"
+dest_files=["res://.godot/imported/Rainbow Road.png-55d7e815e6571fadb2b9370466a29472.ctex"]
 
 [params]
 

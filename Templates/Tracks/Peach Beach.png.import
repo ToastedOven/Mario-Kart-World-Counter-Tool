@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7y1d5g8ghi0d"
-valid=false
+uid="uid://bgo7kddu7j5w4"
+path="res://.godot/imported/Peach Beach.png-4e4dedd3641e2f7b77733e4d1181dc14.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Peach Beach.png"
+dest_files=["res://.godot/imported/Peach Beach.png-4e4dedd3641e2f7b77733e4d1181dc14.ctex"]
 
 [params]
 

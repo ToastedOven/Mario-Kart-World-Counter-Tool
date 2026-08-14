@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cabouv8i0y6a6"
-valid=false
+uid="uid://da3omtuqulp35"
+path="res://.godot/imported/Mario Bros Circuit.png-fec32c4ba64bb367c687976b17dfcf17.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Mario Bros Circuit.png"
+dest_files=["res://.godot/imported/Mario Bros Circuit.png-fec32c4ba64bb367c687976b17dfcf17.ctex"]
 
 [params]
 

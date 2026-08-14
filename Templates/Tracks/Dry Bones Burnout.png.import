@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8y5h3v6ojcrv"
-valid=false
+uid="uid://cgy4c07cngnfy"
+path="res://.godot/imported/Dry Bones Burnout.png-e6b4f640cf34bb89d020528295bbf404.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Dry Bones Burnout.png"
+dest_files=["res://.godot/imported/Dry Bones Burnout.png-e6b4f640cf34bb89d020528295bbf404.ctex"]
 
 [params]
 

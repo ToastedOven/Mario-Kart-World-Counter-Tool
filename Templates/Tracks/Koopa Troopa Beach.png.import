@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://back4uygtm27m"
-valid=false
+uid="uid://b2ynsf0no2r7i"
+path="res://.godot/imported/Koopa Troopa Beach.png-340e8559aee079a0fdad8d3e2d49a71e.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Koopa Troopa Beach.png"
+dest_files=["res://.godot/imported/Koopa Troopa Beach.png-340e8559aee079a0fdad8d3e2d49a71e.ctex"]
 
 [params]
 

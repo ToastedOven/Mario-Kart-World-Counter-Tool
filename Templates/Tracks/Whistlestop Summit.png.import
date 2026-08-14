@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhec2dcolk5ae"
-valid=false
+uid="uid://dki3obenps81n"
+path="res://.godot/imported/Whistlestop Summit.png-32bf19e4d953ff3e43d0dbc6abc58b6c.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Whistlestop Summit.png"
+dest_files=["res://.godot/imported/Whistlestop Summit.png-32bf19e4d953ff3e43d0dbc6abc58b6c.ctex"]
 
 [params]
 

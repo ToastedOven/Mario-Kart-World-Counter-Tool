@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chwfkbgkwkm3q"
-valid=false
+uid="uid://dnk0rg8srfrd2"
+path="res://.godot/imported/Airship Fortress.png-f628ea1e13354093bc22681e59cfd326.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Airship Fortress.png"
+dest_files=["res://.godot/imported/Airship Fortress.png-f628ea1e13354093bc22681e59cfd326.ctex"]
 
 [params]
 

@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8x70i0cs07o4"
-valid=false
+uid="uid://cdyfv7xac1okl"
+path="res://.godot/imported/Acorn Heights.png-651c789519d664bce1394a878411283d.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Acorn Heights.png"
+dest_files=["res://.godot/imported/Acorn Heights.png-651c789519d664bce1394a878411283d.ctex"]
 
 [params]
 

@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbbvaaf64nhe4"
-valid=false
+uid="uid://b68vth04t02kc"
+path="res://.godot/imported/Great Block Ruins.png-26e8c750bbb59ba93801cefa883598e1.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Great Block Ruins.png"
+dest_files=["res://.godot/imported/Great Block Ruins.png-26e8c750bbb59ba93801cefa883598e1.ctex"]
 
 [params]
 

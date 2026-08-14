@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fp4ifvn46tdj"
-valid=false
+uid="uid://do30mpb6sqhcr"
+path="res://.godot/imported/Boo Cinema.png-7eda79eb391b98c629eae5bec2ad8b04.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Boo Cinema.png"
+dest_files=["res://.godot/imported/Boo Cinema.png-7eda79eb391b98c629eae5bec2ad8b04.ctex"]
 
 [params]
 

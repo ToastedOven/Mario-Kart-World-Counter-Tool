@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kfic48tqac17"
-valid=false
+uid="uid://b26bc28j45y80"
+path="res://.godot/imported/Sky High Sundae.png-386fb414beb40239d447c81175f07dba.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Sky High Sundae.png"
+dest_files=["res://.godot/imported/Sky High Sundae.png-386fb414beb40239d447c81175f07dba.ctex"]
 
 [params]
 

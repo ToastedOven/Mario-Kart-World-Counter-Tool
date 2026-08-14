@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsmobjneo68s5"
-valid=false
+uid="uid://bvabewbdar31m"
+path="res://.godot/imported/Cheep Cheep Falls.png-14c08be7521d8e80c1d391af0d66e38f.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Cheep Cheep Falls.png"
+dest_files=["res://.godot/imported/Cheep Cheep Falls.png-14c08be7521d8e80c1d391af0d66e38f.ctex"]
 
 [params]
 

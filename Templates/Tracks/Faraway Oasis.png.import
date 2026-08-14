@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3ee6uvexf2gu"
-valid=false
+uid="uid://cpykss3bwbp0b"
+path="res://.godot/imported/Faraway Oasis.png-ff8e6edbd367d2a346bb4a5fb738bfbd.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Faraway Oasis.png"
+dest_files=["res://.godot/imported/Faraway Oasis.png-ff8e6edbd367d2a346bb4a5fb738bfbd.ctex"]
 
 [params]
 

@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blqnc31utoj1h"
-valid=false
+uid="uid://ckcgb3sbch3dn"
+path="res://.godot/imported/Dandelion Depths.png-4cfb44fb27383b4de0e95adda1ec3422.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Dandelion Depths.png"
+dest_files=["res://.godot/imported/Dandelion Depths.png-4cfb44fb27383b4de0e95adda1ec3422.ctex"]
 
 [params]
 

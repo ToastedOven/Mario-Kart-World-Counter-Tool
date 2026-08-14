@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca67y1hhtcmkq"
-valid=false
+uid="uid://d37v5nv7ak7i8"
+path="res://.godot/imported/Wario Shipyard.png-220e0db8aa6c4367a8b1555ceebe17ce.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/Wario Shipyard.png"
+dest_files=["res://.godot/imported/Wario Shipyard.png-220e0db8aa6c4367a8b1555ceebe17ce.ctex"]
 
 [params]
 

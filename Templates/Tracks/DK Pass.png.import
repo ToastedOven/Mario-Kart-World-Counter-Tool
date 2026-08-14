@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xwkjc21yfrys"
-valid=false
+uid="uid://526653d46lsq"
+path="res://.godot/imported/DK Pass.png-440a99be3e1263818770dc0f3ad1af03.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Templates/Tracks/DK Pass.png"
+dest_files=["res://.godot/imported/DK Pass.png-440a99be3e1263818770dc0f3ad1af03.ctex"]
 
 [params]
 

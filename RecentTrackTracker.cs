@@ -106,9 +106,6 @@ public partial class RecentTrackTracker : VBoxContainer
 
     public void ClearTracks()
     {
-        comingFrom.Texture = null;
-        comingFromId = -1;
-
         foreach (var recentTrack in recentTracks.Duplicate())
             RemoveTrack(recentTrack);
     }
