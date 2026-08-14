@@ -39,7 +39,11 @@ jobs:
           prerelease: false
           generate_release_notes: true
           files: |
-            /github/workspace/build/Windows.zip
-            /github/workspace/build/Linux.zip
+            Builds/*
+            Builds/**/*
+            build/*
+            build/**/*
+            *.Zip
+            *.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
