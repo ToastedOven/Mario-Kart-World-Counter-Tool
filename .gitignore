@@ -16,3 +16,5 @@ mono_crash.*.json
 OcrImages/
 Votes/
 BaseImages/
+Debug-Out/
+Templates/TestFolder
