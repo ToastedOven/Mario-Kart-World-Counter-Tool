@@ -13,7 +13,7 @@ config_version=5
 config/name="CounterTool"
 run/main_scene="uid://daodsqor2qa2x"
 config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://dn6te3b5cihjg"
 
 [display]
 

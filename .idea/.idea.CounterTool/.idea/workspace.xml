@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5ad2cfe-6289-40a2-828b-e8204a2d26fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/libraries/GdSdk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/libraries/GdSdk.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/BaseScene.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CameraSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CameraSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControlManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ControlManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CounterTool.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CounterTool.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,26 +80,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Executable.Editor.executor": "Debug",
-    ".NET Executable.Player.executor": "Debug",
-    "GdScript Start and Debug.Player GDScript.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "XThreadsFramesViewSplitterKey": "2.1875",
-    "git-widget-placeholder": "track-selection-detection",
-    "last_opened_file_path": "/home/nunchuk/Desktop/Godot_v4.7.1-stable_mono_linux_x86_64/Godot_v4.7.1-stable_mono_linux.x86_64",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Executable.Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Executable.Player.executor&quot;: &quot;Debug&quot;,
+    &quot;GdScript Start and Debug.Player GDScript.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;2.1875&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;track-selection-detection&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nunchuk/Desktop/Godot_v4.7.1-stable_mono_linux_x86_64/Godot_v4.7.1-stable_mono_linux.x86_64&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Executable.Editor">
     <configuration name="Debug GDScript (Running session)" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory">
       <option name="json" value="{&#10;  // Launch: &quot;Launch a new instance of the game&quot;,&#10;  // Attach: &quot;Attach to an already running game, which was started from the Godot Editor&quot;&#10;  &quot;request&quot; : &quot;Attach&quot;,&#10;  &quot;debugServer&quot; : 6006, // port should match the Debug Adapter port in the Godot Editor project settings.&#10;  &quot;scene&quot; : &quot;main&quot;, // main, current, res://path/to/file.tscn&#10;  &#10;  // &quot;playArgs&quot; : [ &quot;--editor&quot; ], // debugging a tool script&#10;  // &quot;playArgs&quot;: [&quot;--debug-collisions&quot;,&quot;--debug-navigation&quot;], // different options&#10;  &#10;  // one click deploy and debug via Godot Editor:&#10;  // &quot;platform&quot;: &quot;Android&quot;, // including Android, iOS, Web and W4 consoles&#10;  // &quot;device&quot;: &quot;0&quot;, // index of the device of a &quot;platform&quot; type&#10;}" />
@@ -208,7 +203,7 @@
       <workItem from="1786409774165" duration="2636000" />
       <workItem from="1786479237784" duration="6311000" />
       <workItem from="1786646005924" duration="22463000" />
-      <workItem from="1786727161706" duration="4516000" />
+      <workItem from="1786727161706" duration="6401000" />
     </task>
     <task id="LOCAL-00001" summary="lots of changes">
       <option name="closed" value="true" />
@@ -282,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786658380808</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="camera stuffs">
+      <option name="closed" value="true" />
+      <created>1786731884702</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1786731884702</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,7 +327,8 @@
     <MESSAGE value="fix for track swapping" />
     <MESSAGE value="fixed names" />
     <MESSAGE value="working on images" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on images" />
+    <MESSAGE value="camera stuffs" />
+    <option name="LAST_COMMIT_MESSAGE" value="camera stuffs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
