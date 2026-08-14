@@ -39,12 +39,8 @@ jobs:
           prerelease: false
           generate_release_notes: true
           files: |
-            Builds/*
-            Builds/**/*
-            build/*
-            build/**/*
-            *.Zip
-            *.zip
+            ~/.local/share/godot/archives/Windows.zip
+            ~/.local/share/godot/archives/Linux.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
