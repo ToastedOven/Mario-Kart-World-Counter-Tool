@@ -167,6 +167,7 @@
 [ext_resource type="Texture2D" uid="uid://h4o6bwrjtq43" path="res://Tracks/28.png" id="160_oe45t"]
 [ext_resource type="Texture2D" uid="uid://f63xm516opee" path="res://Tracks/29.png" id="161_gdycy"]
 [ext_resource type="Texture2D" uid="uid://buy3kls7kxmpg" path="res://Tracks/30.png" id="162_yh4el"]
+[ext_resource type="Script" uid="uid://blpjnn2rpliik" path="res://TrackSelectionScanner.cs" id="168_r1sk8"]
 
 [node name="Control" type="Control" unique_id=1425128816]
 layout_mode = 3
@@ -176,7 +177,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "settingsPage", "urlPage", "trackSelectionPage", "autoUpload1", "autoUpload2", "hideTimestamp1", "hideTimestamp2", "autoScanForTracks", "autoScanForVr", "mirrorMode", "autoSetPlayerCount", "historyButton", "cameraSetup", "enterApiKey", "settings", "enterCustomUrl", "dcButton", "pullVersionButton", "versionLine", "postMatchInstructions")]
+[node name="ControlManager" type="Node" parent="." unique_id=907116352 node_paths=PackedStringArray("pickerPage", "historyPage", "comboPage", "postMatchPage", "cameraPage", "apiPage", "settingsPage", "urlPage", "trackSelectionPage", "autoUpload1", "autoUpload2", "hideTimestamp1", "hideTimestamp2", "autoScanForTracks", "autoScanForVr", "mirrorMode", "autoSetPlayerCount", "historyButton", "cameraSetup", "enterApiKey", "settings", "enterCustomUrl", "dcButton", "pullVersionButton", "rescanForCamera", "versionLine", "postMatchInstructions")]
 script = ExtResource("134_28v50")
 pickerPage = NodePath("../PickerPage")
 historyPage = NodePath("../HistoryPage")
@@ -202,6 +203,7 @@ settings = NodePath("../HBoxContainer/Settings")
 enterCustomUrl = NodePath("../SettingsPage/VBoxContainer/DB URL")
 dcButton = NodePath("../Post Match/PostMatchOptions/DC")
 pullVersionButton = NodePath("../SettingsPage/VBoxContainer/HBoxContainer/GrabVersion")
+rescanForCamera = NodePath("../HBoxContainer/Rescan for Camera")
 versionLine = NodePath("../SettingsPage/VBoxContainer/HBoxContainer/VersionLineEdit")
 popupScene = ExtResource("2_2yavy")
 postMatchInstructions = NodePath("../Post Match/Instructions")
@@ -231,6 +233,10 @@ text = "Local History"
 [node name="Settings" type="Button" parent="HBoxContainer" unique_id=436034519]
 layout_mode = 2
 text = "Settings"
+
+[node name="Rescan for Camera" type="Button" parent="HBoxContainer" unique_id=1724607653]
+layout_mode = 2
+text = "Check for connected camera"
 
 [node name="PickerPage" type="Control" parent="." unique_id=604863824]
 layout_mode = 1
@@ -2008,5 +2014,9 @@ expand_mode = 1
 [node name="PickPercentageThing" type="Node" parent="." unique_id=362714986]
 script = ExtResource("131_ecun1")
 metadata/_custom_type_script = "uid://5h4wd572nuu2"
+
+[node name="TrackSelectionScanner" type="Node" parent="." unique_id=2094949448]
+script = ExtResource("168_r1sk8")
+metadata/_custom_type_script = "uid://blpjnn2rpliik"
 
 [editable path="PickerPage/RecentPicks/DrivingFrom/TextureRect"]

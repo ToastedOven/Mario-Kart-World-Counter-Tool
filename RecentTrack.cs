@@ -9,8 +9,11 @@ public partial class RecentTrack : TextureRect
         set
         {
             field = value;
-            Texture = field.Texture;
-            GetNode<Label>("Label").Text = field.intermissionButton ? "Intermission" : "3Lap";
+            if (field is not null)
+            {
+                Texture = field.Texture;
+                GetNode<Label>("Label").Text = field.intermissionButton ? "Intermission" : "3Lap";
+            }
         }
     }
     [Export] private Button button;

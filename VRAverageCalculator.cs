@@ -173,22 +173,16 @@ public partial class VRAverageCalculator : Node
     public static bool gotCapture;
     public async Task GetSourceImage(string fullFilePath)
     {
-        gotCapture = false;
-        await Task.Run(() =>
+        using var frame = new Mat();
+        if (CameraSetup.ReadFrame(frame))
         {
-            using var capture = new VideoCapture(CameraSetup.currentCamera);
-            if (capture.IsOpened())
-            {
-                CameraSetup.ConfigureResolution(capture);
-                using var frame = new Mat();
-                capture.Read(frame);
-                CameraSetup.ApplyTransforms(frame);
-                using var newFrame = new Mat();
-                Cv2.Resize(frame, newFrame, new Size(1920, 1080));
-                Cv2.ImWrite(fullFilePath, newFrame);
-                gotCapture = true;
-            }
-        });
+            Cv2.ImWrite(fullFilePath, frame);
+            gotCapture = true;
+        }
+        else
+        {
+            gotCapture = false;
+        }
     }
 
     public async Task ProcessImageAsync(string cropCoords, string filename, int threshold, string sourceFile)
