@@ -18,3 +18,7 @@ BaseImages/
 Debug-Out/
 Templates/TestFolder
 Builds/
+
+#Rider
+.idea/
+*.sln.iml
