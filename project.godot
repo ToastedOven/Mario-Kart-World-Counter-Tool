@@ -15,6 +15,10 @@ run/main_scene="uid://daodsqor2qa2x"
 config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
 config/icon="uid://dn6te3b5cihjg"
 
+[debug]
+
+file_logging/enable_file_logging=true
+
 [display]
 
 window/size/viewport_width=1280

@@ -30,6 +30,11 @@ jobs:
           relative_project_path: ./
           archive_output: true
 
+      - name: Bundle Native Folders into Archives
+        run: |
+          zip -r ~/.local/share/godot/archives/Windows.zip BaseImages Templates IconsForVotes tessdata
+          zip -r ~/.local/share/godot/archives/Linux.zip BaseImages Templates IconsForVotes tessdata
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
         with:
@@ -43,5 +48,3 @@ jobs:
             ~/.local/share/godot/archives/Linux.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-          
