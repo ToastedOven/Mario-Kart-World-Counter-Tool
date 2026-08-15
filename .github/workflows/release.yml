@@ -21,36 +21,22 @@ jobs:
         uses: actions/setup-dotnet@v6
         with:
           dotnet-version: '10.0.x'
-
-      - name: Setup Godot Engine
-        uses: chickensoft-games/setup-godot@v2
-        with:
-          version: 4.7.1
-          use-dotnet: true
-
-      - name: Download Export Templates
-        run: |
-          mkdir -p ~/.local/share/godot/export_templates/4.7.1.stable.mono
-          curl -fsSL https://github.com/godotengine/godot-builds/releases/download/4.7.1-stable/Godot_v4.7.1-stable_export_templates.tpz -o templates.zip
-          unzip -q templates.zip -d /tmp/godot_templates
-          mv /tmp/godot_templates/templates/* ~/.local/share/godot/export_templates/4.7.1.stable.mono/
-          rm -rf /tmp/godot_templates templates.zip
-
+          
       - name: Build C# Solution
-        run: dotnet build --configuration ExportRelease
+        run: dotnet build
 
-      - name: Export Builds
-        run: |
-          mkdir -p builds/Linux builds/Windows
-          godot --headless --export-release "Linux" builds/Linux/CounterTool_Linux.x86_64
-          godot --headless --export-release "Windows" builds/Windows/CounterTool_Windows.exe
+      - name: Export Godot Project
+        uses: firebelley/godot-export@v8.0.0
+        with:
+          godot_executable_download_url: https://downloads.godotengine.org/?version=4.7.1&flavor=stable&slug=mono_linux_x86_64.zip&platform=linux.64
+          godot_export_templates_download_url: https://downloads.godotengine.org/?version=4.7.1&flavor=stable&slug=mono_export_templates.tpz&platform=templates
+          relative_project_path: ./
+          archive_output: true
 
-      - name: Create Zip Archives
+      - name: Bundle Native Folders into Archives
         run: |
-          cd builds/Linux && zip -r ../../Linux.zip . && cd ../..
-          cd builds/Windows && zip -r ../../Windows.zip . && cd ../..
-          zip -r Linux.zip BaseImages Templates IconsForVotes tessdata
-          zip -r Windows.zip BaseImages Templates IconsForVotes tessdata
+          zip -r ~/.local/share/godot/archives/Windows.zip BaseImages Templates IconsForVotes tessdata
+          zip -r ~/.local/share/godot/archives/Linux.zip BaseImages Templates IconsForVotes tessdata
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
@@ -61,7 +47,9 @@ jobs:
           prerelease: false
           generate_release_notes: true
           files: |
-            Linux.zip
-            Windows.zip
+            ~/.local/share/godot/archives/Windows.zip
+            ~/.local/share/godot/archives/Linux.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          
