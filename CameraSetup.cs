@@ -53,7 +53,7 @@ public partial class CameraSetup : Node
             ConfigureResolution(_currentCamera);
             ControlManager.instance.rescanForCamera.Visible = false;
         }
-        else
+        else if (!ControlManager.instance.cameraPage.Visible)
         {
             ControlManager.instance.CreatePopup($"Camera is not available.");
         }
