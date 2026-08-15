@@ -18,6 +18,7 @@ BaseImages/
 Debug-Out/
 Templates/TestFolder
 Builds/
+!BaseImages/CourseSelected.png
 
 #Rider
 .idea/
