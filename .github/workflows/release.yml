@@ -21,22 +21,28 @@ jobs:
         uses: actions/setup-dotnet@v6
         with:
           dotnet-version: '10.0.x'
-          
-      - name: Build C# Solution
-        run: dotnet build
 
-      - name: Export Godot Project
-        uses: firebelley/godot-export@v8.0.0
+      - name: Setup Godot Engine
+        uses: chickensoft-games/setup-godot@v2
         with:
-          godot_executable_download_url: https://downloads.godotengine.org/?version=4.7.1&flavor=stable&slug=mono_linux_x86_64.zip&platform=linux.64
-          godot_export_templates_download_url: https://downloads.godotengine.org/?version=4.7.1&flavor=stable&slug=mono_export_templates.tpz&platform=templates
-          relative_project_path: ./
-          archive_output: true
+          version: 4.7.1
+          use-dotnet: true
 
-      - name: Bundle Native Folders into Archives
+      - name: Build C# Solution
+        run: dotnet build --configuration ExportRelease
+
+      - name: Export Builds
         run: |
-          zip -r ~/.local/share/godot/archives/Windows.zip BaseImages Templates IconsForVotes tessdata
-          zip -r ~/.local/share/godot/archives/Linux.zip BaseImages Templates IconsForVotes tessdata
+          mkdir -p builds/Linux builds/Windows
+          godot --headless --export-release "Linux" builds/Linux/CounterTool_Linux.x86_64
+          godot --headless --export-release "Windows" builds/Windows/CounterTool_Windows.exe
+
+      - name: Create Zip Archives
+        run: |
+          cd builds/Linux && zip -r ../../Linux.zip . && cd ../..
+          cd builds/Windows && zip -r ../../Windows.zip . && cd ../..
+          zip -r Linux.zip BaseImages Templates IconsForVotes tessdata
+          zip -r Windows.zip BaseImages Templates IconsForVotes tessdata
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
@@ -47,9 +53,7 @@ jobs:
           prerelease: false
           generate_release_notes: true
           files: |
-            ~/.local/share/godot/archives/Windows.zip
-            ~/.local/share/godot/archives/Linux.zip
+            Linux.zip
+            Windows.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-          
