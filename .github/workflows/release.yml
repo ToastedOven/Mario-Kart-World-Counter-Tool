@@ -31,10 +31,10 @@ jobs:
       - name: Download Export Templates
         run: |
           mkdir -p ~/.local/share/godot/export_templates/4.7.1.stable.mono
-          curl -fsSL https://downloads.godotengine.org/4.7.1/Godot_v4.7.1-stable_mono_export_templates.tpz -o templates.zip
-          unzip -q templates.zip -d /tmp/templates
-          mv /tmp/templates/templates/* ~/.local/share/godot/export_templates/4.7.1.stable.mono/
-          rm -rf /tmp/templates templates.zip
+          curl -fsSL https://github.com/godotengine/godot-builds/releases/download/4.7.1-stable/Godot_v4.7.1-stable_export_templates.tpz -o templates.zip
+          unzip -q templates.zip -d /tmp/godot_templates
+          mv /tmp/godot_templates/templates/* ~/.local/share/godot/export_templates/4.7.1.stable.mono/
+          rm -rf /tmp/godot_templates templates.zip
 
       - name: Build C# Solution
         run: dotnet build --configuration ExportRelease
