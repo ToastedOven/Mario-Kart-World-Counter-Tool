@@ -179,5 +179,6 @@ public partial class VerifyDataPage : Control
         editing = false;
         SaveManager.Save();
         PositionButton.currentRacePosition = -1;
+        PostMatchPage.instance.disconnected = false;
     }
 }
