@@ -145,7 +145,7 @@ public partial class PickPercentageThing : Node
 
             if (_selectedTrackName != "Unknown")
             {
-                int trackNum = HistoryCard.trackNames != null ? HistoryCard.trackNames.IndexOf(_selectedTrackName) : -1;
+                int trackNum = HistoryCard.trackNames != null ? HistoryCard.trackNames.IndexOf(_selectedTrackName.Replace("Great Block Ruins", "Great ? Block Ruins")) : -1;
                 GD.Print($"selection is: {_selectedTrackName} (Index: {trackNum}, Random Pick: {pickedWasRandom})");
 
                 if (RecentTrackTracker.instance?.randomCheckbox != null)

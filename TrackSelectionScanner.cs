@@ -187,7 +187,7 @@ public partial class TrackSelectionScanner : Node
         foreach (var (trackFile, _) in tracks.Take(3))
         {
             var track = trackFile.Split("/").Last().Replace(".png", "").Trim();
-            var trackIndex = HistoryCard.trackNames.IndexOf(track);
+            var trackIndex = HistoryCard.trackNames.IndexOf(track.Replace("Great Block Ruins", "Great ? Block Ruins"));
 
             if (tracksConnected.GetValueOrDefault(trackFile, false))
                 trackIndex += 30;

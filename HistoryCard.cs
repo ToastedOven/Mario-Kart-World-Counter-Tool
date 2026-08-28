@@ -31,7 +31,7 @@ public partial class HistoryCard : Control
         "Peach Beach",
         "Salty Salty Speedway",
         "Dino Dino Jungle",
-        "Great Block Ruins",
+        "Great ? Block Ruins",
         "Cheep Cheep Falls",
         "Dandelion Depths",
         "Boo Cinema",
