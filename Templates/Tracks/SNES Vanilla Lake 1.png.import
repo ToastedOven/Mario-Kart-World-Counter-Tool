@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct8jpq6m4ptso"
-path="res://.godot/imported/Vanilla Lake 1.png-867e890b04d3658f5c914ef3bd93b30d.ctex"
+uid="uid://cxxvu256tuktg"
+path="res://.godot/imported/SNES Vanilla Lake 1.png-2dfe72821d4e273f90793c9e22952606.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Templates/Tracks/Vanilla Lake 1.png"
-dest_files=["res://.godot/imported/Vanilla Lake 1.png-867e890b04d3658f5c914ef3bd93b30d.ctex"]
+source_file="res://Templates/Tracks/SNES Vanilla Lake 1.png"
+dest_files=["res://.godot/imported/SNES Vanilla Lake 1.png-2dfe72821d4e273f90793c9e22952606.ctex"]
 
 [params]
 

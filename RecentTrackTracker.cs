@@ -134,9 +134,31 @@ public partial class RecentTrackTracker : VBoxContainer
                 PostMatchPage.instance.kart.Texture = SearchBar.instance.karts.GetChild<TextureRect>(ComboButton.currentKart).Texture;
                 PostMatchPage.instance.driver.Texture = SearchBar.instance.characters.GetChild<TextureRect>(ComboButton.currentDriver).Texture;
                 comingFromId = HistoryCardTrackPicker.buttons.IndexOf(recentTracks.Last()) % ControlManager.TRACKCOUNT;
-                if (comingFromId == 29)
+                switch (comingFromId)
                 {
-                    comingFromId = 28;
+                    case 29:
+                        comingFromId = 28;
+                        break;
+                    case 30:
+                    case 31:
+                    case 32:
+                        comingFromId = 27;
+                        break;
+                    case 33:
+                    case 34:
+                    case 35:
+                        comingFromId = 20;
+                        break;
+                    case 36:
+                    case 37:
+                        comingFromId = 23;
+                        break;
+                    case 38:
+                        comingFromId = 10;
+                        break;
+                    case 39:
+                        comingFromId = 12;
+                        break;
                 }
                 comingFrom.Texture = ControlManager.instance.trackTextures[comingFromId];
                 recentTracks.Clear();

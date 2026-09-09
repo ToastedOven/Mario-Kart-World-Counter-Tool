@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjioxw7y4xauw"
-path="res://.godot/imported/Mario Circuit 3.png-095d7139ffce005bac98d9e4adc0ab8e.ctex"
+uid="uid://dauhyokjqwbxc"
+path="res://.godot/imported/SNES Ghost Valley 1.png-b0086c5eaed480d8e58fd483b5f0f68e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Templates/Tracks/Mario Circuit 3.png"
-dest_files=["res://.godot/imported/Mario Circuit 3.png-095d7139ffce005bac98d9e4adc0ab8e.ctex"]
+source_file="res://Templates/Tracks/SNES Ghost Valley 1.png"
+dest_files=["res://.godot/imported/SNES Ghost Valley 1.png-b0086c5eaed480d8e58fd483b5f0f68e.ctex"]
 
 [params]
 

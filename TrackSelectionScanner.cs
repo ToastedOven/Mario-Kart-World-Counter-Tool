@@ -188,7 +188,8 @@ public partial class TrackSelectionScanner : Node
         {
             var track = trackFile.Split("/").Last().Replace(".png", "").Trim();
             var trackIndex = HistoryCard.trackNames.IndexOf(track.Replace("Great Block Ruins", "Great ? Block Ruins"));
-
+            if (trackIndex == -1)
+                return;
             if (tracksConnected.GetValueOrDefault(trackFile, false))
                 trackIndex += ControlManager.TRACKCOUNT;
             

@@ -9,14 +9,17 @@ public partial class TrackPicker : HFlowContainer
     [Export] public Array<HistoryCardTrackPicker> trackCards = [];
     private HistoryCardTrackPicker currentCard;
     public static TrackPicker instance;
+    [Export] private bool isMainPickerPage;
     public override void _Ready()
     {
-        foreach (var card in trackCards)
+        if (isMainPickerPage)
         {
-            card.PressedButton += CardOnPressedButton;
+            foreach (var card in trackCards)
+            {
+                card.PressedButton += CardOnPressedButton;
+            }
+            instance = this;   
         }
-
-        instance = this;
     }
 
     public override void _Process(double delta)

@@ -11,27 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5ad2cfe-6289-40a2-828b-e8204a2d26fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/libraries/GdSdk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/libraries/GdSdk.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaseScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/BaseScene.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ButtonThing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ButtonThing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControlManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ControlManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CounterTool.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CounterTool.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HistoryCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HistoryCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HistoryCardEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HistoryCardEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HistoryCardTrackPicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HistoryCardTrackPicker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HistoryCardTrackPicker.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/HistoryCardTrackPicker.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PickPercentageThing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PickPercentageThing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecentTrack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecentTrack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecentTrackTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecentTrackTracker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SearchBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SearchBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwitchGraphButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwitchGraphButton.cs.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrackSelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrackSelect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Ghost Valley 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Ghost Valley 1.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mario Circuit 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mario Circuit 1.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mario Circuit 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mario Circuit 2.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mario Circuit 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Mario Circuit 3.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Vanilla Lake 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Tracks/Vanilla Lake 1.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrackPicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrackPicker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TrackSelectionScanner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrackSelectionScanner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracks.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/tracks.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +77,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cd2081581a57397285b1beba7fc14bdbc61c89e3ac09a962676d880d9dd3c/Node.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TrackPicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///tmp/JetBrainsPerUserTemp-1000-1/SourceGeneratedDocuments/6E61948B240D34EC58829E88/Godot.SourceGenerators/Godot.SourceGenerators.ScriptSignalsGenerator/HistoryCardTrackPicker_ScriptSignals.generated.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///usr/lib64/dotnet/sdk/10.0.111/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_10_default.globalconfig" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/Bar.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/ButtonThing.cs" root0="SKIP_HIGHLIGHTING" />
@@ -514,7 +509,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fixed not getting right path" />
     <MESSAGE value="Couple bug fixes" />
     <MESSAGE value="fix for track swapping" />
     <MESSAGE value="fixed names" />
@@ -539,7 +533,8 @@
     <MESSAGE value="it was working before..." />
     <MESSAGE value="fixed disconnected not ever resetting" />
     <MESSAGE value="kinda hacky fix to get names back in order" />
-    <option name="LAST_COMMIT_MESSAGE" value="kinda hacky fix to get names back in order" />
+    <MESSAGE value="Update for 1.8.0 and a bit of refactoring for the future" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update for 1.8.0 and a bit of refactoring for the future" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -286,6 +286,7 @@ offset_left = -614.1176
 offset_top = 164.70589
 offset_right = 614.8824
 offset_bottom = 605.7059
+isMainPickerPage = true
 
 [node name="ThreeLapsTotal" type="Label" parent="PickerPage/3Laps" unique_id=921512176]
 layout_mode = 1

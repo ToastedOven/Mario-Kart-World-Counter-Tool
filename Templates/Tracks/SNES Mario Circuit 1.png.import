@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u48sn1no6lvx"
-path="res://.godot/imported/Mario Circuit 1.png-ce317a98326b8ba5dfe3b73ae0bc53d0.ctex"
+uid="uid://15but1wc6bxj"
+path="res://.godot/imported/SNES Mario Circuit 1.png-808b13278eefb772d8bf1ff0f097cfc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Templates/Tracks/Mario Circuit 1.png"
-dest_files=["res://.godot/imported/Mario Circuit 1.png-ce317a98326b8ba5dfe3b73ae0bc53d0.ctex"]
+source_file="res://Templates/Tracks/SNES Mario Circuit 1.png"
+dest_files=["res://.godot/imported/SNES Mario Circuit 1.png-808b13278eefb772d8bf1ff0f097cfc3.ctex"]
 
 [params]
 
