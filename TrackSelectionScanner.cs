@@ -190,7 +190,7 @@ public partial class TrackSelectionScanner : Node
             var trackIndex = HistoryCard.trackNames.IndexOf(track.Replace("Great Block Ruins", "Great ? Block Ruins"));
 
             if (tracksConnected.GetValueOrDefault(trackFile, false))
-                trackIndex += 30;
+                trackIndex += ControlManager.TRACKCOUNT;
             
             RecentTrackTracker.instance.AddTrack(trackIndex, true);
         }

@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using CounterTool;
 
 public partial class HistoryCardEditor : ColorRect
 {
@@ -59,15 +60,16 @@ public partial class HistoryCardEditor : ColorRect
         Option3.trackId = card.info["Option3"].ToInt();
         Picked.trackId = card.info["Picked"].ToInt();
         ComingFrom.trackId = card.info["ComingFrom"].ToInt();
-        Option1.Texture = ButtonThing.buttons[Option1.trackId].Texture;
-        Option2.Texture = ButtonThing.buttons[Option2.trackId].Texture;
-        Option3.Texture = ButtonThing.buttons[Option3.trackId].Texture;
-        Picked.Texture = ButtonThing.buttons[Picked.trackId].Texture;
-        Option1.label.Text = ButtonThing.buttons[Option1.trackId].intermissionButton ? "Intermission" : "3Lap";
-        Option2.label.Text = ButtonThing.buttons[Option2.trackId].intermissionButton ? "Intermission" : "3Lap";
-        Option3.label.Text = ButtonThing.buttons[Option3.trackId].intermissionButton ? "Intermission" : "3Lap";
-        Picked.label.Text = ButtonThing.buttons[Picked.trackId].intermissionButton ? "Intermission" : "3Lap";
-        ComingFrom.Texture = ButtonThing.buttons[ComingFrom.trackId].Texture;
+        
+        Option1.Texture = ControlManager.instance.trackTextures[Option1.trackId % ControlManager.TRACKCOUNT];
+        Option2.Texture = ControlManager.instance.trackTextures[Option2.trackId % ControlManager.TRACKCOUNT];
+        Option3.Texture = ControlManager.instance.trackTextures[Option3.trackId % ControlManager.TRACKCOUNT];
+        Picked.Texture = ControlManager.instance.trackTextures[Picked.trackId % ControlManager.TRACKCOUNT];
+        Option1.label.Text = Option1.trackId >= ControlManager.TRACKCOUNT ? "Intermission" : "3Lap";
+        Option2.label.Text = Option2.trackId >= ControlManager.TRACKCOUNT ? "Intermission" : "3Lap";
+        Option3.label.Text = Option3.trackId >= ControlManager.TRACKCOUNT ? "Intermission" : "3Lap";
+        Picked.label.Text = Picked.trackId >= ControlManager.TRACKCOUNT ? "Intermission" : "3Lap";
+        ComingFrom.Texture = ControlManager.instance.trackTextures[ComingFrom.trackId % ControlManager.TRACKCOUNT];
         ComingFrom.label.Text = "";
         Random.SetPressed(card.info["Random"] == "1");
         Mirror.SetPressed(card.info["Mirror"] == "1");

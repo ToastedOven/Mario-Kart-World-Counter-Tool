@@ -157,8 +157,8 @@ public partial class PickPercentageThing : Node
                 {
                     foreach (var track in RecentTrackTracker.instance.recentTracks)
                     {
-                        int btnIdx = ButtonThing.buttons.IndexOf(track);
-                        if (btnIdx == trackNum || btnIdx == trackNum + 30)
+                        int btnIdx = track.realTrackId;
+                        if (btnIdx == trackNum || btnIdx == trackNum + ControlManager.TRACKCOUNT)
                         {
                             RecentTrackTracker.instance.AddTrack(track);
                             break;
@@ -344,9 +344,9 @@ public partial class PickPercentageThing : Node
 
     public static string GetCurrentTrackVotesForSaveData(int option1, int option2, int option3)
     {
-        int option1Count = CurrentTrackCounts.GetValueOrDefault(HistoryCard.trackNames[option1 % 30], 0);
-        int option2Count = CurrentTrackCounts.GetValueOrDefault(HistoryCard.trackNames[option2 % 30], 0);
-        int option3Count = CurrentTrackCounts.GetValueOrDefault(HistoryCard.trackNames[option3 % 30], 0);
+        int option1Count = CurrentTrackCounts.GetValueOrDefault(HistoryCard.trackNames[option1 % ControlManager.TRACKCOUNT], 0);
+        int option2Count = CurrentTrackCounts.GetValueOrDefault(HistoryCard.trackNames[option2 % ControlManager.TRACKCOUNT], 0);
+        int option3Count = CurrentTrackCounts.GetValueOrDefault(HistoryCard.trackNames[option3 % ControlManager.TRACKCOUNT], 0);
         int randomCount = CurrentTrackCounts.GetValueOrDefault("Random", 0);
 
         return $"Option1Votes>>{option1Count},Option2Votes>>{option2Count},Option3Votes>>{option3Count},RandomVotes>>{randomCount}";

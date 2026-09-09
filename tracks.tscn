@@ -30,6 +30,16 @@
 [ext_resource type="Texture2D" uid="uid://h4o6bwrjtq43" path="res://Tracks/28.png" id="28_5kjqa"]
 [ext_resource type="Texture2D" uid="uid://f63xm516opee" path="res://Tracks/29.png" id="29_xgtal"]
 [ext_resource type="Texture2D" uid="uid://buy3kls7kxmpg" path="res://Tracks/30.png" id="30_b5nrm"]
+[ext_resource type="Texture2D" uid="uid://gjy2oclad8u7" path="res://Tracks/31.png" id="31_l7wgk"]
+[ext_resource type="Texture2D" uid="uid://4yt1xwj33xf6" path="res://Tracks/32.png" id="32_hpfs7"]
+[ext_resource type="Texture2D" uid="uid://0vkqdvplo51x" path="res://Tracks/33.png" id="33_j5kw3"]
+[ext_resource type="Texture2D" uid="uid://cd0cbhynkcxw5" path="res://Tracks/34.png" id="34_le0hf"]
+[ext_resource type="Texture2D" uid="uid://bjjd10s4uxiuq" path="res://Tracks/35.png" id="35_t13wf"]
+[ext_resource type="Texture2D" uid="uid://bgxh3oa500flv" path="res://Tracks/36.png" id="36_ll1oa"]
+[ext_resource type="Texture2D" uid="uid://2u8415fqchta" path="res://Tracks/37.png" id="37_ubjev"]
+[ext_resource type="Texture2D" uid="uid://bv2iag7hcnif8" path="res://Tracks/38.png" id="38_63rl1"]
+[ext_resource type="Texture2D" uid="uid://bhjmx07uaujqo" path="res://Tracks/39.png" id="39_8gfim"]
+[ext_resource type="Texture2D" uid="uid://g5qj6xb4dh3a" path="res://Tracks/40.png" id="40_rmeja"]
 
 [node name="tracks" type="HFlowContainer" unique_id=1713621522]
 anchors_preset = 5
@@ -160,3 +170,43 @@ texture = ExtResource("29_xgtal")
 [node name="rainbow road rr" parent="." unique_id=1839118250 instance=ExtResource("1_mgyks")]
 layout_mode = 2
 texture = ExtResource("30_b5nrm")
+
+[node name="snes mario circuit 1" parent="." unique_id=1866375676 instance=ExtResource("1_mgyks")]
+layout_mode = 2
+texture = ExtResource("31_l7wgk")
+
+[node name="snes mario circuit 2" parent="." unique_id=1117268754 instance=ExtResource("1_mgyks")]
+layout_mode = 2
+texture = ExtResource("32_hpfs7")
+
+[node name="snes mario circuit 3" parent="." unique_id=1505049571 instance=ExtResource("1_mgyks")]
+layout_mode = 2
+texture = ExtResource("33_j5kw3")
+
+[node name="snes ghost valley 1" parent="." unique_id=491118946 instance=ExtResource("1_mgyks")]
+layout_mode = 2
+texture = ExtResource("34_le0hf")
+
+[node name="snes ghost valley 2" parent="." unique_id=822486732 instance=ExtResource("1_mgyks")]
+layout_mode = 2
+texture = ExtResource("35_t13wf")
+
+[node name="snes ghost valley 3" parent="." unique_id=1337321319 instance=ExtResource("1_mgyks")]
+layout_mode = 2
+texture = ExtResource("36_ll1oa")
+
+[node name="snes choco island 1" parent="." unique_id=1548222434 instance=ExtResource("1_mgyks")]
+layout_mode = 2
+texture = ExtResource("37_ubjev")
+
+[node name="snes choco island 2" parent="." unique_id=478089645 instance=ExtResource("1_mgyks")]
+layout_mode = 2
+texture = ExtResource("38_63rl1")
+
+[node name="snes vanilla lake 1" parent="." unique_id=1593642866 instance=ExtResource("1_mgyks")]
+layout_mode = 2
+texture = ExtResource("39_8gfim")
+
+[node name="snes koopa beach 1" parent="." unique_id=2132130538 instance=ExtResource("1_mgyks")]
+layout_mode = 2
+texture = ExtResource("40_rmeja")

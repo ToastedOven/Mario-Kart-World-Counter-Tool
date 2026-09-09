@@ -4,8 +4,6 @@ using System;
 public partial class SearchBar : LineEdit
 {
     public static SearchBar instance;
-    [Export]
-    public Label threeLapsTotalLabel, intermissionsTotalLabel;
 
     [Export] private Button comboChanger;
     [Export] public Control pickerPage, comboPage;
@@ -34,7 +32,7 @@ public partial class SearchBar : LineEdit
 
     private void OnTextChanged(string newText)
     {
-        foreach (var button in ButtonThing.buttons)
+        foreach (var button in HistoryCardTrackPicker.buttons)
         {
             if (button.Name.ToString().ToLowerInvariant().Contains(newText.ToLowerInvariant()))
             {

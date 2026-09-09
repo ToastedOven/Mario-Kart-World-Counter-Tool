@@ -8,7 +8,7 @@ public partial class RecentTrackTracker : VBoxContainer
 {
     [Export] private PackedScene recentTrackScene;
 
-    public Array<ButtonThing> recentTracks = new();
+    public Array<HistoryCardTrackPicker> recentTracks = new();
     private Array<RecentTrack> recentTrackIcons = new();
     public static RecentTrackTracker instance;
     public double timer = 0;
@@ -41,15 +41,21 @@ public partial class RecentTrackTracker : VBoxContainer
 
     public void AddTrack(int trackId, bool skipIncoming = false)
     {
-        AddTrack(ButtonThing.buttons[trackId], skipIncoming);
+        HistoryCardTrackPicker trackButton;
+        trackButton = HistoryCardTrackPicker.buttons[trackId % ControlManager.TRACKCOUNT];
+        if (trackId >= ControlManager.TRACKCOUNT)
+        {
+            trackButton.intermissionBool = true;
+        }
+        AddTrack(trackButton, skipIncoming);
     }
     
-    public void AddTrack(ButtonThing trackButton, bool skipIncoming = false)
+    public void AddTrack(HistoryCardTrackPicker trackButton, bool skipIncoming = false)
     {
         if (comingFromId == -1 && !skipIncoming)
         {
             comingFrom.Texture = trackButton.Texture;
-            comingFromId = ButtonThing.buttons.IndexOf(trackButton) % 30;
+            comingFromId = trackButton.trackId;
             TrackSelectionScanner.instance.TestScan();
             return;
         }
@@ -79,7 +85,7 @@ public partial class RecentTrackTracker : VBoxContainer
         }
     }
     
-    public void RemoveTrack(ButtonThing trackButton)
+    public void RemoveTrack(HistoryCardTrackPicker trackButton)
     {
         if (!recentTracks.Contains(trackButton))
         {
@@ -94,7 +100,7 @@ public partial class RecentTrackTracker : VBoxContainer
             recentTrackIcons[2].Reparent(this);
         }
     }
-    public ButtonThing SwapTrack(ButtonThing trackButton, ButtonThing newButton)
+    public HistoryCardTrackPicker SwapTrack(HistoryCardTrackPicker trackButton, HistoryCardTrackPicker newButton)
     {
         if (!recentTracks.Contains(trackButton))
         {
@@ -119,25 +125,20 @@ public partial class RecentTrackTracker : VBoxContainer
             timer -= delta;
             if (timer <= 0)
             {
-                for (int i = 0; i < 3; i++)
-                {
-                    recentTracks[i].SetOfferedValue(recentTracks[i].offeredValue + 1, true);
-                }
-                recentTracks[3].SetPickedValue(recentTracks[3].pickedValue + 1, true);
                 int wasRandom = randomCheckbox.IsPressed() ? 1 : 0;
                 int wasNewSession = newSessionCheckbox.IsPressed() ? 1 : 0;
                 randomCheckbox.SetPressed(false);
                 newSessionCheckbox.SetPressed(false);
-                currentMatchInfo = $"Option1>>{ButtonThing.buttons.IndexOf(recentTrackIcons[0].myTrack)},Option2>>{ButtonThing.buttons.IndexOf(recentTrackIcons[1].myTrack)},Option3>>{ButtonThing.buttons.IndexOf(recentTrackIcons[2].myTrack)},Picked>>{ButtonThing.buttons.IndexOf(recentTracks[3])},Random>>{wasRandom},ComingFrom>>{comingFromId},NewSession>>{wasNewSession},{PickPercentageThing.GetCurrentTrackVotesForSaveData(ButtonThing.buttons.IndexOf(recentTracks[0]), ButtonThing.buttons.IndexOf(recentTracks[1]), ButtonThing.buttons.IndexOf(recentTracks[2]))}";
+                currentMatchInfo = $"Option1>>{recentTracks[0].realTrackId},Option2>>{recentTracks[1].realTrackId},Option3>>{recentTracks[2].realTrackId},Picked>>{recentTracks[3].realTrackId},Random>>{wasRandom},ComingFrom>>{comingFromId},NewSession>>{wasNewSession},{PickPercentageThing.GetCurrentTrackVotesForSaveData(recentTracks[0].realTrackId, recentTracks[1].realTrackId, recentTracks[2].realTrackId)}";
                 PostMatchPage.instance.track.Texture = recentTracks[3].Texture;
                 PostMatchPage.instance.kart.Texture = SearchBar.instance.karts.GetChild<TextureRect>(ComboButton.currentKart).Texture;
                 PostMatchPage.instance.driver.Texture = SearchBar.instance.characters.GetChild<TextureRect>(ComboButton.currentDriver).Texture;
-                comingFromId = ButtonThing.buttons.IndexOf(recentTracks.Last()) % 30;
+                comingFromId = HistoryCardTrackPicker.buttons.IndexOf(recentTracks.Last()) % ControlManager.TRACKCOUNT;
                 if (comingFromId == 29)
                 {
                     comingFromId = 28;
                 }
-                comingFrom.Texture = ButtonThing.buttons[comingFromId].Texture;
+                comingFrom.Texture = ControlManager.instance.trackTextures[comingFromId];
                 recentTracks.Clear();
                 foreach (var track in recentTrackIcons)
                 {

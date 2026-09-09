@@ -5,7 +5,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkp08"]
 
-[node name="TextureRect" type="TextureRect" unique_id=1020966983 node_paths=PackedStringArray("mainButton", "threeLapButton", "intermissionButton", "label")]
+[node name="TextureRect" type="TextureRect" unique_id=1020966983 node_paths=PackedStringArray("mainButton", "threeLapButton", "intermissionButton", "label", "overlay")]
 custom_minimum_size = Vector2(150, 85)
 texture = ExtResource("1_1i420")
 expand_mode = 1
@@ -14,6 +14,7 @@ mainButton = NodePath("MainButton")
 threeLapButton = NodePath("3LapButton")
 intermissionButton = NodePath("IntermissionButton")
 label = NodePath("Label")
+overlay = NodePath("ColorRect")
 
 [node name="Label" type="Label" parent="." unique_id=1159935800]
 layout_mode = 0
@@ -23,7 +24,6 @@ offset_right = 147.0
 offset_bottom = 61.0
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 23
-text = "Intermission"
 horizontal_alignment = 1
 
 [node name="MainButton" type="Button" parent="." unique_id=692905590]
@@ -62,3 +62,13 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/outline_size = 6
 text = "Intermission"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=637688347]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)

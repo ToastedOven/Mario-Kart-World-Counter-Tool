@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://daodsqor2qa2x"]
 
-[ext_resource type="PackedScene" uid="uid://bjvuck12jslhc" path="res://tracks.tscn" id="1_r0f7s"]
 [ext_resource type="PackedScene" uid="uid://c6mihqv4fqxus" path="res://popup.tscn" id="2_2yavy"]
+[ext_resource type="Texture2D" uid="uid://uachs8dsw63a" path="res://Tracks/1.png" id="3_clfq1"]
 [ext_resource type="Script" uid="uid://cpgxkjynckw4q" path="res://RecentTrackTracker.cs" id="4_15wuk"]
 [ext_resource type="PackedScene" uid="uid://ydkut4ci8ie1" path="res://RecentTrack.tscn" id="5_gnnrh"]
 [ext_resource type="Texture2D" uid="uid://b55g3fxs2lys" path="res://Combo Icons/Drivers/baby-daisy.png" id="6_naci0"]
@@ -33,16 +33,26 @@
 [ext_resource type="Script" uid="uid://beagxvovaukhs" path="res://SearchBar.cs" id="31_f8oyr"]
 [ext_resource type="Texture2D" uid="uid://bewjlygs8tf4a" path="res://Combo Icons/Drivers/cheep-cheep.png" id="31_omhqs"]
 [ext_resource type="Texture2D" uid="uid://bpa85icgu2pxp" path="res://Combo Icons/Drivers/peach.png" id="32_rs8hp"]
+[ext_resource type="Texture2D" uid="uid://gjy2oclad8u7" path="res://Tracks/31.png" id="33_6of06"]
 [ext_resource type="Texture2D" uid="uid://4bm8p8xlvrht" path="res://Combo Icons/Drivers/daisy.png" id="33_ydmq4"]
 [ext_resource type="Texture2D" uid="uid://neouxn6v8teo" path="res://Combo Icons/Drivers/coin-coffer.png" id="34_a7w86"]
+[ext_resource type="Texture2D" uid="uid://4yt1xwj33xf6" path="res://Tracks/32.png" id="34_dsn11"]
 [ext_resource type="Texture2D" uid="uid://cseifpwemuvjr" path="res://Combo Icons/Drivers/yoshi.png" id="35_toi2r"]
+[ext_resource type="Texture2D" uid="uid://0vkqdvplo51x" path="res://Tracks/33.png" id="35_xgy2b"]
+[ext_resource type="Texture2D" uid="uid://cd0cbhynkcxw5" path="res://Tracks/34.png" id="36_iyq2m"]
 [ext_resource type="Texture2D" uid="uid://c7ltlbi3gkr6j" path="res://Combo Icons/Drivers/monty-mole.png" id="36_mxfhk"]
+[ext_resource type="Texture2D" uid="uid://bjjd10s4uxiuq" path="res://Tracks/35.png" id="37_5kkp1"]
 [ext_resource type="Texture2D" uid="uid://s8ohpg6i8p1x" path="res://Combo Icons/Drivers/dolphin.png" id="37_jbb51"]
 [ext_resource type="Texture2D" uid="uid://bcl2bs0e4dxko" path="res://Combo Icons/Drivers/bowser-jr.png" id="38_dmqu7"]
+[ext_resource type="Texture2D" uid="uid://bgxh3oa500flv" path="res://Tracks/36.png" id="38_lbocp"]
+[ext_resource type="Texture2D" uid="uid://2u8415fqchta" path="res://Tracks/37.png" id="39_kqff4"]
 [ext_resource type="Texture2D" uid="uid://dp22fjtow66q7" path="res://Combo Icons/Drivers/mario.png" id="39_ptr36"]
 [ext_resource type="Texture2D" uid="uid://md4o3w0iuc4i" path="res://Combo Icons/Drivers/rocky-wrench.png" id="40_7hhm6"]
+[ext_resource type="Texture2D" uid="uid://bv2iag7hcnif8" path="res://Tracks/38.png" id="40_135xr"]
+[ext_resource type="Texture2D" uid="uid://bhjmx07uaujqo" path="res://Tracks/39.png" id="41_4j04y"]
 [ext_resource type="Texture2D" uid="uid://jit75hfep1us" path="res://Combo Icons/Drivers/luigi.png" id="41_l5glf"]
 [ext_resource type="Texture2D" uid="uid://clruca7f0opuq" path="res://Combo Icons/Drivers/pokey.png" id="42_ecun1"]
+[ext_resource type="Texture2D" uid="uid://g5qj6xb4dh3a" path="res://Tracks/40.png" id="42_iqcio"]
 [ext_resource type="Texture2D" uid="uid://dh7hj5b53iacx" path="res://Combo Icons/Drivers/hammer-bro.png" id="43_by1f8"]
 [ext_resource type="Texture2D" uid="uid://xk48b87bbyiv" path="res://Combo Icons/Drivers/penguin.png" id="44_f726w"]
 [ext_resource type="Texture2D" uid="uid://ctih4tot3pdbc" path="res://Combo Icons/Drivers/birdo.png" id="45_g800d"]
@@ -137,9 +147,9 @@
 [ext_resource type="Script" uid="uid://5h4wd572nuu2" path="res://PickPercentageThing.cs" id="131_ecun1"]
 [ext_resource type="PackedScene" uid="uid://cyjeh54rlltff" path="res://HistoryCardEditor.tscn" id="132_0jdtu"]
 [ext_resource type="Script" uid="uid://cd6je5apmabea" path="res://TrackSelect.cs" id="133_fk0vt"]
-[ext_resource type="PackedScene" uid="uid://csjxbq2gqp257" path="res://HistoryCardTrackPicker.tscn" id="133_tlb2k"]
 [ext_resource type="Script" uid="uid://d3hxlnhakccat" path="res://ControlManager.cs" id="134_28v50"]
 [ext_resource type="Texture2D" uid="uid://dhr1s066nncof" path="res://Tracks/3.png" id="135_2yavy"]
+[ext_resource type="PackedScene" uid="uid://mim6vks3j4m2" path="res://track_list.tscn" id="135_fu3vv"]
 [ext_resource type="Texture2D" uid="uid://dga5eixhv5xqy" path="res://Tracks/4.png" id="136_r1sk8"]
 [ext_resource type="Texture2D" uid="uid://cic78y2rr8qs2" path="res://Tracks/5.png" id="137_b7tow"]
 [ext_resource type="Texture2D" uid="uid://cgkgffldhnorn" path="res://Tracks/6.png" id="138_lt1o6"]
@@ -207,6 +217,7 @@ rescanForCamera = NodePath("../HBoxContainer/Rescan for Camera")
 versionLine = NodePath("../SettingsPage/VBoxContainer/HBoxContainer/VersionLineEdit")
 popupScene = ExtResource("2_2yavy")
 postMatchInstructions = NodePath("../Post Match/Instructions")
+trackTextures = Array[Texture2D]([ExtResource("3_clfq1"), ExtResource("126_jbb51"), ExtResource("135_2yavy"), ExtResource("136_r1sk8"), ExtResource("137_b7tow"), ExtResource("138_lt1o6"), ExtResource("139_ajrej"), ExtResource("140_tcgq5"), ExtResource("141_fmpyo"), ExtResource("142_i4k74"), ExtResource("143_j0jie"), ExtResource("144_pk537"), ExtResource("145_to8xo"), ExtResource("146_clfq1"), ExtResource("147_6of06"), ExtResource("148_dsn11"), ExtResource("149_xgy2b"), ExtResource("150_iyq2m"), ExtResource("151_5kkp1"), ExtResource("152_lbocp"), ExtResource("153_kqff4"), ExtResource("154_135xr"), ExtResource("155_4j04y"), ExtResource("156_iqcio"), ExtResource("157_npp68"), ExtResource("158_j4x78"), ExtResource("159_dhfdj"), ExtResource("160_oe45t"), ExtResource("161_gdycy"), ExtResource("162_yh4el"), ExtResource("33_6of06"), ExtResource("34_dsn11"), ExtResource("35_xgy2b"), ExtResource("36_iyq2m"), ExtResource("37_5kkp1"), ExtResource("38_lbocp"), ExtResource("39_kqff4"), ExtResource("40_135xr"), ExtResource("41_4j04y"), ExtResource("42_iqcio")])
 metadata/_custom_type_script = "uid://d3hxlnhakccat"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1730624110]
@@ -257,6 +268,7 @@ scale = Vector2(0.85, 0.85)
 mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="PickerPage/3Laps" unique_id=1416350284]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -268,9 +280,12 @@ offset_bottom = 389.0
 grow_horizontal = 2
 color = Color(0.30323282, 0.30323282, 0.30323282, 1)
 
-[node name="tracks" parent="PickerPage/3Laps" unique_id=1713621522 instance=ExtResource("1_r0f7s")]
+[node name="tracks" parent="PickerPage/3Laps" unique_id=1020066316 instance=ExtResource("135_fu3vv")]
 layout_mode = 1
-grow_horizontal = 1
+offset_left = -614.1176
+offset_top = 164.70589
+offset_right = 614.8824
+offset_bottom = 605.7059
 
 [node name="ThreeLapsTotal" type="Label" parent="PickerPage/3Laps" unique_id=921512176]
 layout_mode = 1
@@ -283,49 +298,6 @@ offset_right = 614.57513
 offset_bottom = 36.47059
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 29
-text = "3Laps"
-
-[node name="Intermissions" type="Control" parent="PickerPage" unique_id=1356805048]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 620.0
-offset_top = 337.99997
-offset_right = 620.0
-offset_bottom = 337.99997
-grow_horizontal = 2
-scale = Vector2(0.85, 0.85)
-mouse_filter = 2
-
-[node name="ColorRect" type="ColorRect" parent="PickerPage/Intermissions" unique_id=1113231652]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -616.1109
-offset_top = 35.29416
-offset_right = 614.1176
-offset_bottom = 389.0
-grow_horizontal = 2
-color = Color(0.30323282, 0.30323282, 0.30323282, 1)
-
-[node name="tracks" parent="PickerPage/Intermissions" unique_id=2047806525 instance=ExtResource("1_r0f7s")]
-layout_mode = 1
-grow_horizontal = 1
-
-[node name="intermissionsTotal" type="Label" parent="PickerPage/Intermissions" unique_id=196186877]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -618.82355
-offset_top = -3.529374
-offset_right = 605.62103
-offset_bottom = 36.470627
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 29
-text = "Intermissions"
 
 [node name="RecentPicks" type="Control" parent="PickerPage" unique_id=1132807329]
 layout_mode = 1
@@ -481,14 +453,12 @@ offset_top = 674.0
 offset_right = 1081.0
 offset_bottom = 714.0
 
-[node name="LineEdit" type="LineEdit" parent="PickerPage/HBoxContainer" unique_id=1895571587 node_paths=PackedStringArray("threeLapsTotalLabel", "intermissionsTotalLabel", "comboChanger", "pickerPage", "comboPage", "currentKart", "currentCharacter", "karts", "characters", "positions")]
+[node name="LineEdit" type="LineEdit" parent="PickerPage/HBoxContainer" unique_id=1895571587 node_paths=PackedStringArray("comboChanger", "pickerPage", "comboPage", "currentKart", "currentCharacter", "karts", "characters", "positions")]
 custom_minimum_size = Vector2(180, 0)
 custom_maximum_size = Vector2(235, -1)
 layout_mode = 2
 placeholder_text = "Search..."
 script = ExtResource("31_f8oyr")
-threeLapsTotalLabel = NodePath("../../3Laps/ThreeLapsTotal")
-intermissionsTotalLabel = NodePath("../../Intermissions/intermissionsTotal")
 comboChanger = NodePath("../Change Kart")
 pickerPage = NodePath("../..")
 comboPage = NodePath("../../../Combo Select")
@@ -1746,7 +1716,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("133_fk0vt")
-cards = [NodePath("tracks/TextureRect"), NodePath("tracks/TextureRect2"), NodePath("tracks/TextureRect3"), NodePath("tracks/TextureRect4"), NodePath("tracks/TextureRect5"), NodePath("tracks/TextureRect6"), NodePath("tracks/TextureRect7"), NodePath("tracks/TextureRect8"), NodePath("tracks/TextureRect9"), NodePath("tracks/TextureRect10"), NodePath("tracks/TextureRect11"), NodePath("tracks/TextureRect12"), NodePath("tracks/TextureRect13"), NodePath("tracks/TextureRect14"), NodePath("tracks/TextureRect15"), NodePath("tracks/TextureRect16"), NodePath("tracks/TextureRect17"), NodePath("tracks/TextureRect18"), NodePath("tracks/TextureRect19"), NodePath("tracks/TextureRect20"), NodePath("tracks/TextureRect21"), NodePath("tracks/TextureRect22"), NodePath("tracks/TextureRect23"), NodePath("tracks/TextureRect24"), NodePath("tracks/TextureRect25"), NodePath("tracks/TextureRect26"), NodePath("tracks/TextureRect27"), NodePath("tracks/TextureRect28"), NodePath("tracks/TextureRect29"), NodePath("tracks/TextureRect30")]
+cards = [NodePath("tracks/Mario Bros Circuit mbc"), NodePath("tracks/Crown City"), NodePath("tracks/whistlestop whistleslop"), NodePath("tracks/dk spaceport"), NodePath("tracks/desert hills"), NodePath("tracks/shy guy bazaar"), NodePath("tracks/wario stadium"), NodePath("tracks/bullet airship fortress"), NodePath("tracks/dk pass"), NodePath("tracks/starview peak"), NodePath("tracks/ice cream sky high sundae"), NodePath("tracks/wario shipyard"), NodePath("tracks/ktb koopa troopa beach"), NodePath("tracks/faraway oasis"), NodePath("tracks/peach beach"), NodePath("tracks/sss salty salty speedway"), NodePath("tracks/dino dino jungle"), NodePath("tracks/gbr g?br great question block ruins"), NodePath("tracks/tarzan cheep cheep falls cheap cheap falls"), NodePath("tracks/dandelion depths"), NodePath("tracks/boo cinema"), NodePath("tracks/dbb dry bones burnout"), NodePath("tracks/moo moo meadows cow cow"), NodePath("tracks/choco mountain"), NodePath("tracks/toads factory"), NodePath("tracks/bowsers castle bc"), NodePath("tracks/bees maple treeway acorn heights"), NodePath("tracks/mario circuit mc"), NodePath("tracks/peach stadium paperclip"), NodePath("tracks/rainbow road rr"), NodePath("tracks/snes mario circuit 1"), NodePath("tracks/snes mario circuit 2"), NodePath("tracks/snes mario circuit 3"), NodePath("tracks/snes ghost valley 1"), NodePath("tracks/snes ghost valley 2"), NodePath("tracks/snes ghost valley 3"), NodePath("tracks/snes choco island 1"), NodePath("tracks/snes choco island 2"), NodePath("tracks/snes vanilla lake 1"), NodePath("tracks/snes koopa beach 1")]
 
 [node name="ColorRect" type="ColorRect" parent="Track Select" unique_id=217117677]
 layout_mode = 1
@@ -1758,139 +1728,10 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0.80300003)
 
-[node name="tracks" type="HFlowContainer" parent="Track Select" unique_id=1856684607]
+[node name="tracks" parent="Track Select" unique_id=518879346 instance=ExtResource("135_fu3vv")]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -614.5
-offset_top = -176.0
-offset_right = 614.5
-offset_bottom = 176.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="TextureRect" parent="Track Select/tracks" unique_id=1020966983 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-
-[node name="TextureRect2" parent="Track Select/tracks" unique_id=1009758574 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("126_jbb51")
-
-[node name="TextureRect3" parent="Track Select/tracks" unique_id=627803350 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("135_2yavy")
-
-[node name="TextureRect4" parent="Track Select/tracks" unique_id=1449762537 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("136_r1sk8")
-
-[node name="TextureRect5" parent="Track Select/tracks" unique_id=1571529049 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("137_b7tow")
-
-[node name="TextureRect6" parent="Track Select/tracks" unique_id=1704987091 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("138_lt1o6")
-
-[node name="TextureRect7" parent="Track Select/tracks" unique_id=902216025 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("139_ajrej")
-
-[node name="TextureRect8" parent="Track Select/tracks" unique_id=2042214043 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("140_tcgq5")
-
-[node name="TextureRect9" parent="Track Select/tracks" unique_id=1744862387 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("141_fmpyo")
-
-[node name="TextureRect10" parent="Track Select/tracks" unique_id=1210417996 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("142_i4k74")
-
-[node name="TextureRect11" parent="Track Select/tracks" unique_id=1519154011 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("143_j0jie")
-
-[node name="TextureRect12" parent="Track Select/tracks" unique_id=920872131 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("144_pk537")
-
-[node name="TextureRect13" parent="Track Select/tracks" unique_id=442905955 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("145_to8xo")
-
-[node name="TextureRect14" parent="Track Select/tracks" unique_id=659188972 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("146_clfq1")
-
-[node name="TextureRect15" parent="Track Select/tracks" unique_id=1213038408 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("147_6of06")
-
-[node name="TextureRect16" parent="Track Select/tracks" unique_id=1469292941 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("148_dsn11")
-
-[node name="TextureRect17" parent="Track Select/tracks" unique_id=960538400 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("149_xgy2b")
-
-[node name="TextureRect18" parent="Track Select/tracks" unique_id=1702445204 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("150_iyq2m")
-
-[node name="TextureRect19" parent="Track Select/tracks" unique_id=2095649161 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("151_5kkp1")
-
-[node name="TextureRect20" parent="Track Select/tracks" unique_id=399033515 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("152_lbocp")
-
-[node name="TextureRect21" parent="Track Select/tracks" unique_id=646360358 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("153_kqff4")
-
-[node name="TextureRect22" parent="Track Select/tracks" unique_id=87129765 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("154_135xr")
-
-[node name="TextureRect23" parent="Track Select/tracks" unique_id=2073999674 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("155_4j04y")
-
-[node name="TextureRect24" parent="Track Select/tracks" unique_id=1969482616 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("156_iqcio")
-
-[node name="TextureRect25" parent="Track Select/tracks" unique_id=321078764 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("157_npp68")
-
-[node name="TextureRect26" parent="Track Select/tracks" unique_id=1863418801 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("158_j4x78")
-
-[node name="TextureRect27" parent="Track Select/tracks" unique_id=1611431778 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("159_dhfdj")
-
-[node name="TextureRect28" parent="Track Select/tracks" unique_id=1342023845 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("160_oe45t")
-
-[node name="TextureRect29" parent="Track Select/tracks" unique_id=187050823 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("161_gdycy")
-
-[node name="TextureRect30" parent="Track Select/tracks" unique_id=344124482 instance=ExtResource("133_tlb2k")]
-layout_mode = 2
-texture = ExtResource("162_yh4el")
+offset_top = -220.5
+offset_bottom = 220.5
 
 [node name="Node" type="Node" parent="." unique_id=2119304821 node_paths=PackedStringArray("vrButtons", "resetButton", "averageVR", "myVR", "racerCount")]
 script = ExtResource("128_ptr36")
@@ -2020,3 +1861,4 @@ script = ExtResource("168_r1sk8")
 metadata/_custom_type_script = "uid://blpjnn2rpliik"
 
 [editable path="PickerPage/RecentPicks/DrivingFrom/TextureRect"]
+[editable path="Track Select/tracks"]

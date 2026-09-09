@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using CounterTool;
 using Godot.Collections;
 using Array = Godot.Collections.Array;
 
@@ -18,14 +19,14 @@ public partial class TrackSelect : Control
     private void CardOnPressedButton(int trackId)
     {
         HistoryCardEditor.currentTrackPickerCard.trackId = trackId;
-        HistoryCardEditor.currentTrackPickerCard.Texture = ButtonThing.buttons[trackId].Texture;
+        HistoryCardEditor.currentTrackPickerCard.Texture = ControlManager.instance.trackTextures[trackId % ControlManager.TRACKCOUNT];
         if (HistoryCardEditor.currentTrackPickerCard == HistoryCardEditor.instance.ComingFrom)
         {
-            HistoryCardEditor.currentTrackPickerCard.trackId %= 30;
+            HistoryCardEditor.currentTrackPickerCard.trackId %= ControlManager.TRACKCOUNT;
         }
         else
         {
-            HistoryCardEditor.currentTrackPickerCard.label.Text = ButtonThing.buttons[trackId].intermissionButton ? "Intermission" : "3Lap";
+            HistoryCardEditor.currentTrackPickerCard.label.Text = trackId >= ControlManager.TRACKCOUNT ? "Intermission" : "3Lap";
         }
 
         foreach (var card in cards)

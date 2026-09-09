@@ -1,0 +1,218 @@
+[gd_scene format=3 uid="uid://mim6vks3j4m2"]
+
+[ext_resource type="PackedScene" uid="uid://csjxbq2gqp257" path="res://HistoryCardTrackPicker.tscn" id="1_wpx8m"]
+[ext_resource type="Script" uid="uid://na13x2qbvrjn" path="res://TrackPicker.cs" id="1_x03kd"]
+[ext_resource type="Texture2D" uid="uid://cf25f5ya6k8ee" path="res://Tracks/2.png" id="2_ve53u"]
+[ext_resource type="Texture2D" uid="uid://dhr1s066nncof" path="res://Tracks/3.png" id="3_dueab"]
+[ext_resource type="Texture2D" uid="uid://dga5eixhv5xqy" path="res://Tracks/4.png" id="4_3ryiu"]
+[ext_resource type="Texture2D" uid="uid://cic78y2rr8qs2" path="res://Tracks/5.png" id="5_0m4o5"]
+[ext_resource type="Texture2D" uid="uid://cgkgffldhnorn" path="res://Tracks/6.png" id="6_ib4mi"]
+[ext_resource type="Texture2D" uid="uid://evxj28eh1o0k" path="res://Tracks/7.png" id="7_ommxt"]
+[ext_resource type="Texture2D" uid="uid://bhipor1dl620b" path="res://Tracks/8.png" id="8_s0lqj"]
+[ext_resource type="Texture2D" uid="uid://bggqvtsldcljn" path="res://Tracks/9.png" id="9_mgp1v"]
+[ext_resource type="Texture2D" uid="uid://cdposcuahycl" path="res://Tracks/10.png" id="10_bmsu5"]
+[ext_resource type="Texture2D" uid="uid://ky2ebkss3jko" path="res://Tracks/11.png" id="11_chvk8"]
+[ext_resource type="Texture2D" uid="uid://dgdqb88p8t17g" path="res://Tracks/12.png" id="12_x03kd"]
+[ext_resource type="Texture2D" uid="uid://dx4eu8n7qq2av" path="res://Tracks/13.png" id="13_qvwer"]
+[ext_resource type="Texture2D" uid="uid://cgd2xq6lf5bql" path="res://Tracks/14.png" id="14_rkkwb"]
+[ext_resource type="Texture2D" uid="uid://sp2d28eolnjm" path="res://Tracks/15.png" id="15_m1ewf"]
+[ext_resource type="Texture2D" uid="uid://qmom6nktltmi" path="res://Tracks/16.png" id="16_kv6it"]
+[ext_resource type="Texture2D" uid="uid://kf0j8cboflqo" path="res://Tracks/17.png" id="17_mi4ya"]
+[ext_resource type="Texture2D" uid="uid://c85eegax30phj" path="res://Tracks/18.png" id="18_2p5vo"]
+[ext_resource type="Texture2D" uid="uid://cdqmpygru6ny7" path="res://Tracks/19.png" id="19_fc321"]
+[ext_resource type="Texture2D" uid="uid://do8owmo8re4ta" path="res://Tracks/20.png" id="20_gu5j0"]
+[ext_resource type="Texture2D" uid="uid://bpumsxj5vaqkv" path="res://Tracks/21.png" id="21_3si43"]
+[ext_resource type="Texture2D" uid="uid://ofjkmg6v8bqa" path="res://Tracks/22.png" id="22_lsg2c"]
+[ext_resource type="Texture2D" uid="uid://dsdel2efvhpy8" path="res://Tracks/23.png" id="23_t0tsd"]
+[ext_resource type="Texture2D" uid="uid://c8ycg5h1wlteq" path="res://Tracks/24.png" id="24_w44fw"]
+[ext_resource type="Texture2D" uid="uid://byqp6skf6x4l2" path="res://Tracks/25.png" id="25_ueyp4"]
+[ext_resource type="Texture2D" uid="uid://d2o0xlyijpbaf" path="res://Tracks/26.png" id="26_65oyh"]
+[ext_resource type="Texture2D" uid="uid://cwmy1ww3j8dgj" path="res://Tracks/27.png" id="27_ul2ol"]
+[ext_resource type="Texture2D" uid="uid://h4o6bwrjtq43" path="res://Tracks/28.png" id="28_andb0"]
+[ext_resource type="Texture2D" uid="uid://f63xm516opee" path="res://Tracks/29.png" id="29_sqlen"]
+[ext_resource type="Texture2D" uid="uid://buy3kls7kxmpg" path="res://Tracks/30.png" id="30_hfem1"]
+[ext_resource type="Texture2D" uid="uid://gjy2oclad8u7" path="res://Tracks/31.png" id="31_chvk8"]
+[ext_resource type="Texture2D" uid="uid://4yt1xwj33xf6" path="res://Tracks/32.png" id="32_x03kd"]
+[ext_resource type="Texture2D" uid="uid://0vkqdvplo51x" path="res://Tracks/33.png" id="33_qvwer"]
+[ext_resource type="Texture2D" uid="uid://cd0cbhynkcxw5" path="res://Tracks/34.png" id="34_rkkwb"]
+[ext_resource type="Texture2D" uid="uid://bjjd10s4uxiuq" path="res://Tracks/35.png" id="35_m1ewf"]
+[ext_resource type="Texture2D" uid="uid://bgxh3oa500flv" path="res://Tracks/36.png" id="36_kv6it"]
+[ext_resource type="Texture2D" uid="uid://2u8415fqchta" path="res://Tracks/37.png" id="37_mi4ya"]
+[ext_resource type="Texture2D" uid="uid://bv2iag7hcnif8" path="res://Tracks/38.png" id="38_2p5vo"]
+[ext_resource type="Texture2D" uid="uid://bhjmx07uaujqo" path="res://Tracks/39.png" id="39_fc321"]
+[ext_resource type="Texture2D" uid="uid://g5qj6xb4dh3a" path="res://Tracks/40.png" id="40_gu5j0"]
+
+[node name="tracks" type="HFlowContainer" unique_id=1020066316 node_paths=PackedStringArray("trackCards")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -614.5
+offset_top = -176.0
+offset_right = 614.5
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_x03kd")
+trackCards = [NodePath("Mario Bros Circuit mbc"), NodePath("Crown City"), NodePath("whistlestop whistleslop"), NodePath("dk spaceport"), NodePath("desert hills"), NodePath("shy guy bazaar"), NodePath("wario stadium"), NodePath("bullet airship fortress"), NodePath("dk pass"), NodePath("starview peak"), NodePath("ice cream sky high sundae"), NodePath("wario shipyard"), NodePath("ktb koopa troopa beach"), NodePath("faraway oasis"), NodePath("peach beach"), NodePath("sss salty salty speedway"), NodePath("dino dino jungle"), NodePath("gbr g?br great question block ruins"), NodePath("tarzan cheep cheep falls cheap cheap falls"), NodePath("dandelion depths"), NodePath("boo cinema"), NodePath("dbb dry bones burnout"), NodePath("moo moo meadows cow cow"), NodePath("choco mountain"), NodePath("toads factory"), NodePath("bowsers castle bc"), NodePath("bees maple treeway acorn heights"), NodePath("mario circuit mc"), NodePath("peach stadium paperclip"), NodePath("rainbow road rr"), NodePath("snes mario circuit 1"), NodePath("snes mario circuit 2"), NodePath("snes mario circuit 3"), NodePath("snes ghost valley 1"), NodePath("snes ghost valley 2"), NodePath("snes ghost valley 3"), NodePath("snes choco island 1"), NodePath("snes choco island 2"), NodePath("snes vanilla lake 1"), NodePath("snes koopa beach 1")]
+
+[node name="Mario Bros Circuit mbc" parent="." unique_id=1020966983 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+
+[node name="Crown City" parent="." unique_id=1882908553 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("2_ve53u")
+
+[node name="whistlestop whistleslop" parent="." unique_id=2111775102 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("3_dueab")
+
+[node name="dk spaceport" parent="." unique_id=2080376910 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("4_3ryiu")
+
+[node name="desert hills" parent="." unique_id=53974890 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("5_0m4o5")
+
+[node name="shy guy bazaar" parent="." unique_id=2061608357 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("6_ib4mi")
+
+[node name="wario stadium" parent="." unique_id=1350068831 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("7_ommxt")
+
+[node name="bullet airship fortress" parent="." unique_id=987650751 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("8_s0lqj")
+
+[node name="dk pass" parent="." unique_id=877519721 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("9_mgp1v")
+
+[node name="starview peak" parent="." unique_id=156817989 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("10_bmsu5")
+
+[node name="ice cream sky high sundae" parent="." unique_id=636949790 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("11_chvk8")
+
+[node name="wario shipyard" parent="." unique_id=1884612881 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("12_x03kd")
+
+[node name="ktb koopa troopa beach" parent="." unique_id=2116962071 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("13_qvwer")
+
+[node name="faraway oasis" parent="." unique_id=282835872 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("14_rkkwb")
+
+[node name="peach beach" parent="." unique_id=255249932 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("15_m1ewf")
+
+[node name="sss salty salty speedway" parent="." unique_id=345549333 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("16_kv6it")
+
+[node name="dino dino jungle" parent="." unique_id=949035217 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("17_mi4ya")
+
+[node name="gbr g?br great question block ruins" parent="." unique_id=142749061 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("18_2p5vo")
+
+[node name="tarzan cheep cheep falls cheap cheap falls" parent="." unique_id=96752391 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("19_fc321")
+
+[node name="dandelion depths" parent="." unique_id=610246142 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("20_gu5j0")
+
+[node name="boo cinema" parent="." unique_id=400805642 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("21_3si43")
+
+[node name="dbb dry bones burnout" parent="." unique_id=1090169573 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("22_lsg2c")
+
+[node name="moo moo meadows cow cow" parent="." unique_id=1817443475 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("23_t0tsd")
+
+[node name="choco mountain" parent="." unique_id=167089602 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("24_w44fw")
+
+[node name="toads factory" parent="." unique_id=1869127384 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("25_ueyp4")
+
+[node name="bowsers castle bc" parent="." unique_id=1362348584 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("26_65oyh")
+
+[node name="bees maple treeway acorn heights" parent="." unique_id=2141574755 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("27_ul2ol")
+
+[node name="mario circuit mc" parent="." unique_id=1126537791 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("28_andb0")
+
+[node name="peach stadium paperclip" parent="." unique_id=1114296563 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("29_sqlen")
+
+[node name="rainbow road rr" parent="." unique_id=198419536 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("30_hfem1")
+
+[node name="snes mario circuit 1" parent="." unique_id=309721309 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("31_chvk8")
+
+[node name="snes mario circuit 2" parent="." unique_id=899122935 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("32_x03kd")
+
+[node name="snes mario circuit 3" parent="." unique_id=1589742799 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("33_qvwer")
+
+[node name="snes ghost valley 1" parent="." unique_id=1733707715 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("34_rkkwb")
+
+[node name="snes ghost valley 2" parent="." unique_id=1597755962 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("35_m1ewf")
+
+[node name="snes ghost valley 3" parent="." unique_id=1227787490 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("36_kv6it")
+
+[node name="snes choco island 1" parent="." unique_id=1547381227 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("37_mi4ya")
+
+[node name="snes choco island 2" parent="." unique_id=2053242935 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("38_2p5vo")
+
+[node name="snes vanilla lake 1" parent="." unique_id=1150978245 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("39_fc321")
+
+[node name="snes koopa beach 1" parent="." unique_id=900917815 instance=ExtResource("1_wpx8m")]
+layout_mode = 2
+texture = ExtResource("40_gu5j0")

@@ -43,7 +43,17 @@ public partial class HistoryCard : Control
         "Acorn Heights",
         "Mario Circuit",
         "Peach Stadium",
-        "Rainbow Road"
+        "Rainbow Road",
+        "SNES Mario Circuit 1",
+        "SNES Mario Circuit 2",
+        "SNES Mario Circuit 3",
+        "SNES Ghost Valley 1",
+        "SNES Ghost Valley 2",
+        "SNES Ghost Valley 3",
+        "SNES Choco Island 1",
+        "SNES Choco Island 2",
+        "SNES Vanilla Lake 1",
+        "SNES Koopa Beach 1"
     ];
 
     private static Dictionary<int, string> racerNumbersToNames = new()
@@ -146,17 +156,17 @@ public partial class HistoryCard : Control
 
     public void ReSetup()
     {
-        card1.Texture = ButtonThing.buttons[info["Option1"].ToInt()].Texture;
-        card2.Texture = ButtonThing.buttons[info["Option2"].ToInt()].Texture;
-        card3.Texture = ButtonThing.buttons[info["Option3"].ToInt()].Texture;
-        card4.Texture = ButtonThing.buttons[info["Picked"].ToInt()].Texture;
-        label1.Text = ButtonThing.buttons[info["Option1"].ToInt()].intermissionButton ? "Intermission" : "3Lap";
-        label2.Text = ButtonThing.buttons[info["Option2"].ToInt()].intermissionButton ? "Intermission" : "3Lap";
-        label3.Text = ButtonThing.buttons[info["Option3"].ToInt()].intermissionButton ? "Intermission" : "3Lap";
-        label4.Text = ButtonThing.buttons[info["Picked"].ToInt()].intermissionButton ? "Intermission" : "3Lap";
+        card1.Texture = ControlManager.instance.trackTextures[info["Option1"].ToInt() % ControlManager.TRACKCOUNT];
+        card2.Texture = ControlManager.instance.trackTextures[info["Option2"].ToInt() % ControlManager.TRACKCOUNT];
+        card3.Texture = ControlManager.instance.trackTextures[info["Option3"].ToInt() % ControlManager.TRACKCOUNT];
+        card4.Texture = ControlManager.instance.trackTextures[info["Picked"].ToInt() % ControlManager.TRACKCOUNT];
+        label1.Text = info["Option1"].ToInt() >= ControlManager.TRACKCOUNT ? "Intermission" : "3Lap";
+        label2.Text = info["Option2"].ToInt() >= ControlManager.TRACKCOUNT ? "Intermission" : "3Lap";
+        label3.Text = info["Option3"].ToInt() >= ControlManager.TRACKCOUNT ? "Intermission" : "3Lap";
+        label4.Text = info["Picked"].ToInt() >= ControlManager.TRACKCOUNT ? "Intermission" : "3Lap";
         if (info["ComingFrom"] != "null")
         {
-            comingFromCard.Texture = ButtonThing.buttons[info["ComingFrom"].ToInt()].Texture;
+            comingFromCard.Texture = ControlManager.instance.trackTextures[info["ComingFrom"].ToInt() % ControlManager.TRACKCOUNT];
         }
         else
         {
@@ -231,7 +241,7 @@ public partial class HistoryCard : Control
             vrs.Add(-1);
         }
         //option 123 and picked are "comingfrom to thing" if intermission, otherwise, just "thing"
-        string comingFrom = trackNames[info["ComingFrom"].ToInt()];
+        string comingFrom = trackNames[info["ComingFrom"].ToInt() % ControlManager.TRACKCOUNT];
         var newMatch = new HistoryEntry
         {
             Option1 = Thingy(comingFrom, "Option1"),
@@ -263,13 +273,13 @@ public partial class HistoryCard : Control
     private string Thingy(string comingFrom, string option)
     {
         string option1;
-        if (info[option].ToInt() < 30)
+        if (info[option].ToInt() < ControlManager.TRACKCOUNT)
         {
             option1 = trackNames[info[option].ToInt()];
         }
         else
         {
-            option1 = $"{comingFrom} >>> {trackNames[info[option].ToInt() % 30]}";
+            option1 = $"{comingFrom} >>> {trackNames[info[option].ToInt() % ControlManager.TRACKCOUNT]}";
         }
 
         return option1;

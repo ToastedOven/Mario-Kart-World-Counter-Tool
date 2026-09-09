@@ -3,9 +3,35 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d5ad2cfe-6289-40a2-828b-e8204a2d26fd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/libraries/GdSdk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/libraries/GdSdk.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CounterTool/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/BaseScene.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ButtonThing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ButtonThing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControlManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ControlManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CounterTool.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CounterTool.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HistoryCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HistoryCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HistoryCardEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HistoryCardEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HistoryCardTrackPicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HistoryCardTrackPicker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HistoryCardTrackPicker.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/HistoryCardTrackPicker.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PickPercentageThing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PickPercentageThing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecentTrack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecentTrack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecentTrackTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecentTrackTracker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SearchBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SearchBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwitchGraphButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwitchGraphButton.cs.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrackSelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrackSelect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrackSelectionScanner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TrackSelectionScanner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracks.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/tracks.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +42,12 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -46,30 +78,18 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b2202cec34a44ea914b4df68a5ca71c5e7c00/43/bfff84a8/Array.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/34588703652c4d2782e7c04fa8ce17a81f600/70/85c33014/TesseractEngine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/22/d18d259f/InitHelpers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/89/655c66f1/ThrowHelpers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/a6/506b8082/Number.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/f0/8a783fcd/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4ac38e449eb749c4a6c4081231b3deb2db3000/f2/c2eeac3b/MethodBaseInvoker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b3ab7e14d724759ac204679ece0283d611400/20/2df9c22a/CSharpInstanceBridge.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/780b10c4924b4c70b45876e5766da392199200/c8/1bbe58a1/HttpResponseMessage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b53480f4bb724269a8e0a810e21b5c08bb000/ec/407ad810/QueryTaskGroupState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7e3f8a67883485f96b34e55434971c664c00/86/5f8db497/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c85c00298a834c4984235806788d6a0283800/bf/567b925a/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cf0fda9068894d27906e5fc478b267ec611400/31/8b0e287c/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e929cb9673c947ad9269facdac90006adb3400/18/38026ff2/Task.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e929cb9673c947ad9269facdac90006adb3400/84/92c1c18c/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e929cb9673c947ad9269facdac90006adb3400/d6/1f6d6bf3/CastHelpers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fcb4868840c8420bbfec48a292f3b833db3400/8e/3b75572e/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fcb4868840c8420bbfec48a292f3b833db3400/d9/4e29d640/AsyncVoidMethodBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/241db236b14e13198d9587481ef2cb42ecb0f94858d955fb74adbb9362cb9/Cv2_imgcodecs.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/77c3e056bfce5ef7df47fe570ca2605522a391/CounterTool.CameraSetup_ScriptMethods.generated.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9e95626176f3c0c84abd725d5be48163b1341f243c5ad8618b547e1a0c5aab3/DisplayServer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b3ab7e14d724759ac204679ece0283d611400/bc/ed830592/Array.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bb4617cf92b9c52c1bbdf560a184cdd1318e4215/HistoryCardTrackPicker_ScriptSignals.generated.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cd2081581a57397285b1beba7fc14bdbc61c89e3ac09a962676d880d9dd3c/Node.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/TrackSelectionScanner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TrackPicker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///tmp/JetBrainsPerUserTemp-1000-1/SourceGeneratedDocuments/6E61948B240D34EC58829E88/Godot.SourceGenerators/Godot.SourceGenerators.ScriptSignalsGenerator/HistoryCardTrackPicker_ScriptSignals.generated.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/Bar.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/ButtonThing.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/ControlManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/HistoryCard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/HistoryCardEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nunchuk/Documents/GitHub/Mario-Kart-World-Counter-Tool/HistoryCardTrackPicker.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -80,26 +100,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Executable.Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Executable.Player.executor&quot;: &quot;Debug&quot;,
-    &quot;GdScript Start and Debug.Player GDScript.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;2.1875&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;track-selection-detection&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nunchuk/Desktop/Godot_v4.7.1-stable_mono_linux_x86_64/Godot_v4.7.1-stable_mono_linux.x86_64&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Executable.Editor.executor": "Debug",
+    ".NET Executable.Player.executor": "Debug",
+    "GdScript Start and Debug.Player GDScript.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "XThreadsFramesViewSplitterKey": "1.0",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/nunchuk/Desktop/Godot_v4.7.1-stable_mono_linux_x86_64/Godot_v4.7.1-stable_mono_linux.x86_64",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Executable.Editor">
     <configuration name="Debug GDScript (Running session)" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory">
       <option name="json" value="{&#10;  // Launch: &quot;Launch a new instance of the game&quot;,&#10;  // Attach: &quot;Attach to an already running game, which was started from the Godot Editor&quot;&#10;  &quot;request&quot; : &quot;Attach&quot;,&#10;  &quot;debugServer&quot; : 6006, // port should match the Debug Adapter port in the Godot Editor project settings.&#10;  &quot;scene&quot; : &quot;main&quot;, // main, current, res://path/to/file.tscn&#10;  &#10;  // &quot;playArgs&quot; : [ &quot;--editor&quot; ], // debugging a tool script&#10;  // &quot;playArgs&quot;: [&quot;--debug-collisions&quot;,&quot;--debug-navigation&quot;], // different options&#10;  &#10;  // one click deploy and debug via Godot Editor:&#10;  // &quot;platform&quot;: &quot;Android&quot;, // including Android, iOS, Web and W4 consoles&#10;  // &quot;device&quot;: &quot;0&quot;, // index of the device of a &quot;platform&quot; type&#10;}" />
@@ -144,8 +169,8 @@
     <list>
       <item itemvalue=".NET Executable.Editor" />
       <item itemvalue=".NET Executable.Player" />
-      <item itemvalue="GdScript Start and Debug.Debug GDScript (Running session)" />
-      <item itemvalue="GdScript Start and Debug.Player GDScript" />
+      <item itemvalue="GDScript Start and Debug.Debug GDScript (Running session)" />
+      <item itemvalue="GDScript Start and Debug.Player GDScript" />
     </list>
   </component>
   <component name="TaskManager">
@@ -204,6 +229,10 @@
       <workItem from="1786479237784" duration="6311000" />
       <workItem from="1786646005924" duration="22463000" />
       <workItem from="1786727161706" duration="6401000" />
+      <workItem from="1786742312612" duration="219000" />
+      <workItem from="1786812043315" duration="8529000" />
+      <workItem from="1787037559040" duration="179000" />
+      <workItem from="1787888291234" duration="236000" />
     </task>
     <task id="LOCAL-00001" summary="lots of changes">
       <option name="closed" value="true" />
@@ -285,7 +314,159 @@
       <option name="project" value="LOCAL" />
       <updated>1786731884702</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Create release.yml">
+      <option name="closed" value="true" />
+      <created>1786737305532</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1786737305532</updated>
+    </task>
+    <task id="LOCAL-00012" summary="gitignore and tag">
+      <option name="closed" value="true" />
+      <created>1786737529807</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1786737529808</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix build script">
+      <option name="closed" value="true" />
+      <created>1786738068558</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1786738068558</updated>
+    </task>
+    <task id="LOCAL-00014" summary="tag missed lol">
+      <option name="closed" value="true" />
+      <created>1786738149810</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1786738149810</updated>
+    </task>
+    <task id="LOCAL-00015" summary="actually fixed build paths">
+      <option name="closed" value="true" />
+      <created>1786738393801</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1786738393801</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fix build to include needed files">
+      <option name="closed" value="true" />
+      <created>1786816343022</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1786816343022</updated>
+    </task>
+    <task id="LOCAL-00017" summary="removed camera popup spam on settings page">
+      <option name="closed" value="true" />
+      <created>1786816523216</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1786816523216</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix gitignore">
+      <option name="closed" value="true" />
+      <created>1786817243178</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1786817243178</updated>
+    </task>
+    <task id="LOCAL-00019" summary="re-added course selected png for scanning">
+      <option name="closed" value="true" />
+      <created>1786817268489</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1786817268489</updated>
+    </task>
+    <task id="LOCAL-00020" summary="export to executables properly">
+      <option name="closed" value="true" />
+      <created>1786817347888</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1786817347888</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix for build file (real) (not fake)">
+      <option name="closed" value="true" />
+      <created>1786818060893</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1786818060893</updated>
+    </task>
+    <task id="LOCAL-00022" summary="removed configuration">
+      <option name="closed" value="true" />
+      <created>1786818252861</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1786818252861</updated>
+    </task>
+    <task id="LOCAL-00023" summary="tag issues...">
+      <option name="closed" value="true" />
+      <created>1786818345074</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1786818345074</updated>
+    </task>
+    <task id="LOCAL-00024" summary="agony">
+      <option name="closed" value="true" />
+      <created>1786818760802</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1786818760802</updated>
+    </task>
+    <task id="LOCAL-00025" summary="haha jonathan">
+      <option name="closed" value="true" />
+      <created>1786818903432</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1786818903432</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fix URL">
+      <option name="closed" value="true" />
+      <created>1786819126479</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1786819126479</updated>
+    </task>
+    <task id="LOCAL-00027" summary="it was working before...">
+      <option name="closed" value="true" />
+      <created>1786819568730</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1786819568730</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fixed disconnected not ever resetting">
+      <option name="closed" value="true" />
+      <created>1787037706224</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1787037706224</updated>
+    </task>
+    <task id="LOCAL-00029" summary="kinda hacky fix to get names back in order">
+      <option name="closed" value="true" />
+      <created>1787888482112</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1787888482112</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +475,21 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -304,7 +500,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="track-selection-detection" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -318,17 +514,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="lots of changes" />
-    <MESSAGE value="I forgot to push this" />
-    <MESSAGE value="fixing windows issues" />
-    <MESSAGE value="finalized windows fixes probably" />
     <MESSAGE value="fixed not getting right path" />
     <MESSAGE value="Couple bug fixes" />
     <MESSAGE value="fix for track swapping" />
     <MESSAGE value="fixed names" />
     <MESSAGE value="working on images" />
     <MESSAGE value="camera stuffs" />
-    <option name="LAST_COMMIT_MESSAGE" value="camera stuffs" />
+    <MESSAGE value="Create release.yml" />
+    <MESSAGE value="gitignore and tag" />
+    <MESSAGE value="fix build script" />
+    <MESSAGE value="tag missed lol" />
+    <MESSAGE value="actually fixed build paths" />
+    <MESSAGE value="Fix build to include needed files" />
+    <MESSAGE value="removed camera popup spam on settings page" />
+    <MESSAGE value="fix gitignore" />
+    <MESSAGE value="re-added course selected png for scanning" />
+    <MESSAGE value="export to executables properly" />
+    <MESSAGE value="fix for build file (real) (not fake)" />
+    <MESSAGE value="removed configuration" />
+    <MESSAGE value="tag issues..." />
+    <MESSAGE value="agony" />
+    <MESSAGE value="haha jonathan" />
+    <MESSAGE value="fix URL" />
+    <MESSAGE value="it was working before..." />
+    <MESSAGE value="fixed disconnected not ever resetting" />
+    <MESSAGE value="kinda hacky fix to get names back in order" />
+    <option name="LAST_COMMIT_MESSAGE" value="kinda hacky fix to get names back in order" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -351,19 +562,6 @@
           </properties>
           <option name="timeStamp" value="4" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/PickPercentageThing.cs</url>
-          <line>141</line>
-          <properties documentPath="$PROJECT_DIR$/PickPercentageThing.cs" containingFunctionPresentation="Method 'PickScanning'">
-            <startOffsets>
-              <option value="4539" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4561" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

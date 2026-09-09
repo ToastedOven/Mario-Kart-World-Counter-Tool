@@ -1,9 +1,10 @@
 using Godot;
 using System;
+using CounterTool;
 
 public partial class RecentTrack : TextureRect
 {
-    public ButtonThing myTrack
+    public HistoryCardTrackPicker myTrack
     {
         get;
         set
@@ -12,7 +13,7 @@ public partial class RecentTrack : TextureRect
             if (field is not null)
             {
                 Texture = field.Texture;
-                GetNode<Label>("Label").Text = field.intermissionButton ? "Intermission" : "3Lap";
+                GetNode<Label>("Label").Text = field.intermissionBool ? "Intermission" : "3Lap";
             }
         }
     }
@@ -29,7 +30,8 @@ public partial class RecentTrack : TextureRect
                 switch (mouseEvent.ButtonIndex)
                 {
                     case MouseButton.Left:
-                        myTrack = RecentTrackTracker.instance.SwapTrack(myTrack, ButtonThing.buttons[(ButtonThing.buttons.IndexOf(myTrack) + 30) % 60]);
+                        myTrack.intermissionBool = !myTrack.intermissionBool;
+                        myTrack = RecentTrackTracker.instance.SwapTrack(myTrack, myTrack);
                         break;
 
                     case MouseButton.Right:

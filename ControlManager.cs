@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 
 namespace CounterTool;
 
@@ -12,6 +13,8 @@ public partial class ControlManager : Node
     [Export] private PackedScene popupScene;
     public static ControlManager instance;
     [Export] public Label postMatchInstructions;
+    public const int TRACKCOUNT = 40;
+    [Export] public Array<Texture2D> trackTextures;
     public override void _Ready()
     {
         instance = this;
@@ -21,6 +24,7 @@ public partial class ControlManager : Node
         enterApiKey.Pressed += () => { apiPage.Visible = true; };
         enterCustomUrl.Pressed += () => { urlPage.Visible = true; };
         settings.Pressed += () =>  { settingsPage.Visible = true; };
+        LoadAfterFrame();
     }
 
     private void CameraSetupOnPressed()
@@ -35,5 +39,10 @@ public partial class ControlManager : Node
         var popup = popupScene.Instantiate<global::Popup>();
         GetParent().AddChild(popup);
         popup.text = text;
+    }
+    async void LoadAfterFrame()
+    {
+        await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
+        SaveManager.Load();
     }
 }
