@@ -33,6 +33,10 @@ public partial class HistoryHandler : HBoxContainer
         MoveChild(newCard, 0);
         newCard.Setup(cardData);
         cards.Add(newCard);
+        foreach (var card in TrackPicker.instance.trackCards)
+        {
+            card.intermissionBool = false;
+        }
         return newCard;
     }
 
