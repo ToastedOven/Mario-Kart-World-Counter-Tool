@@ -43,10 +43,7 @@ public partial class RecentTrackTracker : VBoxContainer
     {
         HistoryCardTrackPicker trackButton;
         trackButton = HistoryCardTrackPicker.buttons[trackId % ControlManager.TRACKCOUNT];
-        if (trackId >= ControlManager.TRACKCOUNT)
-        {
-            trackButton.intermissionBool = true;
-        }
+        trackButton.intermissionBool = trackId >= ControlManager.TRACKCOUNT;
         AddTrack(trackButton, skipIncoming);
     }
     
